@@ -1,0 +1,11 @@
+NCDF =
+
+CPP  = /usr/bin/cpp
+FC   = ifort
+LD   = ifort
+
+FFLAGS  = -O3 -lnetcdf -lnetcdff
+LDFLAGS = -lnetcdf -lnetcdff
+     
+F90=mpiifort
+MPF90=mpiifort

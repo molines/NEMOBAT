@@ -1,0 +1,11 @@
+NCDF = -I $(NETCDF_INC) -I $(HDF5_INC) -L $(NETCDF_LIB) -L $(HDF5_LIB) -lnetcdff -lnetcdf -lhdf5_hl -lhdf5 -lz
+
+CPP  = /usr/bin/cpp
+FC   = ifort
+LD   = ifort
+
+FFLAGS  = -O3 -I $(NETCDF_INC) -I $(HDF5_INC) -g -traceback -CB
+LDFLAGS = -L $(NETCDF_LIB) -L $(HDF5_LIB) -lnetcdff -lnetcdf -lhdf5_hl -lhdf5 -lz
+     
+F90=mpiifort
+MPF90=mpiifort

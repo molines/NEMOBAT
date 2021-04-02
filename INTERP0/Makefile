@@ -1,5 +1,5 @@
 #
-## $Date: 2009-04-29 15:53:40 +0200 (Wed, 29 Apr 2009) $
+## $Date: 2009-04-29 15:53:40 +0200 (mer. 29 avril 2009) $
 ## $Rev: 226 $
 ## $Id: Makefile 226 2009-04-29 13:53:40Z molines $
 
@@ -9,9 +9,8 @@
 #
 #  cpp, compilation, chargement
 #
-CPP     = /usr/bin/cpp
-FC      = ifort
-LD      = ifort
+include make.macro
+
 dirsub = ../SUBROUTINES
 #
 # Regles de construction
@@ -23,25 +22,23 @@ dirsub = ../SUBROUTINES
 	$(CPP)   $*.F90 -o $*.f90
 	$(FC) -c $(FFLAGS)  $*.f90 -o $*.o
 #
-NCDF_PATH       = /usr/local
-#
-FFLAGS		=  -I$(NCDF_PATH)/include 
-#
-LDFLAGS	 	= -L$(NCDF_PATH)/lib -lnetcdf
-#
 # resultats --> les executables
 #
 #  etopo2 option: needs to define "etopo2" 
 
-all : batinterp1 batinterp2 
-batinterp2:	batinterpnew.F90  $(dirsub)/scilib.o  $(dirsub)/lbc.o
+all : batinterp.exe #batinterp1.exe batinterp2.exe
+batinterp2.exe:	batinterpnew.F90  $(dirsub)/scilib.o  $(dirsub)/lbc.o
 	$(LD) -Detopo2 $(FFLAGS) -o $@ batinterpnew.F90 $(dirsub)/scilib.o $(dirsub)/lbc.o $(LDFLAGS)
 #
 #   gebco1 option (default)
-batinterp1:	batinterpnew.F90  $(dirsub)/scilib.o $(dirsub)/lbc.o
+batinterp1.exe:	batinterpnew.F90  $(dirsub)/scilib.o $(dirsub)/lbc.o
 	$(LD) $(FFLAGS) -o $@ batinterpnew.F90 $(dirsub)/scilib.o $(dirsub)/lbc.o $(LDFLAGS)
 
-batinterp_grd:	batinterpnew_grd.F90  $(dirsub)/scilib.o $(dirsub)/lbc.o
+#
+batinterp.exe: batinterp.F90 $(dirsub)/scilib.o $(dirsub)/lbc.o
+	$(LD) $(FFLAGS) -o $@ batinterp.F90 $(dirsub)/scilib.o $(dirsub)/lbc.o $(LDFLAGS)
+
+batinterp_grd.exe:	batinterpnew_grd.F90  $(dirsub)/scilib.o $(dirsub)/lbc.o
 	$(LD) $(FFLAGS) -o $@ batinterpnew_grd.F90 $(dirsub)/scilib.o $(dirsub)/lbc.o $(LDFLAGS)
 
 $(dirsub)/scilib.o: $(dirsub)/scilib.F
@@ -51,5 +48,5 @@ $(dirsub)/lbc.o: $(dirsub)/lbc.f90
 	$(FC) -c $(FFLAGS) $(dirsub)/lbc.f90 -o $(dirsub)/lbc.o
 
 clean: 
-	/bin/rm -f *.o *~ batinterp1 batinterp2
+	/bin/rm -f *.o *~ batinterp.exe batinterp1.exe batinterp2.exe
 #
