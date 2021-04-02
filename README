@@ -1,0 +1,71 @@
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 225 $
+   !!  $Id: README 225 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+GENERATION of a new bathymetry file
+--------------------------------------
+June 2005, Anne Marie Treguier
+
+1 - Phase 1: interpolation of ETOPO2 and GEBCO 1mn onto the ORCA025 GRID.
+-------------------------------------------------------------------- 
+directory: INTERP0
+           program batinterpnew rewritten in june 2005.
+result: ORCA025_etopo2_june2005.nc (etopo2). Variable of interest is bathymetry, 
+  It is zero on land and positive in the ocean. 
+
+        ORCA025_gebco1_june2005.nc (gebco1). Variable of interest is bathymetry, 
+  It is zero on land and positive in the ocean. 
+
+
+2 - Phase 2: Smoothing etopo2, keep the land points current. 
+-------------------------------------------------------------------- 
+directory: SMOOTHING.
+we use of a shapiro filter, two passes, weight = 0.6
+remark: with compiler ifort, need 'limit stacksize 500000'!
+output file: ORCA025_etopo2_june2005_smooth_shapiro2.nc
+Bathymetry is positive in this file. 
+
+3 - Phase 3: Combine etopo2 and gebco1. 
+-------------------------------------------------------------------- 
+where bathy gebco < 200m, keep gebco. 
+where bathy gebco > 200m and < 300m, take a linear ramp between 
+gebco and etopo2. 
+
+directory COMBINE
+we need for input both ORCA025_gebco1_june2005.nc (remember to take into account polar
+regions with no gebco data), and ORCA025_etopo2_june2005_smooth_shapiro2.nc
+(result of the smoothing step above).
+Ouput file: ORCA025_combined_etopo_gebco_nocoast_june2005.nc
+
+4 - Phase 4: apply coastline 
+--------------------------------------
+Directory APPLYCOAST
+INPUT files:
+ (    coast_original_ORCA_R025.a: is an ascii file  provided by the MERCATOR team).
+ - coast_ORCA_R025_drakkar.ascii: an edited file with a few grid points changed.
+    a few sea grid point removed from Asia;
+    one grid point at the tip of Cape St Vincent changed from land to ocean.
+                           
+ 
+ - ../ORCA025_combined_combined_etopo_gebco_nocoast_june2005.nc:
+             bathymetry in "meters" obtained  by combination of etopo2 and gebco1
+ 
+OUTPUT file:
+ -  ORCA025_combined_etopo_gebco_coast_june2005.nc
+
+---------------------------------------------------------------------------
+JUNE 2005 
+5 - Phase 5: apply hand corrections.
+  NOTE: Ariane has modified coastlines in the region of Indonesia!!!
+---------------------------------------------------------------------------
+Directory: CORRECT
+treatment: a fortran program reads the bathymetry, includes the 
+"journal" file that changes individual grid points values, 
+then rewrites a new bathy.
+INPUT file: 
+ -  ORCA025_combined_etopo_gebco_coast_june2005.nc
+ - orca025_hand_modif_april05.h90 (merge of my old hand correction file with Ariane's)
+OUTPUT FILE:
+ORCA025_combined_etopo_gebco_coast_corrected_june2005.nc
+

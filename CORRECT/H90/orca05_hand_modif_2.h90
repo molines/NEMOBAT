@@ -1,0 +1,187 @@
+!
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 225 $
+   !!  $Id: orca05_hand_modif_2.h90 225 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+! Hand modifications by Anne Marie Treguier
+! on ORCA_R025 bathymetry for partial steps.
+! note: this version for october 2005 does not correct
+! a few grid island points that were in fact masked in the
+! ORCA025 mask,0so the correction is counter-productive!
+!
+! ################################################################
+! Name of the zoomed area : Torres staits
+! zoom ration : 2
+! Put some islands in G47
+
+bathy(0140,0230) = 0 !
+bathy(0140,0228) = 0 !
+
+
+! ################################################################
+! Name of the zoomed area : Vema fracture zone
+! zoom ration : 2
+! i min : 946
+! i max : 1012
+! j min : 507
+! j max : 573
+
+bathy(0496,0272) = 4883 
+bathy(0497,0272) = 4883 
+
+
+! ################################################################
+! Name of the zoomed area : Gibraltar
+! zoom ration : 2
+! i min : 1092
+! i max : 1158
+! j min : 616
+! j max : 682
+
+bathy(0564,0327) = 300 ! instead of 194
+
+! THIERRY's modifs for even deeper med water FOR G47
+! not done in G44
+bathy(0563,0327) = 340 ! instead of 320
+!bathy(0562,0327) = 780 ! instead of 659
+bathy(0561,0327) = 1200 ! instead of 881
+bathy(0560,0327) = 1200 ! instead of 881
+bathy(0562,0326) = 675 ! instead of 659
+bathy(0561,0326) = 1050 ! instead of 881
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0565,0327) = 349 
+bathy(0564,0327) = 290 
+bathy(0560,0328) = 1200
+bathy(0560,0326) = 1670 !instead of 1566 PM
+
+bathy(0562,0327) = 1200 !instead of 780 AMT
+! ################################################################
+! Name of the zoomed area : Wyville-Thompson ridge,0Faroe bank channel
+! zoom ration : 2
+! i min : 1064
+! i max : 1130
+! j min : 768
+! j max : 834
+
+!!!!!!!!!!!!! AJOUT THIERRY
+
+! ct bathy(0550,0402) = 1050 ! instead of 602
+bathy(0550,0402) = 1200 ! instead of 1050 TP ! instead of 602  PM
+bathy(0551,0402) = 910 ! instead of 602
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+bathy(0554,0400) = 870 ! instead of 737
+bathy(0554,0400) = 870 ! instead of 737
+bathy(0554,0401) = 870 ! instead of 689
+bathy(0554,0401) = 870 ! instead of 602
+bathy(0554,0401) = 870 ! instead of 565
+bathy(0553,0401) = 870 ! instead of 536
+bathy(0553,0401) = 870 ! instead of 437
+bathy(0553,0402) = 870 ! instead of 575
+bathy(0552,0402) = 870 ! instead of 605
+bathy(0552,0402) = 870 ! instead of 644
+bathy(0551,0402) = 870 ! instead of 777
+bathy(0556,0397) = 600 ! instead of 760
+bathy(0556,0397) = 600 ! instead of 714
+bathy(0554,0398) = 600 ! instead of 727
+bathy(0554,0398) = 600 ! instead of 714
+bathy(0553,0398) = 600 ! instead of 668
+bathy(0557,0397) = 600 ! instead of 615
+bathy(0553,0399) = 600 ! instead of 660
+bathy(0555,0397) = 600 ! instead of 671
+bathy(0555,0397) = 600 ! instead of 662
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0556,0399) = 916 
+bathy(0555,0399) = 893 
+bathy(0554,0399) = 870 
+bathy(0549,0402) = 1200 ! instead of 602
+bathy(0548,0402) = 1200 ! instead of 602
+
+bathy(0547,0402) = 1310 ! instead of 1280 PM
+bathy(0547,0401) = 1400 ! instead of 1392 PM
+bathy(0548,0401) = 1320 ! instead of 1291 PM
+bathy(0548,0403) = 1150 ! instead of 1103 PM
+
+!!!!!!!!!!!!!!!!!!! VERSION T.PENDUFF 3/11/2005
+! ################################################################
+! Name of the zoomed area : Denmark Strait
+! zoom ration : 2
+! i min : 1004
+! i max : 1070
+! j min : 796
+! j max : 862
+
+!ct bathy(0517,0412) = 1742 ! instead of 535
+bathy(0515,0411) = 2500 ! instead of 2395 PM
+bathy(0517,0412) = 1550 ! instead of 535
+bathy(0517,0413) = 1550 ! instead of 535
+bathy(0518,0412) = 1550 ! instead of 535
+bathy(0518,0413) = 1550 ! instead of 535
+bathy(0519,0413) = 1550 ! instead of 535
+bathy(0520,0413) = 1376 ! instead of 535
+bathy(0520,0414) = 916 ! instead of 535
+bathy(0521,0414) = 789 ! instead of 560
+bathy(0521,0415) = 670 ! instead of 560
+bathy(0521,0416) = 670 ! instead of 538
+bathy(0522,0416) = 670 ! instead of 550
+bathy(0523,0416) = 670 ! instead of 537
+bathy(0523,0417) = 670 ! instead of 595
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0519,0414) = 1056 ! instead of 535
+bathy(0520,0413) = 1056 ! instead of 535
+bathy(0519,0413) = 1209 ! instead of 535
+bathy(0518,0413) = 1376 ! instead of 535
+bathy(0518,0413) = 1550 ! instead of 535
+bathy(0517,0413) = 1550 ! instead of 535
+bathy(0518,0412) = 1550 ! instead of 535
+bathy(0517,0412) = 1550 ! instead of 535
+bathy(0519,0412) = 1056 ! instead of 535
+bathy(0520,0412) =  916 ! instead of 535
+
+bathy(0523,0418) = 670  ! instead of 609 AMT
+
+bathy(0517,0410) = 2260 ! instead of 2217 PM
+bathy(0517,0411) = 2260 ! instead of 2211 PM
+bathy(0516,0410) = 2500 ! instead of 2469 PM
+! ################################################################
+! Name of the zoomed area : Red Sea south
+! zoom ration : 2
+! i min : 1290
+! i max : 1356
+! j min : 514
+! j max : 580
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0660,0279) = 160
+bathy(0661,0279) = 140
+bathy(0661,0278) = 140
+bathy(0661,0277) = 140
+bathy(0662,0277) = 140
+bathy(0662,0276) = 140
+bathy(0662,0275) = 146
+
+bathy(0662,0274) = 676 !instead of 414 (TP) PM
+bathy(0663,0274) = 676
+bathy(0663,0275) = 676 !instead of 414 (TP) PM
+bathy(0664,0274) = 1040 ! instead of 916 (TP) PM
+bathy(0665,0274) = 1040
+bathy(0666,0274) = 1170 !instead of 1091 PM
+
+
+
+
+!!!! MGP Pierre
+bathy(146,68) = 0
+bathy(146,69) = 0
+bathy(146,70) = 0
+bathy(147,68) = 0
+bathy(147,69) = 0

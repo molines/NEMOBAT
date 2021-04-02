@@ -1,0 +1,543 @@
+!
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 225 $
+   !!  $Id: old_orca025_hand_modif.h90 225 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+!  Hand modifications by Anne Marie Treguier
+!  on ORCA_R025 bathymetry for partial steps. 
+!
+!
+! ################################################################
+! Name of the zoomed area : Vema fracture zone
+! zoom ration :        2
+! i min :      946
+! i max :     1012
+! j min :      507
+! j max :      573
+print *,' Vema fracture zone'
+print *, 'bathy:', bathy( 976, 543)  ! instead of 4279
+print *, 'bathy:', bathy( 977, 543)  ! instead of 4189
+print *, 'bathy:', bathy( 978, 543)  ! instead of 4042
+print *, 'bathy:', bathy( 979, 543)  ! instead of 3889
+print *, 'bathy:', bathy( 979, 542)  ! instead of 4205
+print *, 'bathy:', bathy( 980, 542)  ! instead of 4103
+print *, 'bathy:', bathy( 981, 542)  ! instead of 4093
+print *, 'bathy:', bathy( 982, 542)  ! instead of 4126
+print *, 'bathy:', bathy( 983, 542)  ! instead of 4008
+print *, 'bathy:', bathy( 984, 542)  ! instead of 3870
+print *, 'bathy:', bathy( 985, 542)  ! instead of 3632
+print *, 'bathy:', bathy( 986, 542)  ! instead of 3691
+print *, 'bathy:', bathy( 987, 542)  ! instead of 3883
+print *, 'bathy:', bathy( 988, 542)  ! instead of 3969
+print *, 'bathy:', bathy( 989, 542)  ! instead of 4141
+print *, 'bathy:', bathy( 990, 542)  ! instead of 4273
+ 
+! ################################################################
+! Name of the zoomed area : Fifteen twenty fracture zone
+! zoom ration :        2
+! i min :      934
+! i max :     1000
+! j min :      522
+! j max :      588
+print *, 'Fifteen twenty fracture zone'
+print *, 'bathy:', bathy( 960, 562)  ! instead of 3782
+print *, 'bathy:', bathy( 961, 562)  ! instead of 3630
+print *, 'bathy:', bathy( 961, 561)  ! instead of 3597
+print *, 'bathy:', bathy( 962, 561)  ! instead of 3542
+print *, 'bathy:', bathy( 963, 561)  ! instead of 3560
+print *, 'bathy:', bathy( 964, 561)  ! instead of 3636
+print *, 'bathy:', bathy( 965, 561)  ! instead of 3703
+ 
+! ################################################################
+! Name of the zoomed area : Lesser Antilles
+! zoom ration :        2
+! i min :      868
+! i max :      934
+! j min :      524
+! j max :      590
+print *, 'Lesser Antilles'
+print *, 'bathy:', bathy( 903, 547)  ! instead of  670
+print *, 'bathy:', bathy( 903, 548)  ! instead of  670
+print *, 'bathy:', bathy( 904, 549)  ! instead of  965
+print *, 'bathy:', bathy( 905, 550)  ! instead of  799
+print *, 'bathy:', bathy( 905, 551)  ! instead of  909
+print *, 'bathy:', bathy( 905, 552)  ! instead of  909
+print *, 'bathy:', bathy( 905, 553)  ! instead of 1686
+print *, 'bathy:', bathy( 906, 554)  ! instead of 1089
+print *, 'bathy:', bathy( 906, 555)  ! instead of  923
+print *, 'bathy:', bathy( 906, 555)  ! instead of  600
+print *, 'bathy:', bathy( 906, 556)  ! instead of 1331
+print *, 'bathy:', bathy( 905, 561)  ! instead of 1127
+print *, 'bathy:', bathy( 905, 562)  ! instead of  636
+print *, 'bathy:', bathy( 905, 563)  ! instead of  636
+print *, 'bathy:', bathy( 904, 564)  ! instead of  364
+print *, 'bathy:', bathy( 904, 566)  ! instead of  673
+print *, 'bathy:', bathy( 893, 574)  ! instead of 1062
+print *, 'bathy:', bathy( 898, 574)  ! instead of  849
+print *, 'bathy:', bathy( 898, 573)  ! instead of  403
+print *, 'bathy:', bathy( 898, 572)  ! instead of  403
+print *, 'bathy:', bathy( 899, 572)  ! instead of  405
+print *, 'bathy:', bathy( 899, 571)  ! instead of  454
+print *, 'bathy:', bathy( 900, 570)  ! instead of  489
+print *, 'bathy:', bathy( 900, 571)  ! instead of  502
+print *, 'bathy:', bathy( 878, 574)  ! instead of  541
+print *, 'bathy:', bathy( 881, 573)  ! instead of  414
+ 
+! ################################################################
+! Name of the zoomed area : Florida Straits
+! zoom ration :        2
+! i min :      796
+! i max :      862
+! j min :      560
+! j max :      626
+print *,'Florida Straits'
+print *, 'bathy:', bathy( 827, 599)  ! instead of  707
+print *, 'bathy:', bathy( 828, 599)  ! instead of  643
+print *, 'bathy:', bathy( 829, 599)  ! instead of  552
+print *, 'bathy:', bathy( 829, 600)  ! instead of  610
+print *, 'bathy:', bathy( 830, 600)  ! instead of  719
+print *, 'bathy:', bathy( 831, 600)  ! instead of  740
+print *, 'bathy:', bathy( 832, 601)  ! instead of  747
+print *, 'bathy:', bathy( 832, 602)  ! instead of  773
+print *, 'bathy:', bathy( 831, 602)  ! instead of  761
+print *, 'bathy:', bathy( 832, 603)  ! instead of  762
+print *, 'bathy:', bathy( 832, 604)  ! instead of  714
+print *, 'bathy:', bathy( 832, 605)  ! instead of  638
+print *, 'bathy:', bathy( 832, 606)  ! instead of  598
+print *, 'bathy:', bathy( 832, 607)  ! instead of  602
+print *, 'bathy:', bathy( 832, 608)  ! instead of  610
+print *, 'bathy:', bathy( 832, 609)  ! instead of  618
+print *, 'bathy:', bathy( 832, 610)  ! instead of  627
+print *, 'bathy:', bathy( 832, 611)  ! instead of  620
+print *, 'bathy:', bathy( 832, 613)  ! instead of  585
+print *, 'bathy:', bathy( 832, 614)  ! instead of  592
+print *, 'bathy:', bathy( 832, 615)  ! instead of  622
+print *, 'bathy:', bathy( 832, 616)  ! instead of  652
+print *, 'bathy:', bathy( 832, 617)  ! instead of  681
+print *, 'bathy:', bathy( 832, 612)  ! instead of  603
+print *, 'bathy:', bathy( 839, 591)  ! instead of  334
+print *, 'bathy:', bathy( 840, 591)  ! instead of  351
+print *, 'bathy:', bathy( 840, 590)  ! instead of  554
+print *, 'bathy:', bathy( 838, 592)  ! instead of  358
+print *, 'bathy:', bathy( 837, 592)  ! instead of  311
+print *, 'bathy:', bathy( 836, 593)  ! instead of  342
+print *, 'bathy:', bathy( 837, 593)  ! instead of  340
+print *, 'bathy:', bathy( 835, 593)  ! instead of  344
+print *, 'bathy:', bathy( 834, 594)  ! instead of  434
+print *, 'bathy:', bathy( 834, 593)  ! instead of  336
+print *, 'bathy:', bathy( 833, 594)  ! instead of  451
+print *, 'bathy:', bathy( 833, 595)  ! instead of  483
+print *, 'bathy:', bathy( 832, 595)  ! instead of  475
+print *, 'bathy:', bathy( 831, 595)  ! instead of  469
+print *, 'bathy:', bathy( 830, 595)  ! instead of  485
+print *, 'bathy:', bathy( 838, 591)  ! instead of  182
+ 
+! ################################################################
+! Name of the zoomed area : Gibraltar
+! zoom ration :        2
+! i min :     1092
+! i max :     1158
+! j min :      616
+! j max :      682
+print *,'Gibraltar' 
+print *, 'bathy:', bathy(1127, 654)  ! instead of  194
+print *, 'bathy:', bathy(1126, 654)  ! instead of  144
+print *, 'bathy:', bathy(1126, 653)  ! instead of  170
+print *, 'bathy:', bathy(1125, 653)  ! instead of  248
+ 
+! ################################################################
+! Name of the zoomed area : Wyville-Thompson ridge, Faroe bank channel
+! zoom ration :        2
+! i min :     1064
+! i max :     1130
+! j min :      768
+! j max :      834
+print *,'Wyville-Thompson ridge, Faroe bank channel'
+print *, 'bathy:', bathy(1108, 800)  ! instead of  737
+print *, 'bathy:', bathy(1108, 801)  ! instead of  689
+print *, 'bathy:', bathy(1107, 802)  ! instead of  602
+print *, 'bathy:', bathy(1107, 801)  ! instead of  565
+print *, 'bathy:', bathy(1106, 802)  ! instead of  536
+print *, 'bathy:', bathy(1105, 802)  ! instead of  437
+print *, 'bathy:', bathy(1105, 803)  ! instead of  575
+print *, 'bathy:', bathy(1104, 803)  ! instead of  605
+print *, 'bathy:', bathy(1103, 803)  ! instead of  644
+print *, 'bathy:', bathy(1102, 803)  ! instead of  777
+print *, 'bathy:', bathy(1112, 793)  ! instead of  760
+print *, 'bathy:', bathy(1111, 794)  ! instead of  714
+print *, 'bathy:', bathy(1108, 795)  ! instead of  727
+print *, 'bathy:', bathy(1107, 795)  ! instead of  714
+print *, 'bathy:', bathy(1106, 796)  ! instead of  668
+print *, 'bathy:', bathy(1113, 793)  ! instead of  615
+print *, 'bathy:', bathy(1106, 797)  ! instead of  660
+print *, 'bathy:', bathy(1110, 794)  ! instead of  671
+print *, 'bathy:', bathy(1109, 794)  ! instead of  662
+ 
+! ################################################################
+! Name of the zoomed area : Denmark Strait
+! zoom ration :        2
+! i min :     1004
+! i max :     1070
+! j min :      796
+! j max :      862
+print *,'Denmark Strait'
+print *, 'bathy:', bathy(1042, 829)  ! instead of  535
+print *, 'bathy:', bathy(1042, 830)  ! instead of  560
+print *, 'bathy:', bathy(1042, 831)  ! instead of  538
+print *, 'bathy:', bathy(1043, 831)  ! instead of  546
+print *, 'bathy:', bathy(1043, 832)  ! instead of  527
+print *, 'bathy:', bathy(1044, 832)  ! instead of  550
+print *, 'bathy:', bathy(1045, 832)  ! instead of  537
+print *, 'bathy:', bathy(1045, 833)  ! instead of  595
+ 
+! ################################################################
+! Name of the zoomed area : Gibbs Fracture zone
+! zoom ration :        2
+! i min :      982
+! i max :     1048
+! j min :      708
+! j max :      774
+print *, 'Gibbs Fracture zone'
+print *, 'bathy:', bathy(1008, 742)  ! instead of 3615
+print *, 'bathy:', bathy(1009, 742)  ! instead of 3568
+print *, 'bathy:', bathy(1010, 742)  ! instead of 3535
+print *, 'bathy:', bathy(1011, 742)  ! instead of 3514
+print *, 'bathy:', bathy(1011, 741)  ! instead of 3603
+print *, 'bathy:', bathy(1012, 741)  ! instead of 3602
+print *, 'bathy:', bathy(1013, 741)  ! instead of 3615
+print *, 'bathy:', bathy(1014, 741)  ! instead of 3611
+print *, 'bathy:', bathy(1015, 741)  ! instead of 3565
+print *, 'bathy:', bathy(1016, 741)  ! instead of 3581
+print *, 'bathy:', bathy(1017, 741)  ! instead of 3582
+print *, 'bathy:', bathy(1018, 741)  ! instead of 3651
+print *, 'bathy:', bathy(1020, 741)  ! instead of 3608
+print *, 'bathy:', bathy(1021, 741)  ! instead of 3458
+print *, 'bathy:', bathy(1022, 741)  ! instead of 3318
+print *, 'bathy:', bathy(1023, 740)  ! instead of 3278
+print *, 'bathy:', bathy(1022, 740)  ! instead of 3274
+print *, 'bathy:', bathy(1024, 740)  ! instead of 3279
+print *, 'bathy:', bathy(1025, 740)  ! instead of 3240
+print *, 'bathy:', bathy(1026, 740)  ! instead of 3017
+print *, 'bathy:', bathy(1027, 740)  ! instead of 2963
+print *, 'bathy:', bathy(1028, 740)  ! instead of 3043
+print *, 'bathy:', bathy(1029, 740)  ! instead of 3029
+print *, 'bathy:', bathy(1030, 740)  ! instead of 3110
+print *, 'bathy:', bathy(1030, 739)  ! instead of 2832
+print *, 'bathy:', bathy(1031, 739)  ! instead of 3005
+print *, 'bathy:', bathy(1032, 739)  ! instead of 3019
+print *, 'bathy:', bathy(1033, 739)  ! instead of 3155
+print *, 'bathy:', bathy(1034, 739)  ! instead of 3302
+print *, 'bathy:', bathy(1035, 739)  ! instead of 3383
+print *, 'bathy:', bathy(1036, 739)  ! instead of 3442
+print *, 'bathy:', bathy(1037, 739)  ! instead of 3534
+print *, 'bathy:', bathy(1038, 739)  ! instead of 3621
+ 
+! ################################################################
+! Name of the zoomed area : Oceanographer fracture Zone
+! zoom ration :        2
+! i min :      982
+! i max :     1048
+! j min :      616
+! j max :      682
+print *,'Oceanographer fracture Zone'
+print *, 'bathy:', bathy(1001, 650)  ! instead of 2924
+print *, 'bathy:', bathy(1002, 650)  ! instead of 2882
+print *, 'bathy:', bathy(1003, 650)  ! instead of 2864
+print *, 'bathy:', bathy(1004, 650)  ! instead of 2892
+print *, 'bathy:', bathy(1006, 650)  ! instead of 2904
+print *, 'bathy:', bathy(1007, 650)  ! instead of 2736
+print *, 'bathy:', bathy(1007, 649)  ! instead of 2453
+print *, 'bathy:', bathy(1008, 649)  ! instead of 2655
+print *, 'bathy:', bathy(1009, 649)  ! instead of 2766
+print *, 'bathy:', bathy(1010, 649)  ! instead of 2754
+print *, 'bathy:', bathy(1010, 648)  ! instead of 2687
+print *, 'bathy:', bathy(1011, 648)  ! instead of 2662
+print *, 'bathy:', bathy(1012, 648)  ! instead of 2704
+print *, 'bathy:', bathy(1013, 648)  ! instead of 2811
+print *, 'bathy:', bathy(1014, 648)  ! instead of 2907
+
+! ################################################################
+! Name of the zoomed area : Vema channel
+! zoom ration :        2
+! i min :      978
+! i max :     1044
+! j min :      331
+! j max :      397
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Valvis ridge South
+! zoom ration :        2
+! i min :     1092
+! i max :     1158
+! j min :      305
+! j max :      371
+print *,'Valvis ridge South'
+print *, 'bathy:', bathy(1119, 341)  ! instead of 3607
+print *, 'bathy:', bathy(1123, 344)  ! instead of 3801
+print *, 'bathy:', bathy(1126, 346)  ! instead of 3665
+print *, 'bathy:', bathy(1141, 362)  ! instead of 3932
+print *, 'bathy:', bathy(1142, 362)  ! instead of 3832
+print *, 'bathy:', bathy(1143, 363)  ! instead of 3693
+print *, 'bathy:', bathy(1141, 361)  ! instead of 3891
+print *, 'bathy:', bathy(1140, 361)  ! instead of 3699
+ 
+! ################################################################
+! Name of the zoomed area : Rio de Janeiro fracture Zone
+! zoom ration :        2
+! i min :     1064
+! i max :     1130
+! j min :      375
+! j max :      441
+print *,'Rio de Janeiro fracture Zone'
+print *, 'bathy:', bathy(1107, 408)  ! instead of 3714
+print *, 'bathy:', bathy(1108, 408)  ! instead of 3805
+print *, 'bathy:', bathy(1109, 408)  ! instead of 3882
+print *, 'bathy:', bathy(1106, 408)  ! instead of 3593
+print *, 'bathy:', bathy(1105, 408)  ! instead of 3533
+print *, 'bathy:', bathy(1104, 408)  ! instead of 3561
+print *, 'bathy:', bathy(1103, 408)  ! instead of 3570
+print *, 'bathy:', bathy(1102, 408)  ! instead of 3539
+print *, 'bathy:', bathy(1101, 408)  ! instead of 3399
+print *, 'bathy:', bathy(1100, 408)  ! instead of 3282
+print *, 'bathy:', bathy(1097, 408)  ! instead of 3529
+print *, 'bathy:', bathy(1098, 408)  ! instead of 3404
+print *, 'bathy:', bathy(1096, 408)  ! instead of 3722
+print *, 'bathy:', bathy(1095, 408)  ! instead of 3815
+print *, 'bathy:', bathy(1094, 408)  ! instead of 3777
+print *, 'bathy:', bathy(1093, 408)  ! instead of 3871
+print *, 'bathy:', bathy(1099, 408)  ! instead of 3336
+ 
+! ################################################################
+! Name of the zoomed area : Romanche fracture zone
+! zoom ration :        2
+! i min :     1030
+! i max :     1096
+! j min :      459
+! j max :      525
+print *, 'Romanche fracture zone' 
+print *, 'bathy:', bathy(1057, 496)  ! instead of 3849
+print *, 'bathy:', bathy(1058, 496)  ! instead of 3925
+print *, 'bathy:', bathy(1059, 496)  ! instead of 3937
+print *, 'bathy:', bathy(1060, 496)  ! instead of 3942
+print *, 'bathy:', bathy(1061, 496)  ! instead of 4060
+print *, 'bathy:', bathy(1062, 496)  ! instead of 4177
+print *, 'bathy:', bathy(1063, 497)  ! instead of 3995
+print *, 'bathy:', bathy(1064, 497)  ! instead of 4011
+print *, 'bathy:', bathy(1065, 497)  ! instead of 4041
+print *, 'bathy:', bathy(1066, 497)  ! instead of 4044
+print *, 'bathy:', bathy(1067, 497)  ! instead of 4051
+print *, 'bathy:', bathy(1068, 497)  ! instead of 4306
+print *, 'bathy:', bathy(1069, 498)  ! instead of 4106
+print *, 'bathy:', bathy(1070, 498)  ! instead of 4153
+print *, 'bathy:', bathy(1070, 499)  ! instead of 3847
+print *, 'bathy:', bathy(1071, 499)  ! instead of 3871
+print *, 'bathy:', bathy(1072, 499)  ! instead of 3977
+print *, 'bathy:', bathy(1073, 499)  ! instead of 4142
+print *, 'bathy:', bathy(1074, 499)  ! instead of 4280
+print *, 'bathy:', bathy(1075, 499)  ! instead of 4403
+print *, 'bathy:', bathy(1076, 500)  ! instead of 4133
+print *, 'bathy:', bathy(1077, 500)  ! instead of 3974
+print *, 'bathy:', bathy(1078, 500)  ! instead of 3919
+print *, 'bathy:', bathy(1079, 500)  ! instead of 3820
+print *, 'bathy:', bathy(1082, 500)  ! instead of 4183
+print *, 'bathy:', bathy(1083, 500)  ! instead of 4070
+print *, 'bathy:', bathy(1084, 500)  ! instead of 3850
+print *, 'bathy:', bathy(1085, 500)  ! instead of 3668
+print *, 'bathy:', bathy(1086, 501)  ! instead of 3755
+print *, 'bathy:', bathy(1087, 501)  ! instead of 3832
+print *, 'bathy:', bathy(1088, 501)  ! instead of 3853
+print *, 'bathy:', bathy(1089, 501)  ! instead of 3906
+print *, 'bathy:', bathy(1090, 501)  ! instead of 4013
+print *, 'bathy:', bathy(1086, 500)  ! instead of 3665
+
+! ################################################################
+! Name of the zoomed area : Indonesian Throughflow
+! zoom ration :        2
+! i min :      157
+! i max :      223
+! j min :      427
+! j max :      493
+print *,'Indonesian Throughflow'
+print *, 'bathy:', bathy( 172, 464)  ! instead of  350
+print *, 'bathy:', bathy( 174, 464)  ! instead of  350
+print *, 'bathy:', bathy( 173, 464)  ! instead of  434
+print *, 'bathy:', bathy( 188, 464)  ! instead of  293
+print *, 'bathy:', bathy( 203, 465)  ! instead of  789
+print *, 'bathy:', bathy( 204, 465)  ! instead of  789
+print *, 'bathy:', bathy( 205, 465)  ! instead of  968
+print *, 'bathy:', bathy( 204, 457)  ! instead of  342
+print *, 'bathy:', bathy( 202, 455)  ! instead of  525
+print *, 'bathy:', bathy( 201, 455)  ! instead of  513
+print *, 'bathy:', bathy( 198, 457)  ! instead of  810
+print *, 'bathy:', bathy( 197, 456)  ! instead of  763
+ 
+! ################################################################
+! Name of the zoomed area : Indonesian thoughflow south-east
+! zoom ration :        2
+! i min :      185
+! i max :      251
+! j min :      415
+! j max :      481
+print *,'Indonesian thoughflow south-east'
+print *, 'bathy:', bathy( 202, 453)  ! instead of 1058
+print *, 'bathy:', bathy( 202, 454)  ! instead of 1045
+print *, 'bathy:', bathy( 203, 454)  ! instead of 1171
+print *, 'bathy:', bathy( 204, 454)  ! instead of 1239
+ 
+! ################################################################
+! Name of the zoomed area : Sulu Sea
+! zoom ration :        2
+! i min :      157
+! i max :      223
+! j min :      497
+! j max :      563
+print *,' Sulu Sea' 
+print *, 'bathy:', bathy( 212, 520)  ! instead of 1938
+print *, 'bathy:', bathy( 212, 521)  ! instead of 1447
+print *, 'bathy:', bathy( 213, 518)  ! instead of 1050
+print *, 'bathy:', bathy( 213, 512)  ! instead of  969
+print *, 'bathy:', bathy( 212, 510)  ! instead of 1160
+print *, 'bathy:', bathy( 212, 511)  ! instead of 1230
+ 
+! ################################################################
+! Name of the zoomed area : Indonesian throughflow north-west
+! zoom ration :        2
+! i min :      145
+! i max :      211
+! j min :      437
+! j max :      503
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Red Sea North
+! zoom ration :        2
+! i min :     1266
+! i max :     1332
+! j min :      558
+! j max :      624
+print *,'Red Sea North' 
+print *, 'bathy:', bathy(1291, 608)  ! instead of  991
+print *, 'bathy:', bathy(1291, 610)  ! instead of  988
+print *, 'bathy:', bathy(1308, 577)  ! instead of  974
+print *, 'bathy:', bathy(1308, 575)  ! instead of  951
+ 
+! ################################################################
+! Name of the zoomed area : Red Sea south
+! zoom ration :        2
+! i min :     1290
+! i max :     1356
+! j min :      514
+! j max :      580
+print *, 'Red Sea south'
+print *, 'bathy:', bathy(1319, 556)  ! instead of   94
+print *, 'bathy:', bathy(1320, 556)  ! instead of   87
+print *, 'bathy:', bathy(1320, 555)  ! instead of   59
+print *, 'bathy:', bathy(1320, 554)  ! instead of   45
+print *, 'bathy:', bathy(1321, 554)  ! instead of   56
+print *, 'bathy:', bathy(1321, 553)  ! instead of   58
+print *, 'bathy:', bathy(1322, 553)  ! instead of   66
+print *, 'bathy:', bathy(1322, 552)  ! instead of   44
+print *, 'bathy:', bathy(1323, 552)  ! instead of   42
+print *, 'bathy:', bathy(1323, 551)  ! instead of   48
+print *, 'bathy:', bathy(1324, 550)  ! instead of   71
+print *, 'bathy:', bathy(1323, 550)  ! instead of   52
+ 
+! ################################################################
+! Name of the zoomed area : Agulhas
+! zoom ration :        2
+! i min :     1212
+! i max :     1278
+! j min :      303
+! j max :      369
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Mozambique/Comores
+! zoom ration :        2
+! i min :     1292
+! i max :     1358
+! j min :      413
+! j max :      479
+print *,'Mozambique/Comores' 
+print *, 'bathy:', bathy(1341, 448)  ! instead of 1094
+print *, 'bathy:', bathy(1342, 449)  ! instead of  521
+print *, 'bathy:', bathy(1341, 449)  ! instead of 1067
+print *, 'bathy:', bathy(1337, 449)  ! instead of 2751
+print *, 'bathy:', bathy(1336, 449)  ! instead of 2196
+print *, 'bathy:', bathy(1335, 449)  ! instead of 2371
+print *, 'bathy:', bathy(1331, 448)  ! instead of 1244
+print *, 'bathy:', bathy(1331, 447)  ! instead of 1217
+print *, 'bathy:', bathy(1330, 448)  ! instead of 1298
+print *, 'bathy:', bathy(1328, 449)  ! instead of 2117
+print *, 'bathy:', bathy(1327, 450)  ! instead of 1827
+print *, 'bathy:', bathy(1325, 449)  ! instead of 1815
+print *, 'bathy:', bathy(1326, 449)  ! instead of 2056
+ 
+! ################################################################
+! Name of the zoomed area : Mascarene Ridge
+! zoom ration :        2
+! i min :     1362
+! i max :     1428
+! j min :      409
+! j max :      475
+print *,'Mascarene Ridge' 
+print *, 'bathy:', bathy(1391, 461)  ! instead of  770
+print *, 'bathy:', bathy(1391, 462)  ! instead of  606
+print *, 'bathy:', bathy(1391, 463)  ! instead of  693
+print *, 'bathy:', bathy(1376, 476)  ! instead of  753
+print *, 'bathy:', bathy(1376, 477)  ! instead of  426
+print *, 'bathy:', bathy(1363, 477)  ! instead of 1070
+print *, 'bathy:', bathy(1363, 476)  ! instead of  885
+print *, 'bathy:', bathy(1362, 475)  ! instead of 1250
+print *, 'bathy:', bathy(1395, 450)  ! instead of  508
+print *, 'bathy:', bathy(1395, 449)  ! instead of  936
+print *, 'bathy:', bathy(1395, 448)  ! instead of 1714
+print *, 'bathy:', bathy(1394, 443)  ! instead of  614
+print *, 'bathy:', bathy(1394, 444)  ! instead of  978
+print *, 'bathy:', bathy(1393, 444)  ! instead of  825
+print *, 'bathy:', bathy(1393, 445)  ! instead of 1165
+print *, 'bathy:', bathy(1393, 446)  ! instead of 1546
+print *, 'bathy:', bathy(1394, 447)  ! instead of 1823
+ 
+! ################################################################
+! Name of the zoomed area : Seychelles
+! zoom ration :        2
+! i min :     1346
+! i max :     1412
+! j min :      437
+! j max :      503
+print *,'Seychelles'  
+print *, 'bathy:', bathy(1363, 478)  ! instead of 1683
+print *, 'bathy:', bathy(1363, 476)  ! instead of  885
+print *, 'bathy:', bathy(1362, 475)  ! instead of 1250
+print *, 'bathy:', bathy(1362, 474)  ! instead of 1537
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Ninety east ridge north
+! zoom ration :        2
+! i min :       35
+! i max :      101
+! j min :      479
+! j max :      545
+print *,' Ninety east ridge north'   
+print *, 'bathy:', bathy(  68, 501)  ! instead of 3507
+print *, 'bathy:', bathy(  68, 500)  ! instead of 3571
+print *, 'bathy:', bathy(  67, 490)  ! instead of 3537
+ 
+! ################################################################
+! Name of the zoomed area : ninety east ridge middle
+! zoom ration :        2
+! i min :       29
+! i max :       95
+! j min :      425
+! j max :      491
+print *,'ninety east ridge middle' 
+print *, 'bathy:', bathy(  67, 479)  ! instead of 3698
+print *, 'bathy:', bathy(  67, 477)  ! instead of 3607
+print *, 'bathy:', bathy(  67, 478)  ! instead of 3756
+print *, 'bathy:', bathy(  65, 460)  ! instead of 3600
+ 
+ 

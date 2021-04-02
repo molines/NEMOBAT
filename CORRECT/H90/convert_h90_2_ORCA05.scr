@@ -1,0 +1,159 @@
+#!/bin/csh
+## -------------------------------------------------------------------------
+##  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+##  $Rev: 225 $
+##  $Id: convert_h90_2_ORCA05.scr 225 2009-04-29 13:52:46Z molines $
+## -------------------------------------------------------------------------
+#set echo
+
+##################################################
+#
+# LANCER CE SCRIPT PUIS AJOUTER CES LIGNES AU DEBUT, 
+# PAR EXEMPLE, DU FICHIER DE SORTIE $filout, POUR LE COMBLEMENT
+# DU TROU EN MER DE WEDDEL
+# ! ################################################################
+# ! Name of the zoomed area : WEDDEL SEA
+# ! -------- THIERRY PENDUFF --------------
+# ! Fill topographic hole
+# bathy(0526,0011) = bathy(0525,0011) !
+# bathy(0527,0011) = bathy(0526,0011) !
+# bathy(0527,0012) = bathy(0526,0012) !
+# bathy(0528,0012) = bathy(0527,0012) !
+# bathy(0528,0013) = bathy(0527,0013) !
+# bathy(0529,0013) = bathy(0528,0013) !
+# bathy(0529,0014) = bathy(0528,0014) !
+# bathy(0530,0014) = bathy(0529,0014) !
+# bathy(0530,0015) = bathy(0529,0015) !
+# bathy(0531,0015) = bathy(0530,0015) !
+# bathy(0531,0016) = bathy(0530,0016) !
+# bathy(0532,0016) = bathy(0531,0016) !
+# bathy(0531,0017) = bathy(0530,0017) !
+# bathy(0532,0017) = bathy(0531,0017) !
+# bathy(0531,0018) = bathy(0530,0018) !
+# bathy(0532,0018) = bathy(0531,0018) !
+# bathy(0531,0019) = bathy(0530,0019) !
+# bathy(0532,0019) = bathy(0531,0019) !
+# bathy(0531,0020) = bathy(0530,0020) !
+# bathy(0532,0020) = bathy(0531,0020) !
+# bathy(0532,0021) = bathy(0531,0021) !
+#
+##################################################
+
+##################################################
+#
+# PUIS AJOUTER CORRECTIONS A LA MAIN
+# GIB
+# !))))))))))))))))))))))))))))))))))))
+# ! THIERRY's modifs for ORCA05
+# bathy(0565,0327) = 349 
+# bathy(0564,0327) = 290 
+# bathy(0560,0328) = 1200
+#
+# DEN
+# !))))))))))))))))))))))))))))))))))))
+# ! THIERRY's modifs for ORCA05
+# bathy(0520,0413) = 1056 ! instead of 535
+# bathy(0519,0413) = 1209 ! instead of 535
+# bathy(0518,0413) = 1376 ! instead of 535
+# bathy(0518,0413) = 1550 ! instead of 535
+# bathy(0517,0413) = 1550 ! instead of 535
+# bathy(0518,0412) = 1550 ! instead of 535
+# bathy(0517,0412) = 1550 ! instead of 535
+# bathy(0519,0412) = 1056 ! instead of 535
+# bathy(0520,0412) =  916 ! instead of 535
+#
+# FBC
+# !))))))))))))))))))))))))))))))))))))
+# ! THIERRY's modifs for ORCA05
+# bathy(0556,0399) = 916 
+# bathy(0555,0399) = 893 
+# bathy(0554,0399) = 870 
+# bathy(0549,0402) = 1200 ! instead of 602
+# bathy(0548,0402) = 1200 ! instead of 602
+# 
+# VFZ
+# !))))))))))))))))))))))))))))))))))))
+# ! THIERRY's modifs for ORCA05
+# METTRE EN COMMENTAIRE TOUTES LES MODIFS Vema fracture zone
+# et ajouter
+# bathy(0496,0272) = 4883 
+# bathy(0497,0272) = 4883 
+#
+# BEM
+# !))))))))))))))))))))))))))))))))))))
+# ! THIERRY's modifs for ORCA05
+# METTRE EN COMMENTAIRE TOUTES LES MODIFS Red Sea south
+# et ajouter
+# bathy(0660,0279) = 160
+# bathy(0661,0279) = 140
+# bathy(0661,0278) = 140
+# bathy(0661,0277) = 140
+# bathy(0662,0277) = 140
+# bathy(0662,0276) = 140
+# bathy(0662,0275) = 146
+#
+# bathy(0662,0274) = 414
+# bathy(0663,0274) = 676
+# bathy(0664,0274) = 916
+# bathy(0663,0275) = 414
+# bathy(0665,0274) = 1040
+#
+#
+# TORRES
+# !))))))))))))))))))))))))))))))))))))
+# ! THIERRY's modifs for ORCA05
+# METTRE EN COMMENTAIRE LA LIGNE bathy(0140,0229) = 0 !
+#
+#
+#
+#
+##################################################
+
+set filin = orca05_hand_modif_1.h90
+set filout = orca05_hand_modif_2.h90
+
+set long = ` cat $filin | wc -l `
+\rm -f $filout
+touch $filout
+
+set l = 1
+while ( $l <= $long ) 
+echo -------- line $l
+
+
+set line = ` cat $filin | head -$l | tail -1 `
+set test = ` echo $line | grep "bathy(" | wc -c `
+
+# REMOVAL OF LINES BEGINNING BY !
+#if ( ` echo $line | cut -c1,1 ` = "!" ) then
+echo $line | grep -q -e '^\!'
+set test2 = $status
+#end
+
+#echo $line
+#echo $test
+#echo --test--test2 $test $test2
+
+	if ( $test > 3 && $test2 > 0 ) then
+set deb = ` echo $line | cut  -c1-6 `
+set i   = ` echo $line | cut  -c7-10 `
+set j   = ` echo $line | cut -c12-15 `
+set fin = ` echo $line | cut  -c16-100 `
+
+set II  = ` echo $i | awk '{ printf "%04i \n", int (( $1 - 1 ) / 2) + 1 }' `
+set JJ  = ` echo $j | awk '{ printf "%04i \n", int (( $1 - 1 ) / 2) + 1 }' `
+
+set line2 = ` echo ${deb}${II}','${JJ}${fin} `
+
+#echo $line
+echo $line2 >> $filout
+	else
+echo $line >> $filout
+	endif
+
+
+
+@ l++
+end
+
+

@@ -1,0 +1,63 @@
+  HISTORY OF ORCA05 bathy in meters.
+....................................
+
+4-9 september 2003:
+Interpolation of etopo2bedmap.nc (file from Elizabeth Remy, Mercator)
+onto the ORCA05 grid. 
+The opabat.F program reads the netcdf file  and produces files: 
+- bathy_meter_guess_ORCA_R05.nc
+- bathystats_guess_ORCA_R05.nc
+put in the directory : 
+/home1/porzig/treguier/PROJ/DRAKKAR/BATHY/OPABAT05/INTERP0
+
+
+..................................
+September 9th  2003: 
+APPLYCOAST
+Apply Gurvan's coast mask, taken from a 30 levels bathy. 
+The result is : 
+    bathy_meter_coast_ORCA_R05.nc
+The mask is not as intended:  there  are areas where Gurvan wanted ocean 
+and I have put land because the etopo2bedmap file had land.
+I have probably modified the applycoast program afterwards, I have not kept the old version.
+
+
+..................................
+September 9th  2003:
+EXTRA
+batextra.f90 to remove ponds and spikes. 
+I have noted that there was a bug (this treatment does not preserve the mask???) 
+but in fact it looks more like the problem was in applycoast...
+output file: bathy_meter_treated_ORCA_R05.nc
+
+..................................
+September 9th  2003:
+IDL:
+  do had modifications with the IDL program. 
+The result is in the IDL directory (with a link):
+ bathy_meter_treated_ORCA_R05_checked.nc
+
+..................................
+April 28 2004
+Arne and Gurvan discover bug in mask; this causes some runoffs to fall on land in the arctic. 
+I decide to correct it directly in the previous file, in order not to redo the other treatments. 
+APPLYCOAST , program batcoast.f90
+re-apply the mask, with input file: bathy_meter_treated_ORCA_R05_checked.nc
+and ouput file: bathy_meter_treated_ORCA_R05_checked_coast_nobug.nc
+ 
+unfortunately, this results in a hole in the Weddell sea where Gurvan's and my mask differ the most (points with bathy value =  99999).
+
+VERIFICATION: 
+in directory CORRECT, use the program verify.f90 with the log of the hand modifications 
+(orca05_hand_modif_2003.h90) to verify that I have not undone the hand modifications. This seems OK. 
+
+..................................
+December 2006
+
+in CORRECT directory, 
+create a  new file orca05_hand_modif.h90. This is the previous log (orca05_hand_modif_2003.h90) with Ariane's modifs added (for the indonesian throughflow)
+as well as new data to plug the hole in the Weddell Sea (taken from Gurvan's original 30 levels bathy). 
+
+use the correct.f90 program.
+
+

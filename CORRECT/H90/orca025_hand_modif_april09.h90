@@ -1,0 +1,1355 @@
+!
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 2 $
+   !!  $Id: orca025_hand_modif_april05.h90 2 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+!  Hand modifications by Anne Marie Treguier
+!  on ORCA_R025 bathymetry for partial steps. 
+!
+!
+! ################################################################
+! Name of the zoomed area : Vema fracture zone
+! zoom ration :        2
+! i min :      946
+! i max :     1012
+! j min :      507
+! j max :      573
+ 
+bathy( 976, 543) = 4400  ! instead of 4279
+bathy( 977, 543) = 4400  ! instead of 4189
+bathy( 978, 543) = 4400  ! instead of 4042
+bathy( 979, 543) = 4400  ! instead of 3889
+bathy( 979, 542) = 4400  ! instead of 4205
+bathy( 980, 542) = 4400  ! instead of 4103
+bathy( 981, 542) = 4400  ! instead of 4093
+bathy( 982, 542) = 4400  ! instead of 4126
+bathy( 983, 542) = 4400  ! instead of 4008
+bathy( 984, 542) = 4400  ! instead of 3870
+bathy( 985, 542) = 4400  ! instead of 3632
+bathy( 986, 542) = 4400  ! instead of 3691
+bathy( 987, 542) = 4400  ! instead of 3883
+bathy( 988, 542) = 4400  ! instead of 3969
+bathy( 989, 542) = 4400  ! instead of 4141
+bathy( 990, 542) = 4400  ! instead of 4273
+ 
+! ################################################################
+! Name of the zoomed area : Fifteen twenty fracture zone
+! zoom ration :        2
+! i min :      934
+! i max :     1000
+! j min :      522
+! j max :      588
+ 
+bathy( 960, 562) = 3800  ! instead of 3782
+bathy( 961, 562) = 3800  ! instead of 3630
+bathy( 961, 561) = 3800  ! instead of 3597
+bathy( 962, 561) = 3800  ! instead of 3542
+bathy( 963, 561) = 3800  ! instead of 3560
+bathy( 964, 561) = 3800  ! instead of 3636
+bathy( 965, 561) = 3800  ! instead of 3703
+ 
+! ################################################################
+! Name of the zoomed area : Lesser Antilles
+! zoom ration :        2
+! i min :      868
+! i max :      934
+! j min :      524
+! j max :      590
+ 
+bathy( 903, 547) =  200  ! instead of  670
+bathy( 903, 548) =  200  ! instead of  670
+bathy( 904, 549) =  200  ! instead of  965
+bathy( 905, 550) =  200  ! instead of  799
+bathy( 905, 551) =  200  ! instead of  909
+bathy( 905, 552) =  200  ! instead of  909
+bathy( 905, 553) =  200  ! instead of 1686
+bathy( 906, 554) =  600  ! instead of 1089
+bathy( 906, 555) =  600  ! instead of  923
+bathy( 906, 555) =  200  ! instead of  600
+bathy( 906, 556) =  200  ! instead of 1331
+bathy( 905, 561) =  200  ! instead of 1127
+bathy( 905, 562) =  200  ! instead of  636
+bathy( 905, 563) =  200  ! instead of  636
+bathy( 904, 564) =  200  ! instead of  364
+bathy( 904, 566) =  400  ! instead of  673
+bathy( 893, 574) =  200  ! instead of 1062
+bathy( 898, 574) =  200  ! instead of  849
+bathy( 898, 573) =  200  ! instead of  403
+bathy( 898, 572) =  200  ! instead of  403
+bathy( 899, 572) =  200  ! instead of  405
+bathy( 899, 571) =  200  ! instead of  454
+bathy( 900, 570) =  489  ! instead of  489
+bathy( 900, 571) =  200  ! instead of  502
+bathy( 878, 574) =  300  ! instead of  541
+bathy( 881, 573) =  200  ! instead of  414
+ 
+! ################################################################
+! Name of the zoomed area : Florida Straits
+! zoom ration :        2
+! i min :      796
+! i max :      862
+! j min :      560
+! j max :      626
+ 
+bathy( 827, 599) =  800  ! instead of  707
+bathy( 828, 599) =  800  ! instead of  643
+bathy( 829, 599) =  800  ! instead of  552
+bathy( 829, 600) =  800  ! instead of  610
+bathy( 830, 600) =  800  ! instead of  719
+bathy( 831, 600) =  800  ! instead of  740
+bathy( 832, 601) =  800  ! instead of  747
+bathy( 832, 602) =  800  ! instead of  773
+bathy( 831, 602) =  800  ! instead of  761
+bathy( 832, 603) =  800  ! instead of  762
+bathy( 832, 604) =  800  ! instead of  714
+bathy( 832, 605) =  800  ! instead of  638
+bathy( 832, 606) =  800  ! instead of  598
+bathy( 832, 607) =  760  ! instead of  602
+bathy( 832, 608) =  760  ! instead of  610
+bathy( 832, 609) =  760  ! instead of  618
+bathy( 832, 610) =  760  ! instead of  627
+bathy( 832, 611) =  730  ! instead of  620
+bathy( 832, 613) =  730  ! instead of  585
+bathy( 832, 614) =  730  ! instead of  592
+bathy( 832, 615) =  730  ! instead of  622
+bathy( 832, 616) =  730  ! instead of  652
+bathy( 832, 617) =  730  ! instead of  681
+bathy( 832, 612) =  730  ! instead of  603
+bathy( 839, 591) =  600  ! instead of  334
+bathy( 840, 591) =  600  ! instead of  351
+bathy( 840, 590) =  600  ! instead of  554
+bathy( 838, 592) =  540  ! instead of  358
+bathy( 837, 592) =  500  ! instead of  311
+bathy( 836, 593) =  500  ! instead of  342
+bathy( 837, 593) =  500  ! instead of  340
+bathy( 835, 593) =  500  ! instead of  344
+bathy( 834, 594) =  500  ! instead of  434
+bathy( 834, 593) =  500  ! instead of  336
+bathy( 833, 594) =  500  ! instead of  451
+bathy( 833, 595) =  500  ! instead of  483
+bathy( 832, 595) =  500  ! instead of  475
+bathy( 831, 595) =  500  ! instead of  469
+bathy( 830, 595) =  500  ! instead of  485
+bathy( 838, 591) =  500  ! instead of  182
+ 
+! ################################################################
+! Name of the zoomed area : Gibraltar
+! zoom ration :        2
+! i min :     1092
+! i max :     1158
+! j min :      616
+! j max :      682
+ 
+bathy(1127, 654) =  300  ! instead of  194
+bathy(1126, 654) =  280  ! instead of  144
+bathy(1126, 653) =  280  ! instead of  170
+bathy(1125, 653) =  320  ! instead of  248
+ 
+! ################################################################
+! Name of the zoomed area : Wyville-Thompson ridge, Faroe bank channel
+! zoom ration :        2
+! i min :     1064
+! i max :     1130
+! j min :      768
+! j max :      834
+ 
+bathy(1108, 800) =  800  ! instead of  737
+bathy(1108, 801) =  800  ! instead of  689
+bathy(1107, 802) =  800  ! instead of  602
+bathy(1107, 801) =  800  ! instead of  565
+bathy(1106, 802) =  800  ! instead of  536
+bathy(1105, 802) =  800  ! instead of  437
+bathy(1105, 803) =  800  ! instead of  575
+bathy(1104, 803) =  800  ! instead of  605
+bathy(1103, 803) =  800  ! instead of  644
+bathy(1102, 803) =  800  ! instead of  777
+bathy(1112, 793) =  600  ! instead of  760
+bathy(1111, 794) =  600  ! instead of  714
+bathy(1108, 795) =  600  ! instead of  727
+bathy(1107, 795) =  600  ! instead of  714
+bathy(1106, 796) =  600  ! instead of  668
+bathy(1113, 793) =  600  ! instead of  615
+bathy(1106, 797) =  600  ! instead of  660
+bathy(1110, 794) =  600  ! instead of  671
+bathy(1109, 794) =  600  ! instead of  662
+ 
+! ################################################################
+! Name of the zoomed area : Denmark Strait
+! zoom ration :        2
+! i min :     1004
+! i max :     1070
+! j min :      796
+! j max :      862
+ 
+bathy(1042, 829) =  600  ! instead of  535
+bathy(1042, 830) =  600  ! instead of  560
+bathy(1042, 831) =  600  ! instead of  538
+bathy(1043, 831) =  600  ! instead of  546
+bathy(1043, 832) =  600  ! instead of  527
+bathy(1044, 832) =  600  ! instead of  550
+bathy(1045, 832) =  600  ! instead of  537
+bathy(1045, 833) =  600  ! instead of  595
+ 
+! ################################################################
+! Name of the zoomed area : Gibbs Fracture zone
+! zoom ration :        2
+! i min :      982
+! i max :     1048
+! j min :      708
+! j max :      774
+ 
+bathy(1008, 742) = 3650  ! instead of 3615
+bathy(1009, 742) = 3650  ! instead of 3568
+bathy(1010, 742) = 3650  ! instead of 3535
+bathy(1011, 742) = 3650  ! instead of 3514
+bathy(1011, 741) = 3650  ! instead of 3603
+bathy(1012, 741) = 3650  ! instead of 3602
+bathy(1013, 741) = 3650  ! instead of 3615
+bathy(1014, 741) = 3650  ! instead of 3611
+bathy(1015, 741) = 3650  ! instead of 3565
+bathy(1016, 741) = 3650  ! instead of 3581
+bathy(1017, 741) = 3650  ! instead of 3582
+bathy(1018, 741) = 3650  ! instead of 3651
+bathy(1020, 741) = 3650  ! instead of 3608
+bathy(1021, 741) = 3650  ! instead of 3458
+bathy(1022, 741) = 3650  ! instead of 3318
+bathy(1023, 740) = 3650  ! instead of 3278
+bathy(1022, 740) = 3650  ! instead of 3274
+bathy(1024, 740) = 3650  ! instead of 3279
+bathy(1025, 740) = 3650  ! instead of 3240
+bathy(1026, 740) = 3650  ! instead of 3017
+bathy(1027, 740) = 3650  ! instead of 2963
+bathy(1028, 740) = 3650  ! instead of 3043
+bathy(1029, 740) = 3650  ! instead of 3029
+bathy(1030, 740) = 3650  ! instead of 3110
+bathy(1030, 739) = 3650  ! instead of 2832
+bathy(1031, 739) = 3650  ! instead of 3005
+bathy(1032, 739) = 3650  ! instead of 3019
+bathy(1033, 739) = 3650  ! instead of 3155
+bathy(1034, 739) = 3650  ! instead of 3302
+bathy(1035, 739) = 3650  ! instead of 3383
+bathy(1036, 739) = 3650  ! instead of 3442
+bathy(1037, 739) = 3650  ! instead of 3534
+bathy(1038, 739) = 3650  ! instead of 3621
+ 
+! ################################################################
+! Name of the zoomed area : Oceanographer fracture Zone
+! zoom ration :        2
+! i min :      982
+! i max :     1048
+! j min :      616
+! j max :      682
+ 
+bathy(1001, 650) = 3000  ! instead of 2924
+bathy(1002, 650) = 3000  ! instead of 2882
+bathy(1003, 650) = 3000  ! instead of 2864
+bathy(1004, 650) = 3000  ! instead of 2892
+bathy(1006, 650) = 3000  ! instead of 2904
+bathy(1007, 650) = 3000  ! instead of 2736
+bathy(1007, 649) = 3000  ! instead of 2453
+bathy(1008, 649) = 3000  ! instead of 2655
+bathy(1009, 649) = 3000  ! instead of 2766
+bathy(1010, 649) = 3000  ! instead of 2754
+bathy(1010, 648) = 3000  ! instead of 2687
+bathy(1011, 648) = 3000  ! instead of 2662
+bathy(1012, 648) = 3000  ! instead of 2704
+bathy(1013, 648) = 3000  ! instead of 2811
+bathy(1014, 648) = 3000  ! instead of 2907
+
+! ################################################################
+! Name of the zoomed area : Vema channel
+! zoom ration :        2
+! i min :      978
+! i max :     1044
+! j min :      331
+! j max :      397
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Valvis ridge South
+! zoom ration :        2
+! i min :     1092
+! i max :     1158
+! j min :      305
+! j max :      371
+ 
+bathy(1119, 341) = 3500  ! instead of 3607
+bathy(1123, 344) = 3500  ! instead of 3801
+bathy(1126, 346) = 3500  ! instead of 3665
+bathy(1141, 362) = 3500  ! instead of 3932
+bathy(1142, 362) = 3500  ! instead of 3832
+bathy(1143, 363) = 3500  ! instead of 3693
+bathy(1141, 361) = 3500  ! instead of 3891
+bathy(1140, 361) = 3500  ! instead of 3699
+ 
+! ################################################################
+! Name of the zoomed area : Rio de Janeiro fracture Zone
+! zoom ration :        2
+! i min :     1064
+! i max :     1130
+! j min :      375
+! j max :      441
+ 
+bathy(1107, 408) = 3900  ! instead of 3714
+bathy(1108, 408) = 3900  ! instead of 3805
+bathy(1109, 408) = 3900  ! instead of 3882
+bathy(1106, 408) = 3900  ! instead of 3593
+bathy(1105, 408) = 3900  ! instead of 3533
+bathy(1104, 408) = 3900  ! instead of 3561
+bathy(1103, 408) = 3900  ! instead of 3570
+bathy(1102, 408) = 3900  ! instead of 3539
+bathy(1101, 408) = 3900  ! instead of 3399
+bathy(1100, 408) = 3900  ! instead of 3282
+bathy(1097, 408) = 3900  ! instead of 3529
+bathy(1098, 408) = 3900  ! instead of 3404
+bathy(1096, 408) = 3900  ! instead of 3722
+bathy(1095, 408) = 3900  ! instead of 3815
+bathy(1094, 408) = 3900  ! instead of 3777
+bathy(1093, 408) = 3900  ! instead of 3871
+bathy(1099, 408) = 3900  ! instead of 3336
+ 
+! ################################################################
+! Name of the zoomed area : Romanche fracture zone
+! zoom ration :        2
+! i min :     1030
+! i max :     1096
+! j min :      459
+! j max :      525
+ 
+bathy(1057, 496) = 3700  ! instead of 3849
+bathy(1058, 496) = 3700  ! instead of 3925
+bathy(1059, 496) = 3700  ! instead of 3937
+bathy(1060, 496) = 3700  ! instead of 3942
+bathy(1061, 496) = 3700  ! instead of 4060
+bathy(1062, 496) = 3700  ! instead of 4177
+bathy(1063, 497) = 3700  ! instead of 3995
+bathy(1064, 497) = 3700  ! instead of 4011
+bathy(1065, 497) = 3700  ! instead of 4041
+bathy(1066, 497) = 3700  ! instead of 4044
+bathy(1067, 497) = 3700  ! instead of 4051
+bathy(1068, 497) = 3700  ! instead of 4306
+bathy(1069, 498) = 3700  ! instead of 4106
+bathy(1070, 498) = 3700  ! instead of 4153
+bathy(1070, 499) = 3700  ! instead of 3847
+bathy(1071, 499) = 3700  ! instead of 3871
+bathy(1072, 499) = 3700  ! instead of 3977
+bathy(1073, 499) = 3700  ! instead of 4142
+bathy(1074, 499) = 3700  ! instead of 4280
+bathy(1075, 499) = 3700  ! instead of 4403
+bathy(1076, 500) = 3700  ! instead of 4133
+bathy(1077, 500) = 3700  ! instead of 3974
+bathy(1078, 500) = 3700  ! instead of 3919
+bathy(1079, 500) = 3700  ! instead of 3820
+bathy(1082, 500) = 4200  ! instead of 4183
+bathy(1083, 500) = 4200  ! instead of 4070
+bathy(1084, 500) = 4200  ! instead of 3850
+bathy(1085, 500) = 4200  ! instead of 3668
+bathy(1086, 501) = 4200  ! instead of 3755
+bathy(1087, 501) = 4200  ! instead of 3832
+bathy(1088, 501) = 4200  ! instead of 3853
+bathy(1089, 501) = 4200  ! instead of 3906
+bathy(1090, 501) = 4200  ! instead of 4013
+bathy(1086, 500) = 4200  ! instead of 3665
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Red Sea North
+! zoom ration :        2
+! i min :     1266
+! i max :     1332
+! j min :      558
+! j max :      624
+ 
+bathy(1291, 608) = 1080  ! instead of  991
+bathy(1291, 610) = 1080  ! instead of  988
+bathy(1308, 577) = 1080  ! instead of  974
+bathy(1308, 575) = 1080  ! instead of  951
+ 
+! ################################################################
+! Name of the zoomed area : Red Sea south
+! zoom ration :        2
+! i min :     1290
+! i max :     1356
+! j min :      514
+! j max :      580
+ 
+bathy(1319, 556) =  160  ! instead of   94
+bathy(1320, 556) =  140  ! instead of   87
+bathy(1320, 555) =  140  ! instead of   59
+bathy(1320, 554) =  140  ! instead of   45
+bathy(1321, 554) =  140  ! instead of   56
+bathy(1321, 553) =  140  ! instead of   58
+bathy(1322, 553) =  140  ! instead of   66
+bathy(1322, 552) =  140  ! instead of   44
+bathy(1323, 552) =  140  ! instead of   42
+bathy(1323, 551) =  140  ! instead of   48
+bathy(1324, 550) =  140  ! instead of   71
+bathy(1323, 550) =  140  ! instead of   52
+ 
+! ################################################################
+! Name of the zoomed area : Agulhas
+! zoom ration :        2
+! i min :     1212
+! i max :     1278
+! j min :      303
+! j max :      369
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Mozambique/Comores
+! zoom ration :        2
+! i min :     1292
+! i max :     1358
+! j min :      413
+! j max :      479
+ 
+bathy(1341, 448) =  200  ! instead of 1094
+bathy(1342, 449) =  200  ! instead of  521
+bathy(1341, 449) =  450  ! instead of 1067
+bathy(1337, 449) =  200  ! instead of 2751
+bathy(1336, 449) =  200  ! instead of 2196
+bathy(1335, 449) = 1200  ! instead of 2371
+bathy(1331, 448) =  400  ! instead of 1244
+bathy(1331, 447) =  400  ! instead of 1217
+bathy(1330, 448) =  400  ! instead of 1298
+bathy(1328, 449) =  400  ! instead of 2117
+bathy(1327, 450) =  400  ! instead of 1827
+bathy(1325, 449) =  400  ! instead of 1815
+bathy(1326, 449) =  400  ! instead of 2056
+ 
+! ################################################################
+! Name of the zoomed area : Mascarene Ridge
+! zoom ration :        2
+! i min :     1362
+! i max :     1428
+! j min :      409
+! j max :      475
+ 
+bathy(1391, 461) =  200  ! instead of  770
+bathy(1391, 462) =  200  ! instead of  606
+bathy(1391, 463) =  200  ! instead of  693
+bathy(1376, 476) =  200  ! instead of  753
+bathy(1376, 477) =  200  ! instead of  426
+bathy(1363, 477) =  200  ! instead of 1070
+bathy(1363, 476) =  200  ! instead of  885
+bathy(1362, 475) =  200  ! instead of 1250
+bathy(1395, 450) =  280  ! instead of  508
+bathy(1395, 449) =  350  ! instead of  936
+bathy(1395, 448) =  600  ! instead of 1714
+bathy(1394, 443) =  400  ! instead of  614
+bathy(1394, 444) =  600  ! instead of  978
+bathy(1393, 444) =  450  ! instead of  825
+bathy(1393, 445) =  450  ! instead of 1165
+bathy(1393, 446) =  500  ! instead of 1546
+bathy(1394, 447) = 1100  ! instead of 1823
+ 
+! ################################################################
+! Name of the zoomed area : Seychelles
+! zoom ration :        2
+! i min :     1346
+! i max :     1412
+! j min :      437
+! j max :      503
+ 
+bathy(1363, 478) =  800  ! instead of 1683
+bathy(1363, 476) =  200  ! instead of  885
+bathy(1362, 475) =  200  ! instead of 1250
+bathy(1362, 474) =  400  ! instead of 1537
+ 
+ 
+! ################################################################
+! Name of the zoomed area : Ninety east ridge north
+! zoom ration :        2
+! i min :       35
+! i max :      101
+! j min :      479
+! j max :      545
+ 
+bathy(  68, 501) = 3400  ! instead of 3507
+bathy(  68, 500) = 3400  ! instead of 3571
+bathy(  67, 490) = 3000  ! instead of 3537
+ 
+! ################################################################
+! Name of the zoomed area : ninety east ridge middle
+! zoom ration :        2
+! i min :       29
+! i max :       95
+! j min :      425
+! j max :      491
+ 
+bathy(  67, 479) = 3650  ! instead of 3698
+bathy(  67, 477) = 3650  ! instead of 3607
+bathy(  67, 478) = 3650  ! instead of 3756
+bathy(  65, 460) = 3400  ! instead of 3600
+
+!
+!
+!  Hand modification by Ariane Koch-Larrouy on 
+!  ORCA_R025 bathymetry combined coast for 
+!  partial step
+!
+! ################################################
+! Name of the zomed area : Indonesian Throughflow
+! i min : 89    
+! i max : 290 
+! j min : 395   
+! j max : 602
+
+! Timor passage
+bathy( 202, 453) = 1300.00 ! instead of   1078.23
+bathy( 202, 454) = 1300.00 ! instead of   1027.36
+bathy( 203, 454) = 1300.00 ! instead of   1176.71
+bathy( 204, 454) = 1300.00 ! instead of   1275.38
+
+! Torres
+!bathy( 280, 456) = 0.00000 ! instead of   5.00000
+!bathy( 279, 457) = 0.00000 ! instead of   5.00000
+!bathy( 279, 458) = 0.00000 ! instead of   5.00000
+!bathy( 279, 459) = 0.00000 ! instead of   5.00000
+!bathy( 279, 460) = 0.00000 ! instead of   5.00000
+!bathy( 279, 461) = 0.00000 ! instead of   5.00000
+
+! land retreived between Lombok and Sape
+bathy( 177, 463) = 195.000 ! instead of   0.00000
+bathy( 178, 463) = 300.000 ! instead of   0.00000
+bathy( 179, 463) = 400.000 ! instead of   0.00000
+bathy( 180, 463) = 566.531 ! instead of   0.00000
+
+! Sape
+bathy( 187, 464) = 0.00000 ! instead of   202.594
+bathy( 188, 464) = 0.00000 ! instead of   123.500
+bathy( 187, 465) = 0.00000 ! instead of   104.000
+bathy( 188, 465) = 0.00000 ! instead of   197.500
+
+! Iles d'Alor
+bathy( 203, 465) = 0.00000 ! instead of   241.048
+bathy( 205, 465) = 0.00000 ! instead of   1010.97
+
+! Ombai 
+bathy( 209, 465) = 1800.00 ! instead of   1759.98
+bathy( 211, 465) = 1800.00 ! instead of   1671.20
+bathy( 212, 465) = 1800.00 ! instead of   1401.44
+bathy( 213, 465) = 1800.00 ! instead of   1193.37
+bathy( 211, 466) = 1350.00 ! instead of   2057.59
+bathy( 212, 466) = 0.00000 ! instead of   2003.67
+bathy( 213, 466) = 1800.00 ! instead of   1728.50
+bathy( 214, 466) = 1800.00 ! instead of   1682.30
+bathy( 216, 466) = 1800.00 ! instead of   1758.57
+bathy( 213, 467) = 0.00000 ! instead of   1995.10
+bathy( 213, 468) = 0.00000 ! instead of   2735.98
+
+! Molucca strait
+bathy( 219, 505) = 4.00000 ! instead of   1758.61
+bathy( 220, 505) = 0.00000 ! instead of   761.723
+bathy( 217, 500) = 2300.00 ! instead of   2168.49
+bathy( 217, 501) = 2300.00 ! instead of   2114.26
+bathy( 216, 502) = 2300.00 ! instead of   2176.77
+bathy( 217, 502) = 2300.00 ! instead of   2148.22
+bathy( 216, 503) = 2200.00 ! instead of   2018.43
+bathy( 217, 503) = 2300.00 ! instead of   2071.52
+bathy( 216, 504) = 2200.00 ! instead of   1894.76
+bathy( 217, 504) = 2300.00 ! instead of   1991.11
+bathy( 213, 505) = 1760.00 ! instead of   1847.67
+bathy( 214, 505) = 1650.00 ! instead of   1759.12
+bathy( 216, 505) = 2200.00 ! instead of   1727.12
+bathy( 217, 505) = 2300.00 ! instead of   1999.43
+bathy( 218, 505) = 2300.00 ! instead of   2070.33
+bathy( 216, 506) = 2200.00 ! instead of   1792.68
+bathy( 217, 506) = 2200.00 ! instead of   2139.05
+bathy( 218, 506) = 2300.00 ! instead of   2162.49
+bathy( 217, 507) = 2200.00 ! instead of   2176.00
+bathy( 218, 507) = 2300.00 ! instead of   2191.92
+bathy( 217, 508) = 2200.00 ! instead of   2114.59
+bathy( 218, 508) = 2300.00 ! instead of   2241.65
+bathy( 219, 508) = 2300.00 ! instead of   2258.27
+bathy( 217, 509) = 2200.00 ! instead of   2028.10
+bathy( 218, 509) = 2200.00 ! instead of   2270.84
+
+! Malacca Strait
+bathy( 120, 506) = 0.00000 ! instead of   9.00000
+
+! Sangihe Ridge
+bathy( 210, 506) = 2.00000 ! instead of   295.509
+bathy( 211, 507) = 1000.00 ! instead of   1368.63
+bathy( 212, 508) = 2.00000 ! instead of   1442.14
+bathy( 212, 510) = 2.00000 ! instead of   1160.36
+bathy( 213, 514) = 50.0000 ! instead of   254.383
+bathy( 213, 515) = 500.000 ! instead of   825.242
+bathy( 213, 516) = 200.000 ! instead of   815.492
+bathy( 213, 517) = 4.00000 ! instead of   839.386
+bathy( 218, 517) = 0.00000 ! instead of   996.012
+bathy( 213, 518) = 800.000 ! instead of   1035.70
+bathy( 213, 519) = 1300.00 ! instead of   1526.46
+bathy( 218, 519) = 0.00000 ! instead of   2027.63
+bathy( 212, 520) = 4.00000 ! instead of   1947.67
+bathy( 218, 520) = 0.00000 ! instead of   2984.29
+bathy( 212, 521) = 0.00000 ! instead of   1521.66
+bathy( 217, 521) = 0.00000 ! instead of   3147.63
+bathy( 217, 522) = 0.00000 ! instead of   3276.00
+bathy( 217, 523) = 0.00000 ! instead of   3154.99
+bathy( 217, 524) = 0.00000 ! instead of   3272.37
+bathy( 215, 525) = 0.00000 ! instead of   1061.76
+bathy( 215, 526) = 0.00000 ! instead of   249.692
+
+! Sumba
+bathy( 189, 462) = 610.000 ! instead of   520.226
+bathy( 190, 462) = 610.000 ! instead of   496.277
+bathy( 191, 462) = 610.000 ! instead of   571.018
+bathy( 190, 463) = 167.000 ! instead of   466.042
+
+! sortie Savu
+bathy( 197, 456) = 0.00000 ! instead of   770.963
+bathy( 198, 456) = 0.00000 ! instead of   859.907
+bathy( 199, 456) = 1041.11 ! instead of   956.650
+bathy( 204, 457) = 100.000 ! instead of   299.308
+bathy( 195, 458) = 1100.00 ! instead of   1023.69
+
+! Luzon strait
+bathy( 194, 575) = 200.000 ! instead of   667.179
+bathy( 195, 576) = 100.000 ! instead of   239.656
+bathy( 196, 577) = 0.00000 ! instead of   625.711
+bathy( 196, 578) = 850.000 ! instead of   826.502
+bathy( 196, 579) = 650.000 ! instead of   1396.10
+bathy( 196, 580) = 1100.00 ! instead of   1909.46
+bathy( 196, 581) = 850.000 ! instead of   2351.54
+bathy( 196, 582) = 650.000 ! instead of   2642.53
+bathy( 196, 583) = 2.00000 ! instead of   2756.72
+bathy( 196, 584) = 150.000 ! instead of   2773.34
+bathy( 194, 586) = 1200.00 ! instead of   1533.90
+
+! Molucca Strait
+bathy( 232, 496) = 7.00000 ! instead of   50.0000
+bathy( 231, 497) = 2.00000 ! instead of   111.500
+bathy( 230, 498) = 2.00000 ! instead of   313.281
+bathy( 231, 498) = 2.00000 ! instead of   13.0000
+bathy( 229, 499) = 147.000 ! instead of   405.520
+bathy( 228, 500) = 2.00000 ! instead of   691.682
+bathy( 225, 501) = 2.00000 ! instead of   289.244
+bathy( 226, 501) = 300.000 ! instead of   560.011
+bathy( 227, 501) = 700.000 ! instead of   730.845
+
+! Lifamatola
+bathy( 204, 492) = 3.00000 ! instead of   57.0000
+bathy( 205, 492) = 4.00000 ! instead of   192.000
+bathy( 206, 492) = 3.00000 ! instead of   189.000
+bathy( 207, 492) = 50.0000 ! instead of   14.5000
+bathy( 214, 492) = 4.00000 ! instead of   861.835
+bathy( 215, 492) = 700.000 ! instead of   1153.23
+bathy( 216, 492) = 1829.00 ! instead of   1525.74
+bathy( 217, 492) = 1200.00 ! instead of   1851.48
+bathy( 218, 492) = 200.000 ! instead of   1758.53
+bathy( 219, 493) = 0.00000 ! instead of   1105.22
+bathy( 203, 494) = 60.0000 ! instead of   62.0000
+bathy( 220, 494) = 2.00000 ! instead of   329.407
+bathy( 222, 494) = 500.000 ! instead of   373.465
+bathy( 222, 495) = 500.000 ! instead of   364.917
+
+! Island around Belitung in Java Sea
+bathy( 137, 487) = 0.00000 ! instead of   7.00000
+bathy( 139, 487) = 0.00000 ! instead of   16.0000
+bathy( 140, 487) = 0.00000 ! instead of   1.00000
+bathy( 143, 489) = 0.00000 ! instead of   27.0000
+
+! Island isolated rattached to the coast
+bathy( 134, 487) = 0.00000 ! instead of   3.00000
+bathy( 135, 487) = 0.00000 ! instead of   6.00000
+bathy( 133, 488) = 0.00000 ! instead of   6.00000
+bathy( 134, 488) = 0.00000 ! instead of   7.50000
+bathy( 133, 489) = 0.00000 ! instead of   6.00000
+bathy( 130, 490) = 0.00000 ! instead of   6.00000
+bathy( 131, 490) = 0.00000 ! instead of   8.00000
+bathy( 132, 490) = 0.00000 ! instead of   7.00000
+bathy( 133, 490) = 0.00000 ! instead of   5.00000
+
+! Balabac Strait
+bathy( 179, 530) = 15.0000 ! instead of   25.5000
+
+! Sulu Archipelago
+bathy( 188, 519) = 13.0000 ! instead of   155.383
+bathy( 196, 523) = 7.00000 ! instead of   126.000
+bathy( 193, 521) = 2.00000 ! instead of   17.5000
+
+! Lombok Strait
+bathy( 173, 464) = 0.00000 ! instead of   435.309
+bathy( 174, 464) = 160.000 ! instead of   29.0000
+
+! Philippine Archipelago
+bathy( 213, 539) = 0.00000 ! instead of   1.00000
+bathy( 213, 540) = 0.00000 ! instead of   1.00000
+bathy( 213, 541) = 0.00000 ! instead of   1.00000
+bathy( 213, 542) = 2.00000 ! instead of   4.00000
+bathy( 207, 550) = 0.00000 ! instead of   2.00000
+
+! Taiwan Strait
+bathy( 179, 595) = 5.00000 ! instead of   16.0000
+bathy( 187, 595) = 22.0000 ! instead of   35.0000
+bathy( 188, 595) = 5.00000 ! instead of   22.0000
+
+! Sunda Strait
+bathy( 133, 474) = 0.00000 ! instead of   38.0000
+bathy( 133, 475) = 0.00000 ! instead of   28.0000
+bathy( 133, 476) = 0.00000 ! instead of   37.5000
+
+! Extra modification for overflows taken from G70 bathymetry
+! Bab El Mandeb
+! modification from original file : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.03
+! written to : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.04
+ bathy(1323, 547)=  790.00 ! instead of   335.88
+ bathy(1323, 548)=  790.00 ! instead of   220.04
+ bathy(1323, 549)=  790.00 ! instead of    15.00
+ bathy(1324, 546)=  205.26 ! instead of   205.30
+ bathy(1324, 547)=  790.00 ! instead of   419.34
+ bathy(1325, 545)=  232.05 ! instead of   234.62
+ bathy(1325, 546)=  390.42 ! instead of   371.02
+ bathy(1325, 547)=  790.00 ! instead of   479.29
+ bathy(1325, 548)=  405.93 ! instead of   405.34
+ bathy(1325, 549)=  242.82 ! instead of   249.44
+ bathy(1326, 545)=  465.37 ! instead of   500.06
+ bathy(1326, 546)=  533.13 ! instead of   539.33
+ bathy(1326, 547)=  790.00 ! instead of   578.75
+ bathy(1326, 548)=  485.88 ! instead of   498.72
+ bathy(1327, 545)=  677.48 ! instead of   710.40
+ bathy(1327, 546)=  688.05 ! instead of   708.92
+ bathy(1327, 547)=  790.00 ! instead of   716.30
+ bathy(1327, 548)=  573.04 ! instead of   615.35
+! Denmark Strait
+! modification from original file : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.01
+! written to : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.02
+ bathy(1028, 821)= 2376.17 ! instead of  2385.20
+ bathy(1028, 822)= 2261.45 ! instead of  2269.36
+ bathy(1028, 823)= 2076.01 ! instead of  2083.30
+ bathy(1028, 824)= 1749.69 ! instead of  1756.26
+ bathy(1028, 825)= 1385.01 ! instead of  1392.88
+ bathy(1028, 826)= 1033.51 ! instead of  1040.19
+ bathy(1028, 827)=  652.12 ! instead of   650.97
+ bathy(1028, 828)=  386.88 ! instead of   385.13
+ bathy(1028, 829)=  321.01 ! instead of   320.32
+ bathy(1028, 830)=  316.30 ! instead of   317.55
+ bathy(1028, 831)=  311.48 ! instead of   313.00
+ bathy(1028, 832)=  306.20 ! instead of   306.34
+ bathy(1028, 833)=  307.09 ! instead of   307.60
+ bathy(1028, 834)=  312.60 ! instead of   312.27
+ bathy(1028, 835)=  325.20 ! instead of   323.64
+ bathy(1028, 836)=  332.78 ! instead of   332.27
+ bathy(1028, 837)=  310.06 ! instead of   311.53
+ bathy(1028, 838)=  246.39 ! instead of   247.97
+ bathy(1029, 821)= 2595.00 ! instead of  2384.17
+ bathy(1029, 822)= 2254.96 ! instead of  2258.06
+ bathy(1029, 823)= 2050.15 ! instead of  2055.23
+ bathy(1029, 824)= 1709.69 ! instead of  1714.93
+ bathy(1029, 825)= 1315.34 ! instead of  1319.40
+ bathy(1029, 826)=  923.03 ! instead of   926.87
+ bathy(1029, 827)=  544.83 ! instead of   548.56
+ bathy(1029, 828)=  376.24 ! instead of   377.91
+ bathy(1029, 829)=  353.83 ! instead of   354.19
+ bathy(1029, 830)=  365.37 ! instead of   366.65
+ bathy(1029, 831)=  368.94 ! instead of   372.07
+ bathy(1029, 832)=  357.53 ! instead of   359.90
+ bathy(1029, 833)=  344.99 ! instead of   346.42
+ bathy(1029, 834)=  347.93 ! instead of   349.24
+ bathy(1029, 835)=  356.85 ! instead of   356.17
+ bathy(1029, 836)=  343.23 ! instead of   343.37
+ bathy(1029, 837)=  310.26 ! instead of   308.55
+ bathy(1029, 838)=  296.33 ! instead of   292.69
+ bathy(1030, 821)= 2595.00 ! instead of  2357.43
+ bathy(1030, 822)= 2595.00 ! instead of  2232.38
+ bathy(1030, 823)= 2024.59 ! instead of  2025.93
+ bathy(1030, 824)= 1672.39 ! instead of  1677.71
+ bathy(1030, 825)= 1268.53 ! instead of  1269.71
+ bathy(1030, 826)=  841.11 ! instead of   838.26
+ bathy(1030, 827)=  500.34 ! instead of   501.20
+ bathy(1030, 828)=  395.02 ! instead of   396.45
+ bathy(1030, 829)=  395.74 ! instead of   397.12
+ bathy(1030, 830)=  418.01 ! instead of   419.08
+ bathy(1030, 831)=  433.66 ! instead of   434.61
+ bathy(1030, 832)=  430.76 ! instead of   432.80
+ bathy(1030, 833)=  417.05 ! instead of   418.17
+ bathy(1030, 834)=  416.33 ! instead of   418.19
+ bathy(1030, 835)=  418.78 ! instead of   419.02
+ bathy(1030, 836)=  401.79 ! instead of   402.56
+ bathy(1030, 837)=  382.03 ! instead of   382.60
+ bathy(1030, 838)=  395.05 ! instead of   394.53
+ bathy(1031, 821)= 2595.00 ! instead of  2329.13
+ bathy(1031, 822)= 2595.00 ! instead of  2220.59
+ bathy(1031, 823)= 2595.00 ! instead of  2026.67
+ bathy(1031, 824)= 1679.15 ! instead of  1678.23
+ bathy(1031, 825)= 1256.68 ! instead of  1254.75
+ bathy(1031, 826)=  806.75 ! instead of   799.37
+ bathy(1031, 827)=  493.07 ! instead of   490.86
+ bathy(1031, 828)=  410.56 ! instead of   411.21
+ bathy(1031, 829)=  416.41 ! instead of   418.04
+ bathy(1031, 830)=  440.06 ! instead of   441.19
+ bathy(1031, 831)=  462.57 ! instead of   462.89
+ bathy(1031, 832)=  466.35 ! instead of   466.60
+ bathy(1031, 833)=  457.54 ! instead of   456.63
+ bathy(1031, 834)=  458.05 ! instead of   457.22
+ bathy(1031, 835)=  464.15 ! instead of   463.87
+ bathy(1031, 836)=  466.34 ! instead of   466.16
+ bathy(1031, 837)=  475.57 ! instead of   474.90
+ bathy(1031, 838)=  504.52 ! instead of   504.41
+ bathy(1032, 821)= 2284.32 ! instead of  2289.56
+ bathy(1032, 822)= 2595.00 ! instead of  2198.70
+ bathy(1032, 823)= 2595.00 ! instead of  2019.83
+ bathy(1032, 824)= 2595.00 ! instead of  1688.83
+ bathy(1032, 825)= 1267.57 ! instead of  1276.65
+ bathy(1032, 826)=  811.58 ! instead of   816.37
+ bathy(1032, 827)=  495.63 ! instead of   497.15
+ bathy(1032, 828)=  412.44 ! instead of   413.18
+ bathy(1032, 829)=  412.88 ! instead of   414.16
+ bathy(1032, 830)=  427.84 ! instead of   430.05
+ bathy(1032, 831)=  446.22 ! instead of   447.57
+ bathy(1032, 832)=  445.49 ! instead of   445.61
+ bathy(1032, 833)=  437.54 ! instead of   437.34
+ bathy(1032, 834)=  437.58 ! instead of   437.00
+ bathy(1032, 835)=  444.89 ! instead of   444.45
+ bathy(1032, 836)=  455.17 ! instead of   453.65
+ bathy(1032, 837)=  476.71 ! instead of   473.97
+ bathy(1032, 838)=  498.86 ! instead of   498.48
+ bathy(1033, 821)= 2160.42 ! instead of  2199.46
+ bathy(1033, 822)= 2100.24 ! instead of  2117.56
+ bathy(1033, 823)= 2595.00 ! instead of  1973.94
+ bathy(1033, 824)= 2595.00 ! instead of  1700.51
+ bathy(1033, 825)= 2595.00 ! instead of  1345.31
+ bathy(1033, 826)=  910.07 ! instead of   911.41
+ bathy(1033, 827)=  532.85 ! instead of   534.52
+ bathy(1033, 828)=  402.57 ! instead of   403.56
+ bathy(1033, 829)=  381.93 ! instead of   383.52
+ bathy(1033, 830)=  379.35 ! instead of   381.62
+ bathy(1033, 831)=  387.94 ! instead of   388.34
+ bathy(1033, 832)=  391.04 ! instead of   391.02
+ bathy(1033, 833)=  388.21 ! instead of   389.06
+ bathy(1033, 834)=  385.34 ! instead of   385.96
+ bathy(1033, 835)=  387.10 ! instead of   386.57
+ bathy(1033, 836)=  385.64 ! instead of   384.82
+ bathy(1033, 837)=  378.06 ! instead of   376.12
+ bathy(1033, 838)=  359.74 ! instead of   358.28
+ bathy(1034, 821)= 1935.42 ! instead of  2027.03
+ bathy(1034, 822)= 1930.28 ! instead of  1982.50
+ bathy(1034, 823)= 1869.70 ! instead of  1891.17
+ bathy(1034, 824)= 2595.00 ! instead of  1696.27
+ bathy(1034, 825)= 2595.00 ! instead of  1428.65
+ bathy(1034, 826)= 1040.11 ! instead of  1053.85
+ bathy(1034, 827)=  628.25 ! instead of   637.92
+ bathy(1034, 828)=  414.58 ! instead of   415.32
+ bathy(1034, 829)=  344.87 ! instead of   345.56
+ bathy(1034, 830)=  320.25 ! instead of   321.51
+ bathy(1034, 831)=  320.26 ! instead of   321.06
+ bathy(1034, 832)=  330.64 ! instead of   330.97
+ bathy(1034, 833)=  334.81 ! instead of   335.57
+ bathy(1034, 834)=  329.79 ! instead of   330.54
+ bathy(1034, 835)=  325.82 ! instead of   326.02
+ bathy(1034, 836)=  319.33 ! instead of   319.02
+ bathy(1034, 837)=  296.37 ! instead of   293.78
+ bathy(1034, 838)=  213.46 ! instead of   210.55
+ bathy(1035, 821)= 1625.85 ! instead of  1680.28
+ bathy(1035, 822)= 1672.06 ! instead of  1712.77
+ bathy(1035, 823)= 1703.63 ! instead of  1720.88
+ bathy(1035, 824)= 2595.00 ! instead of  1628.81
+ bathy(1035, 825)= 2595.00 ! instead of  1460.18
+ bathy(1035, 826)= 1170.35 ! instead of  1181.48
+ bathy(1035, 827)=  822.93 ! instead of   830.88
+ bathy(1035, 828)=  538.27 ! instead of   536.83
+ bathy(1035, 829)=  371.65 ! instead of   371.48
+ bathy(1035, 830)=  310.35 ! instead of   310.75
+ bathy(1035, 831)=  301.49 ! instead of   302.08
+ bathy(1035, 832)=  305.85 ! instead of   306.74
+ bathy(1035, 833)=  312.62 ! instead of   313.11
+ bathy(1035, 834)=  312.91 ! instead of   313.39
+ bathy(1035, 835)=  309.52 ! instead of   309.75
+ bathy(1035, 836)=  301.32 ! instead of   300.84
+ bathy(1035, 837)=  281.73 ! instead of   280.18
+ bathy(1035, 838)=  253.67 ! instead of   252.37
+ bathy(1036, 821)= 1364.90 ! instead of  1326.03
+ bathy(1036, 822)= 1414.05 ! instead of  1338.91
+ bathy(1036, 823)= 1486.88 ! instead of  1465.15
+ bathy(1036, 824)= 2595.00 ! instead of  1494.61
+ bathy(1036, 825)= 2595.00 ! instead of  1425.90
+ bathy(1036, 826)= 1248.67 ! instead of  1253.67
+ bathy(1036, 827)= 1005.37 ! instead of  1010.91
+ bathy(1036, 828)=  727.68 ! instead of   735.12
+ bathy(1036, 829)=  465.22 ! instead of   469.86
+ bathy(1036, 830)=  343.38 ! instead of   343.83
+ bathy(1036, 831)=  307.65 ! instead of   308.14
+ bathy(1036, 832)=  302.01 ! instead of   302.61
+ bathy(1036, 833)=  309.18 ! instead of   309.23
+ bathy(1036, 834)=  314.65 ! instead of   314.58
+ bathy(1036, 835)=  311.10 ! instead of   310.95
+ bathy(1036, 836)=  302.73 ! instead of   302.51
+ bathy(1036, 837)=  288.47 ! instead of   288.56
+ bathy(1036, 838)=  269.01 ! instead of   269.18
+ bathy(1037, 821)= 1248.23 ! instead of  1234.86
+ bathy(1037, 822)= 1245.64 ! instead of  1204.90
+ bathy(1037, 823)= 1288.57 ! instead of  1272.42
+ bathy(1037, 824)= 2595.00 ! instead of  1315.98
+ bathy(1037, 825)= 2595.00 ! instead of  1308.68
+ bathy(1037, 826)= 2595.00 ! instead of  1218.59
+ bathy(1037, 827)= 1059.14 ! instead of  1062.69
+ bathy(1037, 828)=  828.76 ! instead of   841.74
+ bathy(1037, 829)=  562.21 ! instead of   571.70
+ bathy(1037, 830)=  404.03 ! instead of   404.16
+ bathy(1037, 831)=  332.36 ! instead of   331.80
+ bathy(1037, 832)=  306.65 ! instead of   306.42
+ bathy(1037, 833)=  311.65 ! instead of   311.53
+ bathy(1037, 834)=  316.88 ! instead of   316.55
+ bathy(1037, 835)=  313.15 ! instead of   312.49
+ bathy(1037, 836)=  308.12 ! instead of   307.42
+ bathy(1037, 837)=  302.28 ! instead of   302.03
+ bathy(1037, 838)=  288.71 ! instead of   288.88
+ bathy(1038, 821)= 1162.31 ! instead of  1193.21
+ bathy(1038, 822)= 1141.03 ! instead of  1148.08
+ bathy(1038, 823)= 1131.23 ! instead of  1131.68
+ bathy(1038, 824)= 1146.07 ! instead of  1146.33
+ bathy(1038, 825)= 2595.00 ! instead of  1154.98
+ bathy(1038, 826)= 2158.00 ! instead of  1102.27
+ bathy(1038, 827)= 2158.00 ! instead of  1003.74
+ bathy(1038, 828)=  829.05 ! instead of   847.52
+ bathy(1038, 829)=  613.31 ! instead of   623.37
+ bathy(1038, 830)=  462.64 ! instead of   462.55
+ bathy(1038, 831)=  377.34 ! instead of   376.26
+ bathy(1038, 832)=  335.83 ! instead of   333.76
+ bathy(1038, 833)=  323.76 ! instead of   323.42
+ bathy(1038, 834)=  321.40 ! instead of   321.59
+ bathy(1038, 835)=  316.79 ! instead of   316.30
+ bathy(1038, 836)=  316.88 ! instead of   316.24
+ bathy(1038, 837)=  316.15 ! instead of   315.95
+ bathy(1038, 838)=  303.57 ! instead of   303.80
+ bathy(1039, 821)= 1024.61 ! instead of  1090.26
+ bathy(1039, 822)=  998.67 ! instead of  1036.29
+ bathy(1039, 823)=  961.71 ! instead of   976.29
+ bathy(1039, 824)=  963.85 ! instead of   965.43
+ bathy(1039, 825)=  982.95 ! instead of   981.26
+ bathy(1039, 826)= 2158.00 ! instead of   961.91
+ bathy(1039, 827)= 1950.00 ! instead of   902.84
+ bathy(1039, 828)= 1950.00 ! instead of   808.24
+ bathy(1039, 829)=  638.57 ! instead of   641.03
+ bathy(1039, 830)=  502.09 ! instead of   502.77
+ bathy(1039, 831)=  426.26 ! instead of   428.48
+ bathy(1039, 832)=  369.25 ! instead of   370.73
+ bathy(1039, 833)=  342.98 ! instead of   343.90
+ bathy(1039, 834)=  330.74 ! instead of   331.99
+ bathy(1039, 835)=  325.47 ! instead of   325.52
+ bathy(1039, 836)=  329.23 ! instead of   329.38
+ bathy(1039, 837)=  326.59 ! instead of   327.14
+ bathy(1039, 838)=  311.79 ! instead of   312.18
+ bathy(1040, 821)=  851.73 ! instead of   894.12
+ bathy(1040, 822)=  796.49 ! instead of   837.37
+ bathy(1040, 823)=  737.24 ! instead of   759.11
+ bathy(1040, 824)=  740.19 ! instead of   742.64
+ bathy(1040, 825)=  777.42 ! instead of   777.81
+ bathy(1040, 826)=  797.66 ! instead of   799.78
+ bathy(1040, 827)= 1950.00 ! instead of   782.76
+ bathy(1040, 828)=  670.00 ! instead of   739.81
+ bathy(1040, 829)=  670.00 ! instead of   645.20
+ bathy(1040, 830)=  534.19 ! instead of   535.78
+ bathy(1040, 831)=  463.91 ! instead of   466.57
+ bathy(1040, 832)=  403.33 ! instead of   407.72
+ bathy(1040, 833)=  368.12 ! instead of   369.73
+ bathy(1040, 834)=  350.53 ! instead of   351.71
+ bathy(1040, 835)=  345.52 ! instead of   344.72
+ bathy(1040, 836)=  346.19 ! instead of   346.21
+ bathy(1040, 837)=  337.34 ! instead of   338.83
+ bathy(1040, 838)=  320.78 ! instead of   322.34
+ bathy(1041, 821)=  646.17 ! instead of   665.64
+ bathy(1041, 822)=  566.99 ! instead of   600.30
+ bathy(1041, 823)=  494.23 ! instead of   517.42
+ bathy(1041, 824)=  489.88 ! instead of   494.70
+ bathy(1041, 825)=  546.52 ! instead of   548.22
+ bathy(1041, 826)=  607.25 ! instead of   609.03
+ bathy(1041, 827)=  632.94 ! instead of   632.18
+ bathy(1041, 828)=  670.00 ! instead of   633.14
+ bathy(1041, 829)=  670.00 ! instead of   612.17
+ bathy(1041, 830)=  670.00 ! instead of   562.90
+ bathy(1041, 831)=  501.72 ! instead of   503.69
+ bathy(1041, 832)=  445.71 ! instead of   448.55
+ bathy(1041, 833)=  401.12 ! instead of   402.91
+ bathy(1041, 834)=  381.71 ! instead of   382.33
+ bathy(1041, 835)=  376.75 ! instead of   374.59
+ bathy(1041, 836)=  372.18 ! instead of   370.73
+ bathy(1041, 837)=  354.11 ! instead of   356.19
+ bathy(1041, 838)=  333.21 ! instead of   335.92
+ bathy(1042, 821)=  443.23 ! instead of   454.38
+ bathy(1042, 822)=  380.24 ! instead of   402.02
+ bathy(1042, 823)=  339.32 ! instead of   349.50
+ bathy(1042, 824)=  330.25 ! instead of   329.88
+ bathy(1042, 825)=  369.87 ! instead of   369.10
+ bathy(1042, 826)=  422.63 ! instead of   421.73
+ bathy(1042, 827)=  466.83 ! instead of   465.90
+ bathy(1042, 828)=  502.48 ! instead of   501.67
+ bathy(1042, 829)=  670.00 ! instead of   600.00
+ bathy(1042, 830)=  670.00 ! instead of   600.00
+ bathy(1042, 831)=  670.00 ! instead of   600.00
+ bathy(1042, 832)=  490.25 ! instead of   491.78
+ bathy(1042, 833)=  446.01 ! instead of   447.78
+ bathy(1042, 834)=  425.58 ! instead of   426.23
+ bathy(1042, 835)=  423.03 ! instead of   421.00
+ bathy(1042, 836)=  415.67 ! instead of   414.15
+ bathy(1042, 837)=  384.68 ! instead of   389.75
+ bathy(1042, 838)=  352.84 ! instead of   357.92
+ bathy(1043, 821)=  296.56 ! instead of   291.84
+ bathy(1043, 822)=  229.09 ! instead of   240.40
+ bathy(1043, 823)=  240.77 ! instead of   242.51
+ bathy(1043, 824)=  225.56 ! instead of   225.76
+ bathy(1043, 825)=  215.72 ! instead of   218.70
+ bathy(1043, 826)=  252.85 ! instead of   250.40
+ bathy(1043, 827)=  322.80 ! instead of   320.93
+ bathy(1043, 828)=  370.03 ! instead of   368.98
+ bathy(1043, 829)=  424.98 ! instead of   422.85
+ bathy(1043, 830)=  670.00 ! instead of   493.31
+ bathy(1043, 831)=  670.00 ! instead of   600.00
+ bathy(1043, 832)=  670.00 ! instead of   600.00
+ bathy(1043, 833)=  499.87 ! instead of   501.55
+ bathy(1043, 834)=  490.39 ! instead of   490.98
+ bathy(1043, 835)=  492.35 ! instead of   492.02
+ bathy(1043, 836)=  484.59 ! instead of   486.82
+ bathy(1043, 837)=  447.61 ! instead of   458.48
+ bathy(1043, 838)=  407.32 ! instead of   414.10
+ bathy(1044, 821)=  220.03 ! instead of   233.31
+ bathy(1044, 822)=  203.32 ! instead of   205.90
+ bathy(1044, 823)=  186.00 ! instead of   181.00
+ bathy(1044, 824)=  176.00 ! instead of   175.50
+ bathy(1044, 825)=  179.00 ! instead of   181.00
+ bathy(1044, 827)=  202.47 ! instead of   204.78
+ bathy(1044, 828)=  238.94 ! instead of   231.58
+ bathy(1044, 829)=  299.73 ! instead of   296.86
+ bathy(1044, 830)=  382.98 ! instead of   384.11
+ bathy(1044, 831)=  670.00 ! instead of   502.39
+ bathy(1044, 832)=  670.00 ! instead of   600.00
+ bathy(1044, 833)=  670.00 ! instead of   551.63
+ bathy(1044, 834)=  549.57 ! instead of   549.78
+ bathy(1044, 835)=  557.46 ! instead of   557.74
+ bathy(1044, 836)=  555.78 ! instead of   558.18
+ bathy(1044, 837)=  545.87 ! instead of   549.68
+ bathy(1044, 838)=  528.62 ! instead of   527.73
+ bathy(1045, 821)=  198.00 ! instead of   225.81
+ bathy(1045, 822)=  193.00 ! instead of   188.00
+ bathy(1045, 823)=  171.00 ! instead of   172.00
+ bathy(1045, 824)=  157.00 ! instead of   158.00
+ bathy(1045, 827)=  176.00 ! instead of   179.00
+ bathy(1045, 829)=  243.63 ! instead of   244.17
+ bathy(1045, 830)=  291.53 ! instead of   288.36
+ bathy(1045, 831)=  416.20 ! instead of   419.35
+ bathy(1045, 832)=  670.00 ! instead of   600.00
+ bathy(1045, 833)=  670.00 ! instead of   600.00
+ bathy(1045, 834)=  670.00 ! instead of   613.72
+ bathy(1045, 835)=  622.33 ! instead of   621.84
+ bathy(1045, 836)=  628.60 ! instead of   633.27
+ bathy(1045, 837)=  644.04 ! instead of   647.64
+ bathy(1045, 838)=  661.98 ! instead of   659.50
+ bathy(1046, 821)=  202.41 ! instead of   213.23
+ bathy(1046, 822)=  179.00 ! instead of   192.00
+ bathy(1046, 823)=  173.00 ! instead of   175.00
+ bathy(1046, 824)=  153.00 ! instead of   152.00
+ bathy(1046, 825)=  140.00 ! instead of   139.00
+ bathy(1046, 826)=  132.00 ! instead of   132.50
+ bathy(1046, 827)=  137.00 ! instead of   136.00
+ bathy(1046, 828)=  169.00 ! instead of   174.00
+ bathy(1046, 829)=  215.57 ! instead of   214.63
+ bathy(1046, 831)=  301.91 ! instead of   306.46
+ bathy(1046, 832)=  450.22 ! instead of   444.14
+ bathy(1046, 833)=  670.00 ! instead of   576.49
+ bathy(1046, 834)=  670.00 ! instead of   663.04
+ bathy(1046, 835)=  670.00 ! instead of   705.32
+ bathy(1046, 836)=  733.68 ! instead of   736.52
+ bathy(1046, 837)=  764.56 ! instead of   767.11
+ bathy(1046, 838)=  795.71 ! instead of   795.87
+ bathy(1047, 821)=  201.12 ! instead of   202.14
+ bathy(1047, 822)=  174.00 ! instead of   186.00
+ bathy(1047, 823)=  159.00 ! instead of   156.00
+ bathy(1047, 825)=  126.00 ! instead of   127.00
+ bathy(1047, 826)=  110.00 ! instead of   111.00
+ bathy(1047, 828)=  184.00 ! instead of   187.00
+ bathy(1047, 830)=  168.00 ! instead of   167.50
+ bathy(1047, 831)=  163.50 ! instead of   163.00
+ bathy(1047, 832)=  267.17 ! instead of   257.78
+ bathy(1047, 833)=  480.03 ! instead of   478.17
+ bathy(1047, 834)=  670.00 ! instead of   656.25
+ bathy(1047, 835)=  670.00 ! instead of   772.78
+ bathy(1047, 836)=  850.01 ! instead of   842.97
+ bathy(1047, 837)=  913.46 ! instead of   907.44
+ bathy(1047, 838)=  968.68 ! instead of   964.90
+ bathy(1048, 822)=  169.00 ! instead of   168.50
+ bathy(1048, 827)=   89.00 ! instead of    88.00
+ bathy(1048, 828)=  119.00 ! instead of   110.00
+ bathy(1048, 829)=  136.00 ! instead of   134.00
+ bathy(1048, 831)=  132.00 ! instead of   134.00
+ bathy(1048, 832)=  156.00 ! instead of   157.50
+ bathy(1048, 833)=  315.85 ! instead of   314.72
+ bathy(1048, 834)=  531.66 ! instead of   531.35
+ bathy(1048, 835)=  731.21 ! instead of   726.76
+ bathy(1048, 836)=  888.46 ! instead of   875.71
+ bathy(1048, 837)= 1015.99 ! instead of  1007.22
+ bathy(1048, 838)= 1113.96 ! instead of  1110.73
+ bathy(1049, 821)=  204.27 ! instead of   203.15
+ bathy(1049, 822)=  162.00 ! instead of   162.50
+ bathy(1049, 823)=  135.00 ! instead of   137.00
+ bathy(1049, 825)=   87.00 ! instead of    88.00
+ bathy(1049, 826)=   72.00 ! instead of    71.00
+ bathy(1049, 827)=   71.00 ! instead of    70.00
+ bathy(1049, 828)=   71.00 ! instead of    73.00
+ bathy(1049, 829)=   90.00 ! instead of    87.00
+ bathy(1049, 830)=  121.00 ! instead of   122.50
+ bathy(1049, 831)=  102.00 ! instead of   103.00
+ bathy(1049, 832)=  116.00 ! instead of   119.00
+ bathy(1049, 833)=  163.00 ! instead of   165.00
+ bathy(1049, 834)=  327.66 ! instead of   320.12
+ bathy(1049, 835)=  533.25 ! instead of   527.49
+ bathy(1049, 836)=  736.67 ! instead of   721.37
+ bathy(1049, 837)=  938.30 ! instead of   927.98
+ bathy(1049, 838)= 1096.01 ! instead of  1093.85
+ bathy(1050, 821)=  233.97 ! instead of   235.01
+ bathy(1050, 822)=  192.00 ! instead of   183.00
+ bathy(1050, 823)=  125.00 ! instead of   126.00
+ bathy(1050, 824)=   91.00 ! instead of    92.00
+ bathy(1050, 825)=   75.50 ! instead of    75.00
+ bathy(1050, 826)=   52.50 ! instead of    55.00
+ bathy(1050, 828)=   56.00 ! instead of    58.00
+ bathy(1050, 829)=   63.00 ! instead of    62.00
+ bathy(1050, 830)=  106.50 ! instead of   107.00
+ bathy(1050, 831)=   92.00 ! instead of    91.00
+ bathy(1050, 832)=   95.00 ! instead of    96.50
+ bathy(1050, 833)=  106.00 ! instead of   105.00
+ bathy(1050, 834)=  120.00 ! instead of   120.50
+ bathy(1050, 835)=  172.00 ! instead of   175.00
+ bathy(1050, 836)=  482.96 ! instead of   469.06
+ bathy(1050, 837)=  739.38 ! instead of   729.62
+ bathy(1050, 838)=  946.61 ! instead of   944.22
+! Faroes Bank Channel
+! modification from original file : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.02
+! written to : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.03
+ bathy(1098, 794)=  922.65 ! instead of   814.00
+ bathy(1098, 795)=  600.12 ! instead of   532.63
+ bathy(1098, 796)=  336.11 ! instead of   312.45
+ bathy(1098, 798)=  539.22 ! instead of   507.71
+ bathy(1098, 799)=  897.69 ! instead of   870.69
+ bathy(1098, 800)= 1111.56 ! instead of  1100.12
+ bathy(1098, 801)= 1176.04 ! instead of  1167.27
+ bathy(1098, 802)= 1206.87 ! instead of  1189.71
+ bathy(1098, 803)= 1203.26 ! instead of  1181.77
+ bathy(1099, 794)=  874.78 ! instead of   844.24
+ bathy(1099, 795)=  508.98 ! instead of   482.55
+ bathy(1099, 798)=  581.08 ! instead of   558.77
+ bathy(1099, 799)=  917.76 ! instead of   908.37
+ bathy(1099, 800)= 1099.50 ! instead of  1094.83
+ bathy(1099, 801)= 1155.66 ! instead of  1150.68
+ bathy(1099, 802)= 1178.78 ! instead of  1166.76
+ bathy(1099, 803)= 1050.00 ! instead of  1145.89
+ bathy(1100, 794)=  912.96 ! instead of   906.75
+ bathy(1100, 795)=  578.94 ! instead of   570.15
+ bathy(1100, 797)=  370.55 ! instead of   358.57
+ bathy(1100, 798)=  684.18 ! instead of   657.70
+ bathy(1100, 799)=  944.56 ! instead of   916.77
+ bathy(1100, 800)= 1066.03 ! instead of  1046.08
+ bathy(1100, 801)= 1104.20 ! instead of  1085.67
+ bathy(1100, 802)= 1115.54 ! instead of  1093.31
+ bathy(1100, 803)= 1050.00 ! instead of  1065.78
+ bathy(1101, 794)=  992.27 ! instead of   996.49
+ bathy(1101, 795)=  753.88 ! instead of   760.71
+ bathy(1101, 796)=  488.51 ! instead of   478.18
+ bathy(1101, 797)=  510.55 ! instead of   466.15
+ bathy(1101, 798)=  652.55 ! instead of   564.59
+ bathy(1101, 799)=  811.04 ! instead of   720.53
+ bathy(1101, 800)=  902.39 ! instead of   849.38
+ bathy(1101, 801)=  942.83 ! instead of   906.15
+ bathy(1101, 802)=  957.17 ! instead of   925.01
+ bathy(1101, 803)=  910.00 ! instead of   932.50
+ bathy(1102, 794)= 1088.33 ! instead of  1090.19
+ bathy(1102, 795)=  893.68 ! instead of   893.43
+ bathy(1102, 796)=  548.73 ! instead of   534.27
+ bathy(1102, 797)=  436.01 ! instead of   367.78
+ bathy(1102, 798)=  426.41 ! instead of   299.94
+ bathy(1102, 799)=  488.94 ! instead of   374.58
+ bathy(1102, 800)=  569.30 ! instead of   508.82
+ bathy(1102, 801)=  627.83 ! instead of   590.59
+ bathy(1102, 802)=  681.43 ! instead of   653.23
+ bathy(1102, 803)=  870.00 ! instead of   800.00
+ bathy(1103, 794)= 1188.53 ! instead of  1176.60
+ bathy(1103, 795)=  909.62 ! instead of   879.47
+ bathy(1103, 796)=  485.19 ! instead of   460.77
+ bathy(1103, 800)=  284.92 ! instead of   265.26
+ bathy(1103, 801)=  368.68 ! instead of   349.01
+ bathy(1103, 802)=  469.40 ! instead of   452.47
+ bathy(1103, 803)=  870.00 ! instead of   800.00
+ bathy(1104, 794)= 1070.55 ! instead of  1033.19
+ bathy(1104, 795)=  732.79 ! instead of   707.37
+ bathy(1104, 796)=  417.51 ! instead of   398.08
+ bathy(1104, 801)=  207.07 ! instead of   206.43
+ bathy(1104, 802)=  398.44 ! instead of   388.65
+ bathy(1104, 803)=  870.00 ! instead of   800.00
+ bathy(1105, 794)=  886.65 ! instead of   856.47
+ bathy(1105, 795)=  663.94 ! instead of   664.99
+ bathy(1105, 796)=  507.13 ! instead of   508.92
+ bathy(1105, 797)=  415.08 ! instead of   415.93
+ bathy(1105, 798)=  271.64 ! instead of   273.56
+ bathy(1105, 802)=  870.00 ! instead of   800.00
+ bathy(1105, 803)=  870.00 ! instead of   800.00
+ bathy(1106, 794)=  811.08 ! instead of   808.21
+ bathy(1106, 795)=  704.30 ! instead of   707.17
+ bathy(1106, 798)=  543.34 ! instead of   556.87
+ bathy(1106, 801)=  286.04 ! instead of   284.23
+ bathy(1106, 802)=  870.00 ! instead of   800.00
+ bathy(1106, 803)=  479.45 ! instead of   454.88
+ bathy(1107, 794)=  775.57 ! instead of   773.18
+ bathy(1107, 796)=  777.76 ! instead of   798.66
+ bathy(1107, 797)=  839.27 ! instead of   862.12
+ bathy(1107, 798)=  786.46 ! instead of   802.94
+ bathy(1107, 799)=  616.51 ! instead of   641.88
+ bathy(1107, 800)=  459.75 ! instead of   482.06
+ bathy(1107, 801)=  870.00 ! instead of   800.00
+ bathy(1107, 802)=  870.00 ! instead of   800.00
+ bathy(1107, 803)=  402.97 ! instead of   351.31
+ bathy(1108, 794)=  717.97 ! instead of   707.85
+ bathy(1108, 796)=  857.58 ! instead of   871.20
+ bathy(1108, 797)=  936.66 ! instead of   952.34
+ bathy(1108, 798)=  907.92 ! instead of   914.78
+ bathy(1108, 799)=  870.00 ! instead of   832.75
+ bathy(1108, 800)=  870.00 ! instead of   800.00
+ bathy(1108, 801)=  870.00 ! instead of   800.00
+ bathy(1108, 802)=  547.83 ! instead of   471.76
+ bathy(1108, 803)=  295.79 ! instead of   262.37
+ bathy(1109, 795)=  764.92 ! instead of   767.42
+ bathy(1109, 796)=  926.14 ! instead of   930.35
+ bathy(1109, 797)=  972.19 ! instead of   980.05
+ bathy(1109, 798)=  913.24 ! instead of   917.65
+ bathy(1109, 799)=  809.62 ! instead of   802.40
+ bathy(1109, 800)=  696.07 ! instead of   655.89
+ bathy(1109, 801)=  547.94 ! instead of   456.96
+ bathy(1109, 802)=  362.97 ! instead of   291.60
+ bathy(1110, 795)=  839.87 ! instead of   848.44
+ bathy(1110, 796)=  971.77 ! instead of   971.41
+ bathy(1110, 797)=  926.35 ! instead of   927.16
+ bathy(1110, 798)=  770.04 ! instead of   763.56
+ bathy(1110, 799)=  590.87 ! instead of   567.99
+ bathy(1110, 800)=  437.22 ! instead of   403.40
+ bathy(1110, 801)=  275.59 ! instead of   255.87
+ bathy(1111, 795)=  930.41 ! instead of   941.73
+ bathy(1111, 796)=  978.91 ! instead of   981.62
+ bathy(1111, 797)=  779.40 ! instead of   778.83
+ bathy(1111, 798)=  520.39 ! instead of   509.41
+ bathy(1111, 799)=  332.25 ! instead of   319.15
+ bathy(1112, 794)=  727.99 ! instead of   737.05
+ bathy(1112, 795)=  970.59 ! instead of   975.16
+ bathy(1112, 796)=  925.93 ! instead of   929.50
+ bathy(1112, 797)=  591.75 ! instead of   598.59
+ bathy(1112, 798)=  342.73 ! instead of   341.55
+ bathy(1112, 799)=  204.06 ! instead of   203.91
+ bathy(1112, 802)=  200.81 ! instead of   200.93
+ bathy(1112, 803)=  201.68 ! instead of   201.95
+ bathy(1113, 794)=  735.10 ! instead of   743.62
+ bathy(1113, 795)=  977.65 ! instead of   981.04
+ bathy(1113, 796)=  866.32 ! instead of   870.50
+ bathy(1113, 797)=  512.84 ! instead of   519.93
+ bathy(1113, 798)=  338.17 ! instead of   342.65
+ bathy(1113, 799)=  227.93 ! instead of   227.59
+ bathy(1113, 801)=  210.23 ! instead of   210.81
+ bathy(1113, 802)=  215.79 ! instead of   216.73
+ bathy(1113, 803)=  204.75 ! instead of   204.95
+ bathy(1114, 794)=  813.40 ! instead of   833.26
+ bathy(1114, 795)=  996.23 ! instead of  1003.44
+ bathy(1114, 796)=  852.35 ! instead of   862.04
+ bathy(1114, 797)=  571.98 ! instead of   575.55
+ bathy(1114, 798)=  476.07 ! instead of   483.32
+ bathy(1114, 799)=  449.67 ! instead of   459.40
+ bathy(1114, 800)=  372.64 ! instead of   382.02
+ bathy(1114, 801)=  299.31 ! instead of   304.82
+ bathy(1114, 802)=  257.53 ! instead of   256.66
+ bathy(1114, 803)=  212.28 ! instead of   211.84
+ bathy(1115, 794)=  832.71 ! instead of   832.38
+ bathy(1115, 795)=  976.19 ! instead of   975.61
+ bathy(1115, 796)=  889.78 ! instead of   905.26
+ bathy(1115, 797)=  720.16 ! instead of   720.18
+ bathy(1115, 798)=  659.84 ! instead of   671.72
+ bathy(1115, 799)=  628.78 ! instead of   659.84
+ bathy(1115, 800)=  530.75 ! instead of   550.75
+ bathy(1115, 801)=  409.55 ! instead of   423.47
+ bathy(1115, 802)=  323.14 ! instead of   324.31
+ bathy(1115, 803)=  271.13 ! instead of   269.47
+ bathy(1116, 794)=  727.23 ! instead of   701.61
+ bathy(1116, 795)=  885.66 ! instead of   870.57
+ bathy(1116, 796)=  925.70 ! instead of   942.99
+ bathy(1116, 797)=  879.67 ! instead of   906.16
+ bathy(1116, 798)=  811.30 ! instead of   854.00
+ bathy(1116, 799)=  770.61 ! instead of   831.26
+ bathy(1116, 800)=  712.47 ! instead of   745.68
+ bathy(1116, 801)=  606.64 ! instead of   630.37
+ bathy(1116, 802)=  491.95 ! instead of   510.69
+ bathy(1116, 803)=  402.85 ! instead of   421.64
+ bathy(1117, 794)=  524.37 ! instead of   497.41
+ bathy(1117, 795)=  710.21 ! instead of   685.51
+ bathy(1117, 796)=  856.24 ! instead of   849.46
+ bathy(1117, 797)=  936.32 ! instead of   946.40
+ bathy(1117, 798)=  927.62 ! instead of   967.55
+ bathy(1117, 799)=  907.73 ! instead of   960.56
+ bathy(1117, 800)=  884.48 ! instead of   907.71
+ bathy(1117, 801)=  829.78 ! instead of   836.39
+ bathy(1117, 802)=  752.76 ! instead of   768.63
+ bathy(1117, 803)=  658.32 ! instead of   687.69
+ bathy(1118, 794)=  250.85 ! instead of   246.18
+ bathy(1118, 795)=  491.57 ! instead of   463.60
+ bathy(1118, 796)=  689.86 ! instead of   665.84
+ bathy(1118, 797)=  861.38 ! instead of   846.86
+ bathy(1118, 798)=  959.05 ! instead of   964.76
+ bathy(1118, 799)= 1004.54 ! instead of  1019.06
+ bathy(1118, 800)= 1013.87 ! instead of  1016.35
+ bathy(1118, 801)=  997.09 ! instead of   981.90
+ bathy(1118, 802)=  974.02 ! instead of   964.91
+ bathy(1118, 803)=  930.41 ! instead of   937.66
+ bathy(1119, 796)=  479.04 ! instead of   462.19
+ bathy(1119, 797)=  694.79 ! instead of   666.41
+ bathy(1119, 798)=  875.05 ! instead of   851.77
+ bathy(1119, 799)=  993.22 ! instead of   978.80
+ bathy(1119, 800)= 1053.72 ! instead of  1043.02
+ bathy(1119, 801)= 1080.30 ! instead of  1068.17
+ bathy(1119, 802)= 1085.24 ! instead of  1080.64
+ bathy(1119, 803)= 1067.23 ! instead of  1066.14
+! Gibraltar with clift
+! modification from original file : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc
+! written to : ORCA025_bathy_etopo1_gebco1_smoothed_coast_corrected.nc.01
+ bathy(1120, 647)= 1693.14 ! instead of  1659.63
+ bathy(1120, 648)= 1662.87 ! instead of  1667.09
+ bathy(1120, 649)= 1429.81 ! instead of  1413.09
+ bathy(1120, 650)= 1364.49 ! instead of  1328.12
+ bathy(1120, 651)= 1357.66 ! instead of  1336.47
+ bathy(1120, 652)= 1324.20 ! instead of  1301.70
+ bathy(1120, 653)= 1200.00 ! instead of  1198.35
+ bathy(1120, 654)= 1038.85 ! instead of  1033.98
+ bathy(1120, 655)=  882.34 ! instead of   877.97
+ bathy(1120, 656)=  716.81 ! instead of   707.93
+ bathy(1120, 657)=  580.77 ! instead of   566.25
+ bathy(1120, 658)=  403.70 ! instead of   390.42
+ bathy(1121, 647)= 1265.54 ! instead of  1200.77
+ bathy(1121, 648)= 1240.97 ! instead of  1197.77
+ bathy(1121, 649)= 1115.87 ! instead of  1068.18
+ bathy(1121, 650)= 1127.13 ! instead of  1074.85
+ bathy(1121, 651)= 1166.79 ! instead of  1130.79
+ bathy(1121, 652)= 1161.38 ! instead of  1143.13
+ bathy(1121, 653)= 1200.00 ! instead of  1042.01
+ bathy(1121, 654)=  897.66 ! instead of   894.13
+ bathy(1121, 655)=  784.09 ! instead of   771.25
+ bathy(1121, 656)=  630.88 ! instead of   609.35
+ bathy(1121, 657)=  485.26 ! instead of   454.51
+ bathy(1122, 647)=  756.18 ! instead of   652.60
+ bathy(1122, 648)=  770.74 ! instead of   692.05
+ bathy(1122, 649)=  786.90 ! instead of   708.45
+ bathy(1122, 650)=  860.68 ! instead of   789.65
+ bathy(1122, 651)=  934.72 ! instead of   867.20
+ bathy(1122, 652)=  967.16 ! instead of   923.65
+ bathy(1122, 653)= 1200.00 ! instead of   860.77
+ bathy(1122, 654)=  759.81 ! instead of   746.60
+ bathy(1122, 655)=  647.76 ! instead of   618.33
+ bathy(1122, 656)=  480.51 ! instead of   435.74
+ bathy(1122, 657)=  328.16 ! instead of   293.09
+ bathy(1123, 649)=  441.80 ! instead of   385.11
+ bathy(1123, 650)=  537.58 ! instead of   478.98
+ bathy(1123, 651)=  625.79 ! instead of   561.02
+ bathy(1123, 652)=  694.38 ! instead of   642.47
+ bathy(1123, 653)= 1200.00 ! instead of   633.74
+ bathy(1123, 654)=  557.79 ! instead of   538.55
+ bathy(1123, 655)=  433.36 ! instead of   392.07
+ bathy(1124, 652)=  395.01 ! instead of   346.13
+ bathy(1124, 653)= 1100.00 ! instead of   395.72
+ bathy(1125, 653)=  800.00 ! instead of   320.00
+ bathy(1128, 654)=  315.35 ! instead of   350.07
+ bathy(1129, 653)=  330.43 ! instead of   359.75
+ bathy(1129, 654)=  504.72 ! instead of   553.10
+ bathy(1129, 655)=  344.87 ! instead of   399.89

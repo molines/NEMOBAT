@@ -1,0 +1,11 @@
+#
+
+rm -f APPLYCOAST/batcoast
+rm -f COMBINE/combine
+rm -f CORRECT/correct
+rm -f INTERP0/batinterp1
+rm -f INTERP0/batinterp2
+rm -r INTERP0/OLD
+rm -f SMOOTHING/batsmooth
+rm -f SMOOTHING/*.o
+rm -f SUBROUTINES/*.o

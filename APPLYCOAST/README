@@ -1,0 +1,48 @@
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 225 $
+   !!  $Id: README 225 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+Batcoast: 
+---------------------------------------------------------------------------
+- program originaly written by Elisabeth Remy or Laure Siefridt from
+     the package OPABAT; 
+
+- adapted to netcdf format by Claude Talandier 
+  and to bathymetry in meters only (partial steps) by A.M. Treguier
+
+---------------------------------------------------------------------------
+This particular code is suitable for ORCA 0.25°:
+
+
+INPUT files:
+first try:   - coast_original_ORCA_R025.a: is an ascii file  provided by the MERCATOR team.
+ - coast_ORCA_R025_drakkar.ascii: an edited file with a few grid points changed. 
+    a few sea grid point removed from Asia; 
+    one grid point at the tip of Cape St Vincent changed from land to ocean. 
+                          
+
+ - ../bathy_meter_guess_ORCA_R025.nc:   
+                      bathymetry in "meters" obtained directly from the 
+ 		      interpolation of the etopo2bedmap.nc (MERCATOR POG team) file.
+                      (first step, INTERP0). The initial file was bathystats.guess.median,
+                      a FORTRAN sequential file provided by E. Remy. 
+                      it has been converted into the file: bathy_meter_guess_ORCA_R025.nc
+                      using the program bathystats_to_netcdf.f90 in 
+                      /home1/porzig/treguier/PROJ/DRAKKAR/BATHY/OPABAT025
+
+OUTPUT file:
+ - bathy_meter_coast_ORCA_R025.nc
+
+---------------------------------------------------------------------------
+RESULT OF EXECUTION
+---------------------------------------------------------------------------
+ reading coast mask with format:1442i1
+   Coast mask read ok, max =            1
+   Coast mask read ok, min =            0
+   The coastal mask has been applied. 
+   553341  ocean points were put to 0
+   128  points were land in first guess bathy but ocean in the mask
+   0 new ocean points extrapolated from neighbors iter             1
+   This is an ORCA R025 configuration, nperio=4
+

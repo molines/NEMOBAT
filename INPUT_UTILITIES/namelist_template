@@ -1,0 +1,23 @@
+!! Template namelist for grd2nc 
+!!edit to fit your own requirement 
+!!template produced by grd2nc -p 
+!
+! input grid netcdf file
+&input_grd
+  cnamegrd  =   dummy.grd  ! name of grd input file
+  cside     =        side  ! name of side dimension
+  cxysize   =      xysize  ! name of xysize dimension
+  cx_range  =     x_range  ! name of x_range  variable
+  cy_range  =     y_range  ! name of y_range  variable
+  cz_range  =     z_range  ! name of z_range  variable
+  cspacing  =     spacing  ! name of spacing  variable
+  cdim      =   dimension  ! name of dimension  variable
+  cdatain   =           z  ! name of input   variable
+/
+! output grid netcdf file
+&output_grd
+  cnamenc   =    dummy.nc  ! name of nc output file
+  clon      =         lon  ! name of longitude dimension
+  clat      =         lat  ! name of latitude dimension
+  cdataout  =       Bathy  ! name of output   variable
+/

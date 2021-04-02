@@ -1,0 +1,371 @@
+!! FIRST MODIFICATIONS BY ANNE MARIE TREGUIER, SEPTEMBER 2003 
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 225 $
+   !!  $Id: orca05_hand_modif.h90 225 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+ 
+! ################################################################
+! Name of the zoomed area : vema fracture zone
+! zoom ration :        2
+! i min :      482
+! i max :      522
+! j min :      241
+! j max :      281
+ 
+bathy( 495, 272) = 4600
+bathy( 494, 272) = 4600
+bathy( 493, 272) = 4600
+bathy( 492, 272) = 4600
+bathy( 491, 272) = 4600
+bathy( 490, 272) = 4600
+bathy( 489, 272) = 4600
+ 
+! ################################################################
+! Name of the zoomed area : Lesser Antilles and windward islands
+! zoom ration :        2
+! i min :      433
+! i max :      473
+! j min :      256
+! j max :      296
+ 
+bathy( 453, 281) =  220
+bathy( 454, 280) =  220
+bathy( 454, 279) =  220
+bathy( 454, 278) =  220
+bathy( 453, 277) =  220
+bathy( 453, 276) =  220
+bathy( 453, 275) =  220
+bathy( 452, 274) =  220
+ 
+! ################################################################
+! Name of the zoomed area : florida strait
+! zoom ration :        2
+! i min :      388
+! i max :      428
+! j min :      274
+! j max :      314
+ 
+bathy( 415, 300) =  800
+bathy( 416, 300) =  800
+bathy( 416, 301) =  800
+bathy( 416, 302) =  800
+bathy( 416, 303) =  800
+bathy( 416, 304) =  800
+bathy( 416, 305) =  800
+bathy( 416, 306) =  800
+bathy( 417, 306) =  800
+bathy( 417, 307) =  800
+bathy( 417, 308) =  800
+ 
+! ################################################################
+! Name of the zoomed area : Oceanographer fracture zone
+! zoom ration :        2
+! i min :      488
+! i max :      528
+! j min :      305
+! j max :      345
+ 
+bathy( 503, 326) = 3000  ! instead of 2918
+bathy( 503, 325) = 3000  ! instead of 2458
+bathy( 504, 325) = 3000  ! instead of 2269
+bathy( 505, 325) = 3000  ! instead of 2610
+bathy( 506, 325) = 3000  ! instead of 2619
+bathy( 507, 325) = 3000  ! instead of 2481
+bathy( 507, 324) = 3000  ! instead of 2853
+
+! ################################################################
+! Name of the zoomed area : Gibbs fracture zone
+! zoom ration :        2
+! i min :      488
+! i max :      528
+! j min :      350
+! j max :      390
+ 
+bathy( 508, 371) = 3600
+bathy( 509, 371) = 3600
+bathy( 509, 372) = 3600
+bathy( 510, 372) = 3600
+bathy( 511, 372) = 3600
+bathy( 512, 372) = 3600
+bathy( 513, 372) = 3600
+bathy( 514, 372) = 3600
+bathy( 515, 372) = 3600
+bathy( 516, 372) = 3600
+bathy( 517, 372) = 3600
+bathy( 518, 372) = 3600
+ 
+! ################################################################
+! Name of the zoomed area : Gibraltar
+! zoom ration :        2
+! i min :      539
+! i max :      579
+! j min :      304
+! j max :      344
+ 
+bathy( 564, 327) =  285
+bathy( 563, 327) =  400
+ 
+! ################################################################
+! Name of the zoomed area : Wyville thomson ridge, Faroe bank channel
+! zoom ration :        2
+! i min :      530
+! i max :      570
+! j min :      377
+! j max :      417
+ 
+bathy( 552, 402) =  800
+bathy( 553, 402) =  800
+bathy( 553, 401) =  800
+bathy( 554, 401) =  800
+bathy( 554, 400) =  800
+bathy( 559, 398) =  950
+bathy( 553, 398) =  600
+bathy( 554, 398) =  600
+bathy( 555, 397) =  600
+bathy( 556, 397) =  600
+ 
+! ################################################################
+! Name of the zoomed area : Denmark Strait
+! zoom ration :        2
+! i min :      497
+! i max :      537
+! j min :      395
+! j max :      435
+ 
+bathy( 522, 417) =  600
+bathy( 522, 416) =  600
+bathy( 521, 416) =  600
+ 
+! ################################################################
+! Name of the zoomed area : Orkney passage
+! zoom ration :        2
+! i min :      482
+! i max :      522
+! j min :       70
+! j max :      110
+ 
+ 
+! ################################################################
+! Name of the zoomed area : VEMA CHANNEL
+! zoom ration :        2
+! i min :      494
+! i max :      534
+! j min :      157
+! j max :      197
+ 
+bathy( 497, 185) = 4200
+bathy( 497, 186) = 4200
+ 
+! ################################################################
+! Name of the zoomed area : Valvis Ridge
+! zoom ration :        2
+! i min :      545
+! i max :      585
+! j min :      154
+! j max :      194
+ 
+bathy( 566, 172) = 3500
+bathy( 566, 171) = 3500
+bathy( 565, 170) = 3500
+ 
+! ################################################################
+! Name of the zoomed area : Rio de Janeiro fracture zone
+! zoom ration :        2
+! i min :      527
+! i max :      567
+! j min :      181
+! j max :      221
+ 
+bathy( 547, 203) = 3900
+bathy( 548, 203) = 3900
+bathy( 549, 203) = 3900
+bathy( 550, 203) = 3900
+bathy( 551, 203) = 3900
+bathy( 552, 203) = 3900
+bathy( 553, 203) = 3900
+bathy( 554, 203) = 3900
+ 
+! ################################################################
+! Name of the zoomed area : Romanche fracture zone
+! zoom ration :        2
+! i min :      521
+! i max :      561
+! j min :      223
+! j max :      263
+ 
+bathy( 531, 250) = 3700
+bathy( 534, 249) = 3700
+bathy( 535, 250) = 3700
+bathy( 536, 250) = 3700
+bathy( 537, 250) = 3700
+bathy( 538, 251) = 3700
+bathy( 539, 251) = 3700
+bathy( 542, 250) = 4200
+bathy( 543, 250) = 4200
+bathy( 544, 250) = 4200
+bathy( 545, 250) = 4200
+bathy( 546, 250) = 4200
+ 
+! ################################################################
+! Name of the zoomed area : Florida Strait South
+! zoom ration :        2
+! i min :      391
+! i max :      431
+! j min :      277
+! j max :      317
+ 
+bathy( 417, 301) =  650
+bathy( 417, 300) =  650
+bathy( 417, 299) =  600
+bathy( 417, 298) =  600
+bathy( 418, 298) =  600
+bathy( 418, 297) =  600
+bathy( 419, 297) =  600
+bathy( 420, 296) =  600
+bathy( 420, 297) =  600
+bathy( 421, 296) =  600
+ 
+ 
+! ################################################################
+! Name of the zoomed area : red sea
+! zoom ration :        2
+! i min :      638
+! i max :      678
+! j min :      253
+! j max :      293
+ 
+bathy( 662, 275) =  225
+bathy( 662, 276) =  190
+bathy( 662, 277) =  160
+bathy( 661, 277) =  140
+bathy( 661, 278) =  140
+bathy( 661, 279) =  160
+bathy( 660, 279) =  190
+bathy( 660, 281) =  210
+bathy( 659, 281) =  210
+bathy( 659, 281) =  250
+bathy( 652, 291) = 1200
+bathy( 653, 291) = 1200
+bathy( 653, 290) = 1200
+bathy( 654, 290) = 1200
+bathy( 654, 289) = 1200
+bathy( 655, 289) = 1200
+bathy( 655, 288) = 1200
+bathy( 655, 287) = 1200
+bathy( 656, 287) = 1200
+bathy( 656, 286) = 1200
+bathy( 656, 285) = 1200
+bathy( 657, 285) = 1200
+bathy( 657, 284) = 1200
+bathy( 658, 284) = 1000
+
+! ################################################################
+! Name of the zoomed area : Mozambique -Comores
+! zoom ration :        2
+! i min :      641
+! i max :      681
+! j min :      199
+! j max :      239
+ 
+bathy( 668, 225) =  200
+bathy( 669, 225) =  200
+bathy( 666, 224) =  200
+bathy( 664, 225) =  200
+bathy( 663, 225) =  200
+bathy( 662, 226) =  200
+bathy( 662, 227) =  200
+ 
+! ################################################################
+! Name of the zoomed area : Mascarene ridge
+! zoom ration :        2
+! i min :      674
+! i max :      714
+! j min :      209
+! j max :      249
+ 
+bathy( 697, 223) =  500  ! instead of  908
+bathy( 697, 224) =  800
+ 
+! ################################################################
+! Name of the zoomed area : Indonesian throughflow
+! zoom ration :        2
+! i min :       79
+! i max :      119
+! j min :      211
+! j max :      251
+!
+!                            Massakar
+bathy(  92, 244) = 1540
+!                          Lombok 
+bathy(  87, 233) =  350  !  
+!                          flores sea/sumba strait
+bathy(  94, 233) =  300  !  
+!                          Ombai strait
+bathy( 104, 233) =   40
+bathy( 105, 233) = 1400
+!                          Timor
+bathy(  99, 229) =  100
+bathy(  93, 238) =  550
+bathy( 105, 228) = 1200
+bathy( 102, 227) = 1200
+ 
+! ################################################################
+! Name of the zoomed area : Timor North
+bathy( 120, 236) =  600
+
+!! SECOND  MODIFICATIONS, DECEMBER 2006 
+!
+!  Ariane's new modifs in Indonesian Trhoughflow region 
+! 
+ bathy(   74 ,  246 ) =   16.0 ! (Ariane)  instead of   30.0 (Anne Marie) 
+ bathy(   87 ,  233 ) =  210.0 ! (Ariane)  instead of  350.0 (Anne Marie) 
+ bathy(   89 ,  232 ) = 1030.0 ! (Ariane)  instead of  287.0 (Anne Marie) 
+ bathy(   90 ,  232 ) = 1040.0 ! (Ariane)  instead of    0.0 (Anne Marie) 
+ bathy(   90 ,  265 ) =   20.0 ! (Ariane)  instead of   19.0 (Anne Marie) 
+ bathy(   90 ,  266 ) =    4.0 ! (Ariane)  instead of   63.0 (Anne Marie) 
+ bathy(   91 ,  232 ) = 1050.0 ! (Ariane)  instead of    0.0 (Anne Marie) 
+ bathy(   91 ,  298 ) =    4.0 ! (Ariane)  instead of   20.0 (Anne Marie) 
+ bathy(   93 ,  238 ) =  615.0 ! (Ariane)  instead of  550.0 (Anne Marie) 
+ bathy(   93 ,  239 ) =  615.0 ! (Ariane)  instead of  591.5 (Anne Marie) 
+ bathy(   94 ,  233 ) =    0.0 ! (Ariane)  instead of  300.0 (Anne Marie) 
+ bathy(   94 ,  298 ) =    4.0 ! (Ariane)  instead of   30.0 (Anne Marie) 
+ bathy(   95 ,  260 ) =   80.0 ! (Ariane)  instead of  214.0 (Anne Marie) 
+ bathy(   95 ,  272 ) =    0.0 ! (Ariane)  instead of    4.0 (Anne Marie) 
+ bathy(   95 ,  273 ) =    0.0 ! (Ariane)  instead of    4.0 (Anne Marie) 
+ bathy(   95 ,  299 ) =   25.0 ! (Ariane)  instead of   42.5 (Anne Marie) 
+ bathy(   96 ,  275 ) =  120.0 ! (Ariane)  instead of   63.5 (Anne Marie) 
+ bathy(   99 ,  263 ) =    4.0 ! (Ariane)  instead of   24.0 (Anne Marie) 
+ bathy(  102 ,  227 ) = 1300.0 ! (Ariane)  instead of 1200.0 (Anne Marie) 
+ bathy(  102 ,  228 ) = 1300.0 ! (Ariane)  instead of 1110.0 (Anne Marie) 
+ bathy(  105 ,  228 ) = 1300.0 ! (Ariane)  instead of 1200.0 (Anne Marie) 
+ bathy(  106 ,  270 ) =   50.0 ! (Ariane)  instead of  377.0 (Anne Marie) 
+ bathy(  107 ,  261 ) = 1300.0 ! (Ariane)  instead of 2283.0 (Anne Marie) 
+ bathy(  107 ,  270 ) =    4.0 ! (Ariane)  instead of   34.5 (Anne Marie) 
+ bathy(  142 ,  229 ) =    1.0 ! (Ariane)  instead of    3.0 (Anne Marie) 
+ bathy(  142 ,  230 ) =    2.0 ! (Ariane)  instead of    4.0 (Anne Marie) 
+ bathy(  142 ,  231 ) =    1.0 ! (Ariane)  instead of    3.0 (Anne Marie) 
+
+! CORRECT HOLE in WEDDELL SEA
+ bathy(  526 ,   11 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  527 ,   11 ) =   40.0 ! (from Gurvan 30 levels)  
+ bathy(  527 ,   12 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  528 ,   12 ) =  100.7 ! (from Gurvan 30 levels)  
+ bathy(  528 ,   13 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  529 ,   13 ) =  169.4 ! (from Gurvan 30 levels)  
+ bathy(  529 ,   14 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  530 ,   14 ) =  169.4 ! (from Gurvan 30 levels)  
+ bathy(  530 ,   15 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  531 ,   15 ) =  197.4 ! (from Gurvan 30 levels)  
+ bathy(  531 ,   16 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  531 ,   17 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  531 ,   18 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  531 ,   19 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  531 ,   20 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  532 ,   16 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  532 ,   17 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  532 ,   18 ) =  312.7 ! (from Gurvan 30 levels)  
+ bathy(  532 ,   19 ) =  241.1 ! (from Gurvan 30 levels)  
+ bathy(  532 ,   20 ) =  197.4 ! (from Gurvan 30 levels)  
+ bathy(  532 ,   21 ) =  135.2 ! (from Gurvan 30 levels)  
+

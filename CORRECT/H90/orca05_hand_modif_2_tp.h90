@@ -1,0 +1,879 @@
+!
+   !! -------------------------------------------------------------------------
+   !!  $Date: 2009-04-29 15:52:46 +0200 (Wed, 29 Apr 2009) $
+   !!  $Rev: 225 $
+   !!  $Id: orca05_hand_modif_2_tp.h90 225 2009-04-29 13:52:46Z molines $
+   !! -------------------------------------------------------------------------
+! Hand modifications by Anne Marie Treguier
+! on ORCA_R025 bathymetry for partial steps.
+! note: this version for october 2005 does not correct
+! a few grid island points that were in fact masked in the
+! ORCA025 mask,0so the correction is counter-productive!
+!
+! ################################################################
+! Name of the zoomed area : WEDDEL SEA
+! -------- THIERRY PENDUFF --------------
+! Fill topographic hole
+bathy(0526,0011) = bathy(0525,0011) !
+bathy(0527,0011) = bathy(0526,0011) !
+bathy(0527,0012) = bathy(0526,0012) !
+bathy(0528,0012) = bathy(0527,0012) !
+bathy(0528,0013) = bathy(0527,0013) !
+bathy(0529,0013) = bathy(0528,0013) !
+bathy(0529,0014) = bathy(0528,0014) !
+bathy(0530,0014) = bathy(0529,0014) !
+bathy(0530,0015) = bathy(0529,0015) !
+bathy(0531,0015) = bathy(0530,0015) !
+bathy(0531,0016) = bathy(0530,0016) !
+bathy(0532,0016) = bathy(0531,0016) !
+bathy(0531,0017) = bathy(0530,0017) !
+bathy(0532,0017) = bathy(0531,0017) !
+bathy(0531,0018) = bathy(0530,0018) !
+bathy(0532,0018) = bathy(0531,0018) !
+bathy(0531,0019) = bathy(0530,0019) !
+bathy(0532,0019) = bathy(0531,0019) !
+bathy(0531,0020) = bathy(0530,0020) !
+bathy(0532,0020) = bathy(0531,0020) !
+bathy(0532,0021) = bathy(0531,0021) !
+! ################################################################
+! Name of the zoomed area : Torres staits
+! zoom ration : 2
+! Put some islands in G47
+
+bathy(0140,0230) = 0 !
+!bathy(0140,0229) = 0 !
+bathy(0140,0228) = 0 !
+
+
+! ################################################################
+! Name of the zoomed area : Vema fracture zone
+! zoom ration : 2
+! i min : 946
+! i max : 1012
+! j min : 507
+! j max : 573
+
+! NO CHANGE IN 05 : bathy(0488,0272) = 4400 ! instead of 4279
+! NO CHANGE IN 05 : bathy(0489,0272) = 4400 ! instead of 4189
+! NO CHANGE IN 05 : bathy(0489,0272) = 4400 ! instead of 4042
+! NO CHANGE IN 05 : bathy(0490,0272) = 4400 ! instead of 3889
+! NO CHANGE IN 05 : bathy(0490,0271) = 4400 ! instead of 4205
+! NO CHANGE IN 05 : bathy(0490,0271) = 4400 ! instead of 4103
+! NO CHANGE IN 05 : bathy(0491,0271) = 4400 ! instead of 4093
+! NO CHANGE IN 05 : bathy(0491,0271) = 4400 ! instead of 4126
+! NO CHANGE IN 05 : bathy(0492,0271) = 4400 ! instead of 4008
+! NO CHANGE IN 05 : bathy(0492,0271) = 4400 ! instead of 3870
+! NO CHANGE IN 05 : bathy(0493,0271) = 4400 ! instead of 3632
+! NO CHANGE IN 05 : bathy(0493,0271) = 4400 ! instead of 3691
+! NO CHANGE IN 05 : bathy(0494,0271) = 4400 ! instead of 3883
+! NO CHANGE IN 05 : bathy(0494,0271) = 4400 ! instead of 3969
+! NO CHANGE IN 05 : bathy(0495,0271) = 4400 ! instead of 4141
+! NO CHANGE IN 05 : bathy(0495,0271) = 4400 ! instead of 4273
+!!!!!!!!!!! NOUVEAU THIERRY G45
+! NO CHANGE IN 05 : bathy(0496,0271) = 4482 ! instead of 4273
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+bathy(0496,0272) = 4883 
+bathy(0497,0272) = 4883 
+
+
+! ################################################################
+! Name of the zoomed area : Fifteen twenty fracture zone
+! zoom ration : 2
+! i min : 934
+! i max : 1000
+! j min : 522
+! j max : 588
+
+bathy(0480,0281) = 3800 ! instead of 3782
+bathy(0481,0281) = 3800 ! instead of 3630
+bathy(0481,0281) = 3800 ! instead of 3597
+bathy(0481,0281) = 3800 ! instead of 3542
+bathy(0482,0281) = 3800 ! instead of 3560
+bathy(0482,0281) = 3800 ! instead of 3636
+bathy(0483,0281) = 3800 ! instead of 3703
+
+! ################################################################
+! Name of the zoomed area : Lesser Antilles
+! zoom ration : 2
+! i min : 868
+! i max : 934
+! j min : 524
+! j max : 590
+
+bathy(0452,0274) = 200 ! instead of 670
+bathy(0452,0275) = 200 ! instead of 965
+bathy(0453,0275) = 200 ! instead of 799
+bathy(0453,0276) = 200 ! instead of 909
+bathy(0453,0277) = 200 ! instead of 1686
+bathy(0453,0277) = 600 ! instead of 1089
+bathy(0453,0278) = 200 ! instead of 1331
+bathy(0453,0281) = 200 ! instead of 1127
+bathy(0453,0282) = 200 ! instead of 636
+bathy(0452,0282) = 200 ! instead of 364
+bathy(0452,0283) = 400 ! instead of 673
+bathy(0447,0287) = 200 ! instead of 1062
+bathy(0449,0287) = 200 ! instead of 849
+bathy(0449,0286) = 200 ! instead of 403
+bathy(0450,0286) = 200 ! instead of 405
+bathy(0450,0286) = 200 ! instead of 454
+bathy(0450,0285) = 489 ! instead of 489
+bathy(0450,0286) = 200 ! instead of 502
+bathy(0439,0287) = 300 ! instead of 541
+bathy(0441,0287) = 200 ! instead of 414
+
+! ################################################################
+! Name of the zoomed area : Florida Straits
+! zoom ration : 2
+! i min : 796
+! i max : 862
+! j min : 560
+! j max : 626
+
+bathy(0414,0300) = 800 ! instead of 707
+bathy(0414,0300) = 800 ! instead of 643
+bathy(0415,0300) = 800 ! instead of 552
+bathy(0415,0300) = 800 ! instead of 610
+bathy(0415,0300) = 800 ! instead of 719
+bathy(0416,0300) = 800 ! instead of 740
+bathy(0416,0301) = 800 ! instead of 747
+bathy(0416,0301) = 800 ! instead of 773
+bathy(0416,0301) = 800 ! instead of 761
+bathy(0416,0302) = 800 ! instead of 762
+bathy(0416,0302) = 800 ! instead of 714
+bathy(0416,0303) = 800 ! instead of 638
+bathy(0416,0303) = 800 ! instead of 598
+bathy(0416,0304) = 760 ! instead of 602
+bathy(0416,0304) = 760 ! instead of 610
+bathy(0416,0305) = 760 ! instead of 618
+bathy(0416,0305) = 760 ! instead of 627
+bathy(0416,0306) = 730 ! instead of 620
+bathy(0416,0307) = 730 ! instead of 585
+bathy(0416,0307) = 730 ! instead of 592
+bathy(0416,0308) = 730 ! instead of 622
+bathy(0416,0308) = 730 ! instead of 652
+bathy(0416,0309) = 730 ! instead of 681
+bathy(0416,0306) = 730 ! instead of 603
+bathy(0420,0296) = 600 ! instead of 334
+bathy(0420,0296) = 600 ! instead of 351
+bathy(0420,0295) = 600 ! instead of 554
+bathy(0419,0296) = 540 ! instead of 358
+bathy(0419,0296) = 500 ! instead of 311
+bathy(0418,0297) = 500 ! instead of 342
+bathy(0419,0297) = 500 ! instead of 340
+bathy(0418,0297) = 500 ! instead of 344
+bathy(0417,0297) = 500 ! instead of 434
+bathy(0417,0297) = 500 ! instead of 336
+bathy(0417,0297) = 500 ! instead of 451
+bathy(0417,0298) = 500 ! instead of 483
+bathy(0416,0298) = 500 ! instead of 475
+bathy(0416,0298) = 500 ! instead of 469
+bathy(0415,0298) = 500 ! instead of 485
+bathy(0419,0296) = 500 ! instead of 182
+
+! ################################################################
+! Name of the zoomed area : Gibraltar
+! zoom ration : 2
+! i min : 1092
+! i max : 1158
+! j min : 616
+! j max : 682
+
+bathy(0564,0327) = 300 ! instead of 194
+!ct bathy(0563,0327) = 280 ! instead of 144
+!ct bathy(0563,0327) = 280 ! instead of 170
+!bathy(1125,0653) = 320 ! instead of 248
+
+!! ##############################################################
+!! Sebastien's modifs for deeper med water
+!! not done in G44
+!bathy(1125,0653) = 800 ! instead of 320
+!bathy(1124,0653) = 900 ! instead of 415
+!bathy(1123,0653) = 1000 ! instead of 659
+!bathy(1122,0653) = 1000 ! instead of 881
+
+! THIERRY's modifs for deeper med water FOR G45
+! not done in G44
+!bathy(1125,0653) = 751 ! instead of 320
+!bathy(1124,0653) = 865 ! instead of 415
+!bathy(1123,0653) = 1000 ! instead of 659
+!bathy(1122,0653) = 1000 ! instead of 881
+
+! THIERRY's modifs for even deeper med water FOR G47
+! not done in G44
+bathy(0563,0327) = 340 ! instead of 320
+!ct bathy(0562,0327) = 570 ! instead of 415
+bathy(0562,0327) = 780 ! instead of 659
+!ct bathy(0561,0327) = 1050 ! instead of 881
+bathy(0561,0327) = 1200 ! instead of 881
+bathy(0560,0327) = 1200 ! instead of 881
+
+bathy(0562,0326) = 675 ! instead of 659
+!ct bathy(0561,0326) = 910 ! instead of 881
+bathy(0561,0326) = 1050 ! instead of 881
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0565,0327) = 349 
+bathy(0564,0327) = 290 
+bathy(0560,0328) = 1200
+
+
+
+
+! ################################################################
+! Name of the zoomed area : Wyville-Thompson ridge,0Faroe bank channel
+! zoom ration : 2
+! i min : 1064
+! i max : 1130
+! j min : 768
+! j max : 834
+
+!!!!!!!!!!!!! AJOUT THIERRY
+
+! ct bathy(0550,0402) = 1050 ! instead of 602
+bathy(0550,0402) = 1050 ! instead of 602
+bathy(0551,0402) = 910 ! instead of 602
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+bathy(0554,0400) = 870 ! instead of 737
+bathy(0554,0400) = 870 ! instead of 737
+bathy(0554,0401) = 870 ! instead of 689
+bathy(0554,0401) = 870 ! instead of 602
+bathy(0554,0401) = 870 ! instead of 565
+bathy(0553,0401) = 870 ! instead of 536
+bathy(0553,0401) = 870 ! instead of 437
+bathy(0553,0402) = 870 ! instead of 575
+bathy(0552,0402) = 870 ! instead of 605
+bathy(0552,0402) = 870 ! instead of 644
+bathy(0551,0402) = 870 ! instead of 777
+bathy(0556,0397) = 600 ! instead of 760
+bathy(0556,0397) = 600 ! instead of 714
+bathy(0554,0398) = 600 ! instead of 727
+bathy(0554,0398) = 600 ! instead of 714
+bathy(0553,0398) = 600 ! instead of 668
+bathy(0557,0397) = 600 ! instead of 615
+bathy(0553,0399) = 600 ! instead of 660
+bathy(0555,0397) = 600 ! instead of 671
+bathy(0555,0397) = 600 ! instead of 662
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0556,0399) = 916 
+bathy(0555,0399) = 893 
+bathy(0554,0399) = 870 
+bathy(0549,0402) = 1200 ! instead of 602
+bathy(0548,0402) = 1200 ! instead of 602
+
+
+
+!! ANNE-MARIE ################################################################
+!! Name of the zoomed area : Denmark Strait
+!! zoom ration : 2
+!! i min : 1004
+!! i max : 1070
+!! j min : 796
+!! j max : 862
+!
+!bathy(1041,0828) = 670 ! instead of 535
+!bathy(1041,0829) = 670 ! instead of 535
+!bathy(1042,0829) = 670 ! instead of 535
+!bathy(1042,0830) = 670 ! instead of 560
+!bathy(1042,0831) = 670 ! instead of 538
+!bathy(1043,0831) = 670 ! instead of 546
+!bathy(1043,0832) = 670 ! instead of 527
+!bathy(1044,0832) = 670 ! instead of 550
+!bathy(1045,0832) = 670 ! instead of 537
+!bathy(1045,0833) = 670 ! instead of 595
+!bathy(1046,0833) = 670 ! instead of 595
+!bathy(1046,0834) = 670 ! instead of 595
+
+!!!!!!!!!!!!!!!!!!! VERSION T.PENDUFF 3/11/2005
+! ################################################################
+! Name of the zoomed area : Denmark Strait
+! zoom ration : 2
+! i min : 1004
+! i max : 1070
+! j min : 796
+! j max : 862
+
+!ct bathy(0517,0412) = 1742 ! instead of 535
+bathy(0517,0412) = 1550 ! instead of 535
+bathy(0517,0413) = 1550 ! instead of 535
+
+!ct bathy(0518,0412) = 1550 ! instead of 535
+!ct bathy(0518,0412) = 1550 ! instead of 535
+!ct bathy(0518,0413) = 1550 ! instead of 535
+
+bathy(0518,0412) = 1550 ! instead of 535
+!ct bathy(0518,0413) = 1550 ! instead of 535
+bathy(0518,0413) = 1550 ! instead of 535
+
+!ct bathy(0519,0413) = 1550 ! instead of 535
+!ct bathy(0519,0413) = 1550 ! instead of 535
+!ct bathy(0519,0413) = 1550 ! instead of 535
+
+bathy(0519,0413) = 1550 ! instead of 535
+bathy(0520,0413) = 1376 ! instead of 535
+!ct bathy(0520,0414) = 1209 ! instead of 535
+!ct bathy(0520,0414) = 1056 ! instead of 535
+bathy(0520,0414) = 916 ! instead of 535
+bathy(0521,0414) = 789 ! instead of 560
+!ct bathy(0521,0415) = 670 ! instead of 535
+!ct bathy(0521,0415) = 670 ! instead of 535
+bathy(0521,0415) = 670 ! instead of 560
+bathy(0521,0416) = 670 ! instead of 538
+!ct bathy(0522,0416) = 670 ! instead of 546
+!ct bathy(0522,0416) = 670 ! instead of 546
+!ct bathy(0522,0416) = 670 ! instead of 527
+bathy(0522,0416) = 670 ! instead of 550
+bathy(0523,0416) = 670 ! instead of 537
+!ct bathy(0523,0417) = 670 ! instead of 595
+!ct bathy(0523,0417) = 670 ! instead of 595
+bathy(0523,0417) = 670 ! instead of 595
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0519,0414) = 1056 ! instead of 535
+bathy(0520,0413) = 1056 ! instead of 535
+bathy(0519,0413) = 1209 ! instead of 535
+bathy(0518,0413) = 1376 ! instead of 535
+bathy(0518,0413) = 1550 ! instead of 535
+bathy(0517,0413) = 1550 ! instead of 535
+bathy(0518,0412) = 1550 ! instead of 535
+bathy(0517,0412) = 1550 ! instead of 535
+bathy(0519,0412) = 1056 ! instead of 535
+bathy(0520,0412) =  916 ! instead of 535
+
+! ################################################################
+! Name of the zoomed area : Gibbs Fracture zone
+! zoom ration : 2
+! i min : 982
+! i max : 1048
+! j min : 708
+! j max : 774
+
+bathy(0504,0371) = 3650 ! instead of 3615
+bathy(0505,0371) = 3650 ! instead of 3568
+bathy(0505,0371) = 3650 ! instead of 3535
+bathy(0506,0371) = 3650 ! instead of 3514
+bathy(0506,0371) = 3650 ! instead of 3603
+bathy(0506,0371) = 3650 ! instead of 3602
+bathy(0507,0371) = 3650 ! instead of 3615
+bathy(0507,0371) = 3650 ! instead of 3611
+bathy(0508,0371) = 3650 ! instead of 3565
+bathy(0508,0371) = 3650 ! instead of 3581
+bathy(0509,0371) = 3650 ! instead of 3582
+bathy(0509,0371) = 3650 ! instead of 3651
+bathy(0510,0371) = 3650 ! instead of 3608
+bathy(0511,0371) = 3650 ! instead of 3458
+bathy(0511,0371) = 3650 ! instead of 3318
+bathy(0512,0370) = 3650 ! instead of 3278
+bathy(0511,0370) = 3650 ! instead of 3274
+bathy(0512,0370) = 3650 ! instead of 3279
+bathy(0513,0370) = 3650 ! instead of 3240
+bathy(0513,0370) = 3650 ! instead of 3017
+bathy(0514,0370) = 3650 ! instead of 2963
+bathy(0514,0370) = 3650 ! instead of 3043
+bathy(0515,0370) = 3650 ! instead of 3029
+bathy(0515,0370) = 3650 ! instead of 3110
+bathy(0515,0370) = 3650 ! instead of 2832
+bathy(0516,0370) = 3650 ! instead of 3005
+bathy(0516,0370) = 3650 ! instead of 3019
+bathy(0517,0370) = 3650 ! instead of 3155
+bathy(0517,0370) = 3650 ! instead of 3302
+bathy(0518,0370) = 3650 ! instead of 3383
+bathy(0518,0370) = 3650 ! instead of 3442
+bathy(0519,0370) = 3650 ! instead of 3534
+bathy(0519,0370) = 3650 ! instead of 3621
+
+! ################################################################
+! Name of the zoomed area : Oceanographer fracture Zone
+! zoom ration : 2
+! i min : 982
+! i max : 1048
+! j min : 616
+! j max : 682
+
+bathy(0501,0325) = 3000 ! instead of 2924
+bathy(0501,0325) = 3000 ! instead of 2882
+bathy(0502,0325) = 3000 ! instead of 2864
+bathy(0502,0325) = 3000 ! instead of 2892
+bathy(0503,0325) = 3000 ! instead of 2904
+bathy(0504,0325) = 3000 ! instead of 2736
+bathy(0504,0325) = 3000 ! instead of 2453
+bathy(0504,0325) = 3000 ! instead of 2655
+bathy(0505,0325) = 3000 ! instead of 2766
+bathy(0505,0325) = 3000 ! instead of 2754
+bathy(0505,0324) = 3000 ! instead of 2687
+bathy(0506,0324) = 3000 ! instead of 2662
+bathy(0506,0324) = 3000 ! instead of 2704
+bathy(0507,0324) = 3000 ! instead of 2811
+bathy(0507,0324) = 3000 ! instead of 2907
+
+! ################################################################
+! Name of the zoomed area : Vema channel
+! zoom ration : 2
+! i min : 978
+! i max : 1044
+! j min : 331
+! j max : 397
+
+
+! ################################################################
+! Name of the zoomed area : Valvis ridge South
+! zoom ration : 2
+! i min : 1092
+! i max : 1158
+! j min : 305
+! j max : 371
+
+bathy(0560,0171) = 3500 ! instead of 3607
+bathy(0562,0172) = 3500 ! instead of 3801
+bathy(0563,0173) = 3500 ! instead of 3665
+bathy(0571,0181) = 3500 ! instead of 3932
+bathy(0571,0181) = 3500 ! instead of 3832
+bathy(0572,0182) = 3500 ! instead of 3693
+bathy(0571,0181) = 3500 ! instead of 3891
+bathy(0570,0181) = 3500 ! instead of 3699
+
+! ################################################################
+! Name of the zoomed area : Rio de Janeiro fracture Zone
+! zoom ration : 2
+! i min : 1064
+! i max : 1130
+! j min : 375
+! j max : 441
+
+bathy(0554,0204) = 3900 ! instead of 3714
+bathy(0554,0204) = 3900 ! instead of 3805
+bathy(0555,0204) = 3900 ! instead of 3882
+bathy(0553,0204) = 3900 ! instead of 3593
+bathy(0553,0204) = 3900 ! instead of 3533
+bathy(0552,0204) = 3900 ! instead of 3561
+bathy(0552,0204) = 3900 ! instead of 3570
+bathy(0551,0204) = 3900 ! instead of 3539
+bathy(0551,0204) = 3900 ! instead of 3399
+bathy(0550,0204) = 3900 ! instead of 3282
+bathy(0549,0204) = 3900 ! instead of 3529
+bathy(0549,0204) = 3900 ! instead of 3404
+bathy(0548,0204) = 3900 ! instead of 3722
+bathy(0548,0204) = 3900 ! instead of 3815
+bathy(0547,0204) = 3900 ! instead of 3777
+bathy(0547,0204) = 3900 ! instead of 3871
+bathy(0550,0204) = 3900 ! instead of 3336
+
+! ################################################################
+! Name of the zoomed area : Romanche fracture zone
+! zoom ration : 2
+! i min : 1030
+! i max : 1096
+! j min : 459
+! j max : 525
+
+bathy(0529,0248) = 3700 ! instead of 3849
+bathy(0529,0248) = 3700 ! instead of 3925
+bathy(0530,0248) = 3700 ! instead of 3937
+bathy(0530,0248) = 3700 ! instead of 3942
+bathy(0531,0248) = 3700 ! instead of 4060
+bathy(0531,0248) = 3700 ! instead of 4177
+bathy(0532,0249) = 3700 ! instead of 3995
+bathy(0532,0249) = 3700 ! instead of 4011
+bathy(0533,0249) = 3700 ! instead of 4041
+bathy(0533,0249) = 3700 ! instead of 4044
+bathy(0534,0249) = 3700 ! instead of 4051
+bathy(0534,0249) = 3700 ! instead of 4306
+bathy(0535,0249) = 3700 ! instead of 4106
+bathy(0535,0249) = 3700 ! instead of 4153
+bathy(0535,0250) = 3700 ! instead of 3847
+bathy(0536,0250) = 3700 ! instead of 3871
+bathy(0536,0250) = 3700 ! instead of 3977
+bathy(0537,0250) = 3700 ! instead of 4142
+bathy(0537,0250) = 3700 ! instead of 4280
+bathy(0538,0250) = 3700 ! instead of 4403
+bathy(0538,0250) = 3700 ! instead of 4133
+bathy(0539,0250) = 3700 ! instead of 3974
+bathy(0539,0250) = 3700 ! instead of 3919
+bathy(0540,0250) = 3700 ! instead of 3820
+bathy(0541,0250) = 4200 ! instead of 4183
+bathy(0542,0250) = 4200 ! instead of 4070
+bathy(0542,0250) = 4200 ! instead of 3850
+bathy(0543,0250) = 4200 ! instead of 3668
+bathy(0543,0251) = 4200 ! instead of 3755
+bathy(0544,0251) = 4200 ! instead of 3832
+bathy(0544,0251) = 4200 ! instead of 3853
+bathy(0545,0251) = 4200 ! instead of 3906
+bathy(0545,0251) = 4200 ! instead of 4013
+bathy(0543,0250) = 4200 ! instead of 3665
+
+
+! ################################################################
+! Name of the zoomed area : Red Sea North
+! zoom ration : 2
+! i min : 1266
+! i max : 1332
+! j min : 558
+! j max : 624
+
+bathy(0646,0304) = 1080 ! instead of 991
+bathy(0646,0305) = 1080 ! instead of 988
+bathy(0654,0289) = 1080 ! instead of 974
+bathy(0654,0288) = 1080 ! instead of 951
+
+! ################################################################
+! Name of the zoomed area : Red Sea south
+! zoom ration : 2
+! i min : 1290
+! i max : 1356
+! j min : 514
+! j max : 580
+
+! NO CHANGE IN 05 : bathy(0660,0278) = 160 ! instead of 94
+! NO CHANGE IN 05 : bathy(0660,0278) = 140 ! instead of 87
+! NO CHANGE IN 05 : bathy(0660,0278) = 140 ! instead of 59
+! NO CHANGE IN 05 : bathy(0660,0277) = 140 ! instead of 45
+! NO CHANGE IN 05 : bathy(0661,0277) = 140 ! instead of 56
+! NO CHANGE IN 05 : bathy(0661,0277) = 140 ! instead of 58
+! NO CHANGE IN 05 : bathy(0661,0277) = 140 ! instead of 66
+! NO CHANGE IN 05 : bathy(0661,0276) = 140 ! instead of 44
+! NO CHANGE IN 05 : bathy(0662,0276) = 140 ! instead of 42
+! NO CHANGE IN 05 : bathy(0662,0276) = 140 ! instead of 48
+! NO CHANGE IN 05 : bathy(0662,0275) = 140 ! instead of 52
+! NO CHANGE IN 05 : bathy(0662,0275) = 140 ! instead of 71
+
+!!!!!!!!!!!!!! NOUVEAU THIERRY
+! NO CHANGE IN 05 : bathy(0663,0275) = 140 ! instead of 71
+! NO CHANGE IN 05 : bathy(0663,0274) = 206 ! instead of 71
+! NO CHANGE IN 05 : bathy(0663,0274) = 246 ! instead of 71
+
+! NO CHANGE IN 05 : bathy(0662,0275) = 172 !
+! NO CHANGE IN 05 : bathy(0662,0274) = 245 !
+! NO CHANGE IN 05 : bathy(0662,0274) = 292 !
+! NO CHANGE IN 05 : bathy(0662,0273) = 348 !
+! NO CHANGE IN 05 : bathy(0663,0273) = 400 !
+! NO CHANGE IN 05 : bathy(0663,0273) = 553 !
+
+! NO CHANGE IN 05 : bathy(0663,0273) = 676 !
+! NO CHANGE IN 05 : bathy(0664,0273) = 676 !
+! NO CHANGE IN 05 : bathy(0664,0273) = 676 !
+! NO CHANGE IN 05 : bathy(0663,0274) = 553 !
+
+!))))))))))))))))))))))))))))))))))))
+! THIERRY's modifs for ORCA05
+bathy(0660,0279) = 160
+bathy(0661,0279) = 140
+bathy(0661,0278) = 140
+bathy(0661,0277) = 140
+bathy(0662,0277) = 140
+bathy(0662,0276) = 140
+bathy(0662,0275) = 146
+
+bathy(0662,0274) = 414
+bathy(0663,0274) = 676
+bathy(0664,0274) = 916
+bathy(0663,0275) = 414
+bathy(0665,0274) = 1040
+
+! ################################################################
+! Name of the zoomed area : Agulhas
+! zoom ration : 2
+! i min : 1212
+! i max : 1278
+! j min : 303
+! j max : 369
+
+
+! ################################################################
+! Name of the zoomed area : Mozambique/Comores
+! zoom ration : 2
+! i min : 1292
+! i max : 1358
+! j min : 413
+! j max : 479
+
+bathy(0671,0224) = 200 ! instead of 1094
+bathy(0671,0225) = 200 ! instead of 521
+bathy(0671,0225) = 450 ! instead of 1067
+bathy(0669,0225) = 200 ! instead of 2751
+bathy(0668,0225) = 200 ! instead of 2196
+bathy(0668,0225) = 1200 ! instead of 2371
+bathy(0666,0224) = 400 ! instead of 1244
+bathy(0665,0224) = 400 ! instead of 1298
+bathy(0664,0225) = 400 ! instead of 2117
+bathy(0664,0225) = 400 ! instead of 1827
+bathy(0663,0225) = 400 ! instead of 2056
+
+! ################################################################
+! Name of the zoomed area : Mascarene Ridge
+! zoom ration : 2
+! i min : 1362
+! i max : 1428
+! j min : 409
+! j max : 475
+
+bathy(0696,0231) = 200 ! instead of 770
+bathy(0696,0231) = 200 ! instead of 606
+bathy(0696,0232) = 200 ! instead of 693
+bathy(0688,0238) = 200 ! instead of 753
+bathy(0688,0239) = 200 ! instead of 426
+bathy(0682,0239) = 200 ! instead of 1070
+bathy(0682,0238) = 200 ! instead of 885
+bathy(0681,0238) = 200 ! instead of 1250
+bathy(0698,0225) = 280 ! instead of 508
+bathy(0698,0225) = 350 ! instead of 936
+bathy(0698,0224) = 600 ! instead of 1714
+bathy(0697,0222) = 400 ! instead of 614
+bathy(0697,0222) = 600 ! instead of 978
+bathy(0697,0222) = 450 ! instead of 825
+bathy(0697,0223) = 450 ! instead of 1165
+bathy(0697,0223) = 500 ! instead of 1546
+bathy(0697,0224) = 1100 ! instead of 1823
+
+! ################################################################
+! Name of the zoomed area : Seychelles
+! zoom ration : 2
+! i min : 1346
+! i max : 1412
+! j min : 437
+! j max : 503
+
+bathy(0682,0239) = 800 ! instead of 1683
+bathy(0682,0238) = 200 ! instead of 885
+bathy(0681,0238) = 200 ! instead of 1250
+bathy(0681,0237) = 400 ! instead of 1537
+
+
+! ################################################################
+! Name of the zoomed area : Ninety east ridge north
+! zoom ration : 2
+! i min : 35
+! i max : 101
+! j min : 479
+! j max : 545
+
+bathy(0034,0251) = 3400 ! instead of 3507
+bathy(0034,0250) = 3400 ! instead of 3571
+bathy(0034,0245) = 3000 ! instead of 3537
+
+! ################################################################
+! Name of the zoomed area : ninety east ridge middle
+! zoom ration : 2
+! i min : 29
+! i max : 95
+! j min : 425
+! j max : 491
+
+bathy(0034,0240) = 3650 ! instead of 3698
+bathy(0034,0239) = 3650 ! instead of 3607
+bathy(0034,0239) = 3650 ! instead of 3756
+bathy(0033,0230) = 3400 ! instead of 3600
+
+!
+!
+! Hand modification by Ariane Koch-Larrouy on
+! ORCA_R025 bathymetry combined coast for
+! partial step
+!
+! ################################################
+! Name of the zomed area : Indonesian Throughflow
+! i min : 89
+! i max : 290
+! j min : 395
+! j max : 602
+
+! Timor passage
+bathy(0101,0227) = 1300.00 ! instead of 1078.23
+bathy(0101,0227) = 1300.00 ! instead of 1027.36
+bathy(0102,0227) = 1300.00 ! instead of 1176.71
+bathy(0102,0227) = 1300.00 ! instead of 1275.38
+
+! Torres is not closed in ORCA025-G44
+! bathy(0280,0456) = 0.00000 ! instead of 5.00000
+! bathy(0279,0457) = 0.00000 ! instead of 5.00000
+! bathy(0279,0458) = 0.00000 ! instead of 5.00000
+! bathy(0279,0459) = 0.00000 ! instead of 5.00000
+! bathy(0279,0460) = 0.00000 ! instead of 5.00000
+! bathy(0279,0461) = 0.00000 ! instead of 5.00000
+
+! land retreived between Lombok and Sape
+bathy(0089,0232) = 195.000 ! instead of 0.00000
+bathy(0089,0232) = 300.000 ! instead of 0.00000
+bathy(0090,0232) = 400.000 ! instead of 0.00000
+bathy(0090,0232) = 566.531 ! instead of 0.00000
+
+! Sape
+bathy(0094,0232) = 0.00000 ! instead of 202.594
+bathy(0094,0232) = 0.00000 ! instead of 123.500
+bathy(0094,0233) = 0.00000 ! instead of 104.000
+bathy(0094,0233) = 0.00000 ! instead of 197.500
+
+! Iles d'Alor
+bathy(0102,0233) = 0.00000 ! instead of 241.048
+bathy(0103,0233) = 0.00000 ! instead of 1010.97
+
+! Ombai
+bathy(0105,0233) = 1800.00 ! instead of 1759.98
+bathy(0106,0233) = 1800.00 ! instead of 1671.20
+bathy(0106,0233) = 1800.00 ! instead of 1401.44
+bathy(0107,0233) = 1800.00 ! instead of 1193.37
+bathy(0106,0233) = 1350.00 ! instead of 2057.59
+bathy(0106,0233) = 0.00000 ! instead of 2003.67
+bathy(0107,0233) = 1800.00 ! instead of 1728.50
+bathy(0107,0233) = 1800.00 ! instead of 1682.30
+bathy(0108,0233) = 1800.00 ! instead of 1758.57
+bathy(0107,0234) = 0.00000 ! instead of 1995.10
+bathy(0107,0234) = 0.00000 ! instead of 2735.98
+
+! Molucca strait
+bathy(0110,0253) = 4.00000 ! instead of 1758.61
+bathy(0110,0253) = 0.00000 ! instead of 761.723
+bathy(0109,0250) = 2300.00 ! instead of 2168.49
+bathy(0109,0251) = 2300.00 ! instead of 2114.26
+bathy(0108,0251) = 2300.00 ! instead of 2176.77
+bathy(0109,0251) = 2300.00 ! instead of 2148.22
+bathy(0108,0252) = 2200.00 ! instead of 2018.43
+bathy(0109,0252) = 2300.00 ! instead of 2071.52
+bathy(0108,0252) = 2200.00 ! instead of 1894.76
+bathy(0109,0252) = 2300.00 ! instead of 1991.11
+bathy(0107,0253) = 1760.00 ! instead of 1847.67
+bathy(0107,0253) = 1650.00 ! instead of 1759.12
+bathy(0108,0253) = 2200.00 ! instead of 1727.12
+bathy(0109,0253) = 2300.00 ! instead of 1999.43
+bathy(0109,0253) = 2300.00 ! instead of 2070.33
+bathy(0108,0253) = 2200.00 ! instead of 1792.68
+bathy(0109,0253) = 2200.00 ! instead of 2139.05
+bathy(0109,0253) = 2300.00 ! instead of 2162.49
+bathy(0109,0254) = 2200.00 ! instead of 2176.00
+bathy(0109,0254) = 2300.00 ! instead of 2191.92
+bathy(0109,0254) = 2200.00 ! instead of 2114.59
+bathy(0109,0254) = 2300.00 ! instead of 2241.65
+bathy(0110,0254) = 2300.00 ! instead of 2258.27
+bathy(0109,0255) = 2200.00 ! instead of 2028.10
+bathy(0109,0255) = 2200.00 ! instead of 2270.84
+
+! Malacca Strait
+bathy(0060,0253) = 0.00000 ! instead of 9.00000
+
+! Sangihe Ridge
+bathy(0105,0253) = 2.00000 ! instead of 295.509
+bathy(0106,0254) = 1000.00 ! instead of 1368.63
+bathy(0106,0254) = 2.00000 ! instead of 1442.14
+bathy(0106,0255) = 2.00000 ! instead of 1160.36
+bathy(0107,0257) = 50.0000 ! instead of 254.383
+bathy(0107,0258) = 500.000 ! instead of 825.242
+bathy(0107,0258) = 200.000 ! instead of 815.492
+bathy(0107,0259) = 4.00000 ! instead of 839.386
+bathy(0109,0259) = 0.00000 ! instead of 996.012
+bathy(0107,0259) = 800.000 ! instead of 1035.70
+bathy(0107,0260) = 1300.00 ! instead of 1526.46
+bathy(0109,0260) = 0.00000 ! instead of 2027.63
+bathy(0106,0260) = 4.00000 ! instead of 1947.67
+bathy(0109,0260) = 0.00000 ! instead of 2984.29
+bathy(0106,0261) = 0.00000 ! instead of 1521.66
+bathy(0109,0261) = 0.00000 ! instead of 3147.63
+bathy(0109,0261) = 0.00000 ! instead of 3276.00
+bathy(0109,0262) = 0.00000 ! instead of 3154.99
+bathy(0109,0262) = 0.00000 ! instead of 3272.37
+bathy(0108,0263) = 0.00000 ! instead of 1061.76
+bathy(0108,0263) = 0.00000 ! instead of 249.692
+
+! Sumba
+bathy(0095,0231) = 610.000 ! instead of 520.226
+bathy(0095,0231) = 610.000 ! instead of 496.277
+bathy(0096,0231) = 610.000 ! instead of 571.018
+bathy(0095,0232) = 167.000 ! instead of 466.042
+
+! sortie Savu
+bathy(0099,0228) = 0.00000 ! instead of 770.963
+bathy(0099,0228) = 0.00000 ! instead of 859.907
+bathy(0100,0228) = 1041.11 ! instead of 956.650
+bathy(0102,0229) = 100.000 ! instead of 299.308
+bathy(0098,0229) = 1100.00 ! instead of 1023.69
+
+! Luzon strait
+bathy(0097,0288) = 200.000 ! instead of 667.179
+bathy(0098,0288) = 100.000 ! instead of 239.656
+bathy(0098,0289) = 0.00000 ! instead of 625.711
+bathy(0098,0289) = 850.000 ! instead of 826.502
+bathy(0098,0290) = 650.000 ! instead of 1396.10
+bathy(0098,0290) = 1100.00 ! instead of 1909.46
+bathy(0098,0291) = 850.000 ! instead of 2351.54
+bathy(0098,0291) = 650.000 ! instead of 2642.53
+bathy(0098,0292) = 2.00000 ! instead of 2756.72
+bathy(0098,0292) = 150.000 ! instead of 2773.34
+bathy(0097,0293) = 1200.00 ! instead of 1533.90
+
+! Molucca Strait
+bathy(0116,0248) = 7.00000 ! instead of 50.0000
+bathy(0116,0249) = 2.00000 ! instead of 111.500
+bathy(0115,0249) = 2.00000 ! instead of 313.281
+bathy(0116,0249) = 2.00000 ! instead of 13.0000
+bathy(0115,0250) = 147.000 ! instead of 405.520
+bathy(0114,0250) = 2.00000 ! instead of 691.682
+bathy(0113,0251) = 2.00000 ! instead of 289.244
+bathy(0113,0251) = 300.000 ! instead of 560.011
+bathy(0114,0251) = 700.000 ! instead of 730.845
+
+! Lifamatola
+bathy(0102,0246) = 3.00000 ! instead of 57.0000
+bathy(0103,0246) = 4.00000 ! instead of 192.000
+bathy(0103,0246) = 3.00000 ! instead of 189.000
+bathy(0104,0246) = 50.0000 ! instead of 14.5000
+bathy(0107,0246) = 4.00000 ! instead of 861.835
+bathy(0108,0246) = 700.000 ! instead of 1153.23
+bathy(0108,0246) = 1829.00 ! instead of 1525.74
+bathy(0109,0246) = 1200.00 ! instead of 1851.48
+bathy(0109,0246) = 200.000 ! instead of 1758.53
+bathy(0110,0247) = 0.00000 ! instead of 1105.22
+bathy(0102,0247) = 60.0000 ! instead of 62.0000
+bathy(0110,0247) = 2.00000 ! instead of 329.407
+bathy(0111,0247) = 500.000 ! instead of 373.465
+bathy(0111,0248) = 500.000 ! instead of 364.917
+
+! Island around Belitung in Java Sea
+bathy(0069,0244) = 0.00000 ! instead of 7.00000
+bathy(0070,0244) = 0.00000 ! instead of 16.0000
+bathy(0070,0244) = 0.00000 ! instead of 1.00000
+bathy(0072,0245) = 0.00000 ! instead of 27.0000
+
+! Island isolated rattached to the coast
+bathy(0067,0244) = 0.00000 ! instead of 3.00000
+bathy(0068,0244) = 0.00000 ! instead of 6.00000
+bathy(0067,0244) = 0.00000 ! instead of 6.00000
+bathy(0067,0244) = 0.00000 ! instead of 7.50000
+bathy(0067,0245) = 0.00000 ! instead of 6.00000
+bathy(0065,0245) = 0.00000 ! instead of 6.00000
+bathy(0066,0245) = 0.00000 ! instead of 8.00000
+bathy(0066,0245) = 0.00000 ! instead of 7.00000
+bathy(0067,0245) = 0.00000 ! instead of 5.00000
+
+! Balabac Strait
+bathy(0090,0265) = 15.0000 ! instead of 25.5000
+
+! Sulu Archipelago
+bathy(0094,0260) = 13.0000 ! instead of 155.383
+bathy(0098,0262) = 7.00000 ! instead of 126.000
+bathy(0097,0261) = 2.00000 ! instead of 17.5000
+
+! Lombok Strait
+bathy(0087,0232) = 0.00000 ! instead of 435.309
+bathy(0087,0232) = 160.000 ! instead of 29.0000
+
+! Philippine Archipelago
+bathy(0107,0270) = 0.00000 ! instead of 1.00000
+bathy(0107,0270) = 0.00000 ! instead of 1.00000
+bathy(0107,0271) = 0.00000 ! instead of 1.00000
+bathy(0107,0271) = 2.00000 ! instead of 4.00000
+bathy(0104,0275) = 0.00000 ! instead of 2.00000
+
+! Taiwan Strait
+bathy(0090,0298) = 5.00000 ! instead of 16.0000
+bathy(0094,0298) = 22.0000 ! instead of 35.0000
+bathy(0094,0298) = 5.00000 ! instead of 22.0000
+
+! Sunda Strait
+bathy(0067,0237) = 0.00000 ! instead of 38.0000
+bathy(0067,0238) = 0.00000 ! instead of 28.0000
+bathy(0067,0238) = 0.00000 ! instead of 37.5000
+
+

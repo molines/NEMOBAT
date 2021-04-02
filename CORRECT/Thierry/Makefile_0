@@ -1,0 +1,44 @@
+#
+#
+CPP     = /lib/cpp
+#FC      = ifort
+#LD      = ifort
+FC      = pgf90
+LD      = pgf90
+dirsub = ../SUBROUTINES
+#
+# Regles de construction
+#
+.SUFFIXES:	.F90
+.DEFAULTS:
+.F90.o:
+	@echo default rule .F90.o used 
+	$(FC) -c $(FFLAGS)  $*.F90 -o $*.o
+#
+# NCDF_PATH       = /home/porzig/services/netcdf/netcdf-3.5.0
+#NCDF_PATH       = /home/kaaba/theetten/Linux/Ncdf_test/netcdf-3.5.1_i4r4_ifort_8.0/
+# tpenduff
+#NCDF_PATH       = /usr/local/netcdf/include/
+NCDF_PATH       = /home/tpenduff/Roms_tools/netcdf_ifc/
+#
+#FFLAGS		=  -I$(NCDF_PATH)/include -check bounds
+FFLAGS		=  -I$(NCDF_PATH)/include -C
+#
+LDFLAGS	 	= -L$(NCDF_PATH)/lib -lnetcdf
+# resultats --> les executables
+#
+correct:	correct.f90  orca025_hand_modif_march05.h90  $(dirsub)/rewrite_bathy_nc.o $(dirsub)/lbc.o
+	$(LD) $(FFLAGS) -o $@ correct.f90 $(dirsub)/rewrite_bathy_nc.o $(dirsub)/lbc.o   $(LDFLAGS)
+
+verify:	verify.f90  old_orca025_hand_modif.h90  $(dirsub)/rewrite_bathy_nc.o $(dirsub)/lbc.o
+	$(LD) $(FFLAGS) -o $@ verify.f90 $(dirsub)/rewrite_bathy_nc.o $(dirsub)/lbc.o   $(LDFLAGS)
+#
+$(dirsub)/rewrite_bathy_nc.o: $(dirsub)/rewrite_bathy_nc.f90
+	$(FC) -c $(FFLAGS) $(dirsub)/rewrite_bathy_nc.f90 -o $(dirsub)/rewrite_bathy_nc.o
+
+$(dirsub)/lbc.o: $(dirsub)/lbc.f90
+	$(FC) -c $(FFLAGS) $(dirsub)/lbc.f90 -o $(dirsub)/lbc.o
+
+clean: 
+	/bin/rm -f *.o
+#
