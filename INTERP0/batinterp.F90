@@ -29,6 +29,7 @@ PROGRAM batinterp
   INTEGER(KIND=4)                 :: npiglo,npjglo    ! size of NEMO grid
   INTEGER(KIND=4)                 :: npibat,npjbat    ! size of external Bathy file
   INTEGER(KIND=4)                 :: numnam=99        ! namelist logical unit
+  INTEGER(KIND=4)                 :: iargc, narg, ijarg
   INTEGER(KIND=4)                 :: iimin, iimax, ijmin, ijmax  
   !
   INTEGER(KIND=4)                 :: ierr
@@ -55,6 +56,10 @@ PROGRAM batinterp
   REAL(KIND=8)                               :: dlatmin_in, dlatmax_in
   REAL(KIND=8), DIMENSION(:,:), ALLOCATABLE  :: dflo, dfla, dfloloc, dflaloc, dzflo, dzfla
 
+  
+  CHARACTER(LEN=80)                          :: cldum         ! dummy char variable
+  CHARACTER(LEN=80)                          :: cf_tplnamlst  ! template namelist file name created with -p
+  CHARACTER(LEN=80)                          :: cf_namlist    ! namelist file name
 
   ! Namelist variable
   INTEGER(KIND=4)     :: nn_interp   ! interpolation method : O: Arithmetic Average   1: Median average
@@ -68,12 +73,64 @@ PROGRAM batinterp
   CHARACTER(len=140)  :: cn_varin    ! External Bathymetry variable name
   CHARACTER(len=140)  :: cn_xdim     ! External Bathymetry file X dimension name
   CHARACTER(len=140)  :: cn_ydim     ! External Bathymetry file Y dimension name
+  CHARACTER(len=140)  :: cn_lonv     ! External Bathymetry file longitude name
+  CHARACTER(len=140)  :: cn_latv     ! External Bathymetry file Latitude name
 
   LOGICAL             :: ln_sign     ! If True change the sign of surface elevation (case of Ice Shelves)
   LOGICAL             :: ln_regin    ! True : External Bathymetry file regular, False:  irregular
 
-  NAMELIST /naminterpo/ nn_interp, ln_sign, cn_fbatin, cn_fout, cn_fgrid, nn_perio, cn_varin, cn_varout, cn_xdim, cn_ydim, ln_regin
+  NAMELIST /naminterpo/ nn_interp, ln_sign, cn_fbatin, cn_fout, cn_fgrid, nn_perio,      &
+         &              cn_varin, cn_varout, cn_xdim, cn_ydim, ln_regin, cn_lonv, cn_latv
   !-------------------------------------------------------------------
+  narg = iargc()
+
+  IF ( narg == 0 ) THEN
+     PRINT *,' usage : batinterp.exe -f NAMELIST-name'
+     PRINT *,'      '
+     PRINT *,'     PURPOSE :'
+     PRINT *,'        This program is part of the NEMOBAT package used to create a '
+     PRINT *,'      bathymetry for NEMO configurations. All parameters are set  '
+     PRINT *,'      in a namelist file, whose name is passed to the program with -f option.'
+     PRINT *,'      '
+     PRINT *,'        This program is used to interpolate an external bathymetry'
+     PRINT *,'      data base (such as GEBCO, ETOPO, BedMachine etc... ) to a NEMO'
+     PRINT *,'      configuration defined by its horizontal grid. Supported interpolation'
+     PRINT *,'      techniques are presently arithmetic averaging or median average.'
+     PRINT *,'      '
+     PRINT *,'     ARGUMENTS :'
+     PRINT *,'       -f NAMELIST-name : Pass the name of the namelist file to use.'
+     PRINT *,'              A template namelist can be created using option -p '
+     PRINT *,'      '
+     PRINT *,'     OPTIONS :'
+     PRINT *,'       -p TEMPLATE_namelist: create a template namelist whose name is'
+     PRINT *,'             TEMPLATE_namelist for further editing before use.' 
+     PRINT *,'      '
+     PRINT *,'     REQUIRED FILES :'
+     PRINT *,'       All needed files are indicated in the namelist' 
+     PRINT *,'      '
+     PRINT *,'     OUTPUT : '
+     PRINT *,'       netcdf file : guess bathymetry, whose name is given in the namelist.'
+     PRINT *,'         variables : the name of the bathymetry is specified in namelist.'
+     PRINT *,'      '
+     PRINT *,'     SEE ALSO :'
+     PRINT *,'       '
+     PRINT *,'      '
+     STOP
+  ENDIF
+
+  ijarg = 1 
+  DO WHILE ( ijarg <= narg )
+     CALL getarg(ijarg, cldum ) ; ijarg=ijarg+1
+     SELECT CASE ( cldum )
+     CASE ( '-f'   ) ; CALL getarg(ijarg, cf_namlist   ) ; ijarg=ijarg+1
+        ! option
+     CASE ( '-p'   ) ; CALL getarg(ijarg, cf_tplnamlst ) ; ijarg=ijarg+1 
+                     ; CALL PrintTplNamelist(cf_tplnamlst) 
+                     ; STOP 'Template namelist created'
+     CASE DEFAULT    ; PRINT *, ' ERROR : ', TRIM(cldum),' : unknown option.'; STOP 1
+     END SELECT
+  ENDDO
+
   ! Set default namelist values
   nn_interp=1 
   ln_sign = .FALSE.   ! to change the sign of data to deal with surface elevation (isf for exemple)
@@ -82,6 +139,8 @@ PROGRAM batinterp
   cn_varin  = 'bathy' 
   cn_xdim   = 'lon'
   cn_ydim   = 'lat'
+  cn_lonv   = 'lon'
+  cn_latv   = 'lat'
   ln_regin  = .TRUE.
   !
   cn_fout   = 'bathy_PIG025_rtopo1.nc'
@@ -95,7 +154,7 @@ PROGRAM batinterp
   !-------------------------------------------------------------------
   ! READ NAMELIST
   !-------------------------------------------------------------------
-  OPEN  ( numnam, FILE='namelist', STATUS='OLD', FORM='FORMATTED', ACCESS='SEQUENTIAL')
+  OPEN  ( numnam, FILE=cf_namlist, STATUS='OLD', FORM='FORMATTED', ACCESS='SEQUENTIAL')
   READ  ( numnam, naminterpo )
   !-------------------------------------------------------------------
   ! 0 - Read grid file 
@@ -123,7 +182,7 @@ PROGRAM batinterp
   ALLOCATE(glamf(npiglo,npjglo),gphif(npiglo,npjglo),glamt(npiglo,npjglo),gphit(npiglo,npjglo))
   ALLOCATE(zdep(npiglo,npjglo))
   !
-  !            read longitude and latitude 
+  !            read longitude and latitude  of F and T points
   !
   ierr = NF90_INQ_VARID(ncid, 'glamf', id)
   ierr = NF90_GET_VAR(ncid, id, glamf(:,:), start=(/1,1/), count=(/npiglo,npjglo/) )
@@ -133,17 +192,15 @@ PROGRAM batinterp
   ierr = NF90_GET_VAR(ncid, id, glamt(:,:), start=(/1,1/), count=(/npiglo,npjglo/) )
   ierr = NF90_INQ_VARID(ncid, 'gphit', id)
   ierr = NF90_GET_VAR(ncid, id, gphit(:,:), start=(/1,1/), count=(/npiglo,npjglo/) )
-  zvmax= MAXVAL(glamf)
-  zvmin= MINVAL(glamf)
+
+  ! check (??)
+  zvmax= MAXVAL(glamf)  ; zvmin= MINVAL(glamf)
   PRINT *, ' read  glamf  OK max=',zvmax,' min =', zvmin 
-  zvmax= MAXVAL(glamt)
-  zvmin= MINVAL(glamt)
+  zvmax= MAXVAL(glamt)  ; zvmin= MINVAL(glamt)
   PRINT *, ' read  glamt  OK max=',zvmax,' min =', zvmin 
-  zvmax= MAXVAL(gphif)
-  zvmin= MINVAL(gphif)
+  zvmax= MAXVAL(gphif)  ; zvmin= MINVAL(gphif)
   PRINT *, ' read  gphif  OK max=',zvmax,' min =', zvmin 
-  zvmax= MAXVAL(gphit)
-  zvmin= MINVAL(gphit)
+  zvmax= MAXVAL(gphit)  ; zvmin= MINVAL(gphit)
   PRINT *, ' read  gphit  OK max=',zvmax,' min =', zvmin 
 
   ierr=NF90_CLOSE(ncid)
@@ -189,6 +246,8 @@ PROGRAM batinterp
   ENDIF
   ! We suppose that all input files are netcdf map. If grd, preprocess with grd2nc.
   ! etopo1 and gebco
+  ! We also assume that original bathy file have longitude and latitude variables (cn_lonv and cn_latv)
+  ! If this is not the case, preprocess the file with NSIDC_map_trf (ask JMM .. )
   CALL hdlerr(NF90_INQ_DIMID(ncid, cn_xdim, id))      
   CALL hdlerr( NF90_INQUIRE_DIMENSION(ncid, id, len=npibat))
   CALL hdlerr(NF90_INQ_DIMID(ncid, cn_ydim, id))      
@@ -196,18 +255,17 @@ PROGRAM batinterp
   ALLOCATE (vardep(npibat,npjbat))
   PRINT *,'--   Reading ',TRIM(cn_fbatin),' file, dimension ',npibat,npjbat
 
-
-
   CALL hdlerr(NF90_INQ_VARID(ncid,cn_varin,id))
   CALL hdlerr(NF90_GET_VAR(ncid,id,vardep))
+
   ! 
   IF ( ln_regin ) THEN
      ALLOCATE(dflo(npibat,npjbat),dfla(npibat,npjbat), dzflo(npibat,1), dzfla(npjbat,1))
      PRINT *, 'input data are on a case regular grid (1d)'
-     CALL hdlerr(NF90_INQ_VARID(ncid, 'lon', id))
+     CALL hdlerr(NF90_INQ_VARID(ncid, cn_lonv, id))
      CALL hdlerr(NF90_GET_VAR(ncid, id, dzflo))
 
-     CALL hdlerr(NF90_INQ_VARID(ncid, 'lat', id))
+     CALL hdlerr(NF90_INQ_VARID(ncid, cn_latv, id))
      CALL hdlerr(NF90_GET_VAR(ncid, id, dzfla))
 
      DO ji=1,npjbat
@@ -218,15 +276,15 @@ PROGRAM batinterp
      END DO
   ELSE
      ALLOCATE(dflo(npibat,npjbat),dfla(npibat,npjbat))
-     CALL hdlerr(NF90_INQ_VARID(ncid, 'lon', id))
+     CALL hdlerr(NF90_INQ_VARID(ncid, cn_lonv, id))
      CALL hdlerr(NF90_GET_VAR(ncid, id, dflo))
 
-     CALL hdlerr(NF90_INQ_VARID(ncid, 'lat', id))
+     CALL hdlerr(NF90_INQ_VARID(ncid, cn_latv, id))
      CALL hdlerr(NF90_GET_VAR(ncid, id, dfla))
   END IF
 
   dlatmin_in = -99               !  99 values for a global file
-  dlatmax_in = 99
+  dlatmax_in =  99
   !   calculate max and min value of input array bathy 
   ! 
   zvmax= MAXVAL(vardep)
@@ -256,26 +314,26 @@ PROGRAM batinterp
         dlatmax=MAX(gphif(ji-1,jj-1),gphif(ji,jj-1),gphif(ji,jj),gphif(ji-1,jj))
 
         ! remove point using missing data
-        IF (ABS(glamf(ji-1,jj)) + ABS(glamf(ji,jj)) + ABS(glamf(ji,jj-1)) + ABS(glamf(ji-1, jj-1)) .GE. 1.0e10) THEN
-           moce(ji,jj) = 0.0 ; zdep(ji,jj) = -9999.99 ; mpoi (ji,jj) = 0.0 ;
+        IF (ABS(glamf(ji-1,jj)) + ABS(glamf(ji,jj)) + ABS(glamf(ji,jj-1)) + ABS(glamf(ji-1, jj-1)) >=  1.0e10) THEN
+           moce(ji,jj) = 0 ; zdep(ji,jj) = -9999.99 ; mpoi (ji,jj) = 0 ;
            ! skip part out of input data
         ELSE IF ( dlatmax_in < dlatmin .OR. dlatmin_in > dlatmax ) THEN
-           moce(ji,jj) = 0.0 ; zdep(ji,jj) = -9999.99 ; mpoi (ji,jj) = 0.0 ;
+           moce(ji,jj) = 0 ; zdep(ji,jj) = -9999.99 ; mpoi (ji,jj) = 0 ;
         ELSE
-           IF ( ABS(glamf(ji-1,jj) - glamf(ji+1,jj)) .GE. 180 ) THEN
-              IF (MAX(glamf(ji-1,jj),glamf(ji+1,jj)) > 180.) THEN
-                 WHERE (glamf .GT. 180.) 
+           IF ( ABS(glamf(ji-1,jj) - glamf(ji+1,jj)) >= 180 ) THEN
+              IF (MAX(glamf(ji-1,jj),glamf(ji+1,jj)) >  180.) THEN
+                 WHERE (glamf > 180.) 
                     glamf = glamf - 360. 
                  END WHERE
-                 WHERE (dflo .GT. 180.)
-                    dflo = dflo - 360.
+                 WHERE (dflo  > 180.d0 )
+                    dflo = dflo - 360.d0
                  END WHERE
               ELSE
-                 WHERE (glamf .LT. 0.)
-                    glamf = glamf + 360.
+                 WHERE (glamf < 0.)
+                    glamf = glamf + 360.d0
                  END WHERE
-                 WHERE (dflo .LT. 0.)
-                    dflo = dflo + 360.
+                 WHERE (dflo < 0.)
+                    dflo = dflo + 360.d0
                  END WHERE
               END IF
            END IF
@@ -329,29 +387,31 @@ PROGRAM batinterp
            ! remove all the data not in the cell and on land
            IF (ln_sign ) vardeploc = - vardeploc
            mask_oce(:,:)=1
-           WHERE (vardeploc .LE. -9000)
+           WHERE (vardeploc <= -9000)
               mask_oce = 0
            END WHERE
            mask_oce = mask_oce * mask_box
            moce(ji,jj) = SUM(mask_oce)
 
            ALLOCATE(vardep1d(moce(ji,jj)))
-           IF (FLOAT(moce(ji,jj))/FLOAT(mpoi(ji,jj)) .GT. 0.5) THEN
+           IF (FLOAT(moce(ji,jj))/FLOAT(mpoi(ji,jj)) > 0.5) THEN
               IF (nn_interp == 0 ) THEN
                  !                Arithmetic average
                  zdep(ji,jj) = SUM (vardeploc*mask_oce)/float(moce(ji,jj))
               ELSE
                  !                Median average 
-                 !vardep1d=RESHAPE(vardep, (/ npibat*npjbat /) )
-                 ik = 0
-                 DO jii=1,npiloc
-                    DO jij=1,npjloc
-                       IF (mask_oce(jii,jij) == 1 ) THEN 
-                          ik = ik + 1
-                          vardep1d(ik) = vardeploc(jii,jij) 
-                       END IF
-                    END DO
-                 END DO
+                 ! If the compiler does not like the RESHAPE statement
+                 ! use the commented code instead
+                 vardep1d=RESHAPE(vardeploc, (/ npiloc*npjloc /) )
+!                ik = 0
+!                DO jii=1,npiloc
+!                   DO jij=1,npjloc
+!                      IF (mask_oce(jii,jij) == 1 ) THEN 
+!                         ik = ik + 1
+!                         vardep1d(ik) = vardeploc(jii,jij) 
+!                      END IF
+!                   END DO
+!                END DO
                  zdep(ji,jj) = median(vardep1d,moce(ji,jj))
               ENDIF
            END IF
@@ -421,7 +481,56 @@ PROGRAM batinterp
   !
   ierr=NF90_CLOSE(ncio)
   CLOSE(numnam)
+
 CONTAINS
+
+  SUBROUTINE PrintTplNamelist( cd_template)
+    !!---------------------------------------------------------------------
+    !!                  ***  ROUTINE PrintTplNamelist ***
+    !!
+    !! ** Purpose :  Print a template of the namelist used in this program
+    !!               to be edited before use. 
+    !!
+    !! ** Method  :  Just write statement 
+    !!
+    !!----------------------------------------------------------------------
+    CHARACTER(LEN=*), INTENT(in) :: cd_template
+    
+    INTEGER(KIND=4) :: inum =36
+    !!----------------------------------------------------------------------
+    OPEN(inum, file= cd_template )
+    WRITE(inum,'(a)') '! Namelist file to be used by batinterp.exe'
+    WRITE(inum,'(a)') '! This file was produced by the command batinterp.exe -p '//TRIM(cd_template)
+    WRITE(inum,'(a)') '!    EDIT this file to fit your needs/wish before use.'
+    WRITE(inum,'(a)') '  '
+    WRITE(inum,'(a)') '&naminterpo'
+    WRITE(inum,'(a)') '   nn_interp = 1       ! interpolation method : O: Arithmetic Average'
+    WRITE(inum,'(a)') '                       !                        1: Median average'
+    WRITE(inum,'(a)') '   nn_perio  = 0       ! NEMO periodic conditions (99 : automatic inference)'
+    WRITE(inum,'(a)') ''
+    WRITE(inum,'(a)') '   ! NEMO bathymetry output file'
+    WRITE(inum,'(a)') "   cn_fout   = 'bathy_meter.nc'   ! name of the output filer"
+    WRITE(inum,'(a)') "   cn_varout = 'Bathymetry'       ! name of output variable"
+    WRITE(inum,'(a)') ''
+    WRITE(inum,'(a)') '   ! NEMO coordinate file'
+    WRITE(inum,'(a)') "   cn_fgrid  = 'mesh_hgr.nc'      ! name of horizontal grid file"
+    WRITE(inum,'(a)') ''
+    WRITE(inum,'(a)') '   ! External Bathymetric file'
+    WRITE(inum,'(a)') "   cn_batin  = 'BedmachineGreenland...'  ! name of external baty file"
+    WRITE(inum,'(a)') '   ln_regin  = .FALSE.  ! True  : Regular external bathy file'
+    WRITE(inum,'(a)') '                        ! False :Irregular external bathy file'
+    WRITE(inum,'(a)') "   cn_varin  = 'bed'    ! name of bathymetry in file"
+    WRITE(inum,'(a)') "   cn_xdim   = 'x'      ! name of X dimension"
+    WRITE(inum,'(a)') "   cn_ydim   = 'y'      ! name of Y dimension"
+    WRITE(inum,'(a)') "   cn_lonv   = 'lon'    ! name of longitude variable"
+    WRITE(inum,'(a)') "   cn_latv   = 'lat'    ! name of latitude variable"
+    WRITE(inum,'(a)') ''
+    WRITE(inum,'(a)') '   ! change sign  of bathymetry'
+    WRITE(inum,'(a)') '   ln_sign   = .FALSE.  ! change sign for bathymetry (ISF related)'
+    WRITE(inum,'(a)') '/'
+    CLOSE(inum)
+  
+  END SUBROUTINE PrintTplNamelist
   !-------------------------------------------------------------------
   SUBROUTINE hdlerr(istatus)
     !--------------------------------------------------------------------
@@ -532,7 +641,7 @@ CONTAINS
     END DO
     IF (nreachbnd == 2) THEN
        !PRINT *, ' cmp dist ', zdistmin0, disttry1, kpiloc, kpiloctry1, kpjloc, kpjloctry1
-       IF (zdistmin0 .GE. disttry1) THEN
+       IF (zdistmin0 >= disttry1) THEN
           kpiloc = kpiloctry1
           kpjloc = kpjloctry1
        END IF
