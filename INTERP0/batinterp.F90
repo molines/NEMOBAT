@@ -516,7 +516,7 @@ CONTAINS
     WRITE(inum,'(a)') "   cn_fgrid  = 'mesh_hgr.nc'      ! name of horizontal grid file"
     WRITE(inum,'(a)') ''
     WRITE(inum,'(a)') '   ! External Bathymetric file'
-    WRITE(inum,'(a)') "   cn_batin  = 'BedmachineGreenland...'  ! name of external baty file"
+    WRITE(inum,'(a)') "   cn_fbatin = 'BedmachineGreenland...'  ! name of external baty file"
     WRITE(inum,'(a)') '   ln_regin  = .FALSE.  ! True  : Regular external bathy file'
     WRITE(inum,'(a)') '                        ! False :Irregular external bathy file'
     WRITE(inum,'(a)') "   cn_varin  = 'bed'    ! name of bathymetry in file"

@@ -11,7 +11,7 @@
    cn_fgrid  = 'mesh_hgr.nc'      ! name of horizontal grid file
 
    ! External Bathymetric file
-   cn_batin  = 'BedmachineGreenland...'  ! name of external baty file
+   cn_fbatin = 'BedmachineGreenland...'  ! name of external baty file
    ln_regin  = .FALSE.  ! True  : Regular external bathy file
                         ! False :Irregular external bathy file
    cn_varin  = 'bed'    ! name of bathymetry in file
