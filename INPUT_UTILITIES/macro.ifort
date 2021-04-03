@@ -1,0 +1,5 @@
+FC=ifort
+NCDF=/usr/local
+
+FFLAGS=-O2 -I$(NCDF)/include -L$(NCDF)/lib -lnetcdf
+

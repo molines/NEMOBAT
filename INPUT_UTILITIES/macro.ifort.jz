@@ -1,0 +1,5 @@
+FC=ifort
+NCDF=
+
+FFLAGS=-O2 -lnetcdf -lnetcdff
+
