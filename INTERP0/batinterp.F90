@@ -402,16 +402,16 @@ PROGRAM batinterp
                  !                Median average 
                  ! If the compiler does not like the RESHAPE statement
                  ! use the commented code instead
-                 vardep1d=RESHAPE(vardeploc, (/ npiloc*npjloc /) )
-!                ik = 0
-!                DO jii=1,npiloc
-!                   DO jij=1,npjloc
-!                      IF (mask_oce(jii,jij) == 1 ) THEN 
-!                         ik = ik + 1
-!                         vardep1d(ik) = vardeploc(jii,jij) 
-!                      END IF
-!                   END DO
-!                END DO
+!                vardep1d=RESHAPE(vardeploc, (/ npiloc*npjloc /) )
+                 ik = 0
+                 DO jii=1,npiloc
+                    DO jij=1,npjloc
+                       IF (mask_oce(jii,jij) == 1 ) THEN 
+                          ik = ik + 1
+                          vardep1d(ik) = vardeploc(jii,jij) 
+                       END IF
+                    END DO
+                 END DO
                  zdep(ji,jj) = median(vardep1d,moce(ji,jj))
               ENDIF
            END IF
