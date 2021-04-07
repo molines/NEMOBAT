@@ -131,19 +131,18 @@ PROGRAM mergebat
   ierr=NF90_OPEN(cn_final,NF90_WRITE,ncid)
   ierr= NF90_INQ_VARID(ncid,cn_vbat,id) 
   Vfinal=Vorig
-  DO jj=2,npjglo
-     DO ji = 2, npiglo
-     IF ( Vpatch(ji,jj) > 0 ) THEN
-     IF ( tdist(ji,jj) <= rn_limit)  THEN
-       alfa =  tdist(ji,jj)/rn_limit
-     ELSE
-       alfa = 1.
-     ENDIF
-     Vfinal(ji,jj) = Vpatch(ji,jj) * alfa + Vorig(ji,jj) *(1 - alfa)
-     ELSE IF (Vorig(ji,jj) > 0 ) THEN
-     Vfinal(ji,jj) = -50.
-  
-     ENDIF
+  DO jj=2,npjglo-1
+     DO ji = 2, npiglo-1
+       IF ( Vpatch(ji,jj) > 0 ) THEN
+          IF ( tdist(ji,jj) <= rn_limit)  THEN
+            alfa =  tdist(ji,jj)/rn_limit
+          ELSE
+            alfa = 1.
+          ENDIF
+          Vfinal(ji,jj) = Vpatch(ji,jj) * alfa + Vorig(ji,jj) *(1 - alfa)
+       ELSE IF (Vorig(ji,jj) > 0 ) THEN
+         Vfinal(ji,jj) = -50.  ! this indicates an original point  in water, now drown
+       ENDIF
      ENDDO
   ENDDO
   ierr = NF90_PUT_VAR(ncid,id,Vfinal)
