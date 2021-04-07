@@ -5,34 +5,37 @@
 ## -------------------------------------------------------------------------
 include make.macro
 
-EXEC=grd2nc mk_coor smith_sandwell2nc revertetopo2 find_zoom NSIDC_map_trf test_xy
+EXEC=grd2nc.x mk_coor.x smith_sandwell2nc.x revertetopo2.x find_zoom.x NSIDC_map_trf.x test_xy.x mergebat.x
 
 all: $(EXEC)
 
-grd2nc: grd2nc.f90
-	$(FC)  grd2nc.f90 -o grd2nc $(FFLAGS)
+grd2nc.x: grd2nc.f90
+	$(FC)  grd2nc.f90 -o grd2nc.x $(FFLAGS)
 
-mk_coor: mk_coor.f90
-	$(FC)  mk_coor.f90 -o mk_coor $(FFLAGS)
+mk_coor.x: mk_coor.f90
+	$(FC)  mk_coor.f90 -o mk_coor.x $(FFLAGS)
 
-revertetopo2: revertetopo2.f90
-	$(FC)  revertetopo2.f90 -o revertetopo2 $(FFLAGS)
+revertetopo2.x: revertetopo2.f90
+	$(FC)  revertetopo2.f90 -o revertetopo2.x $(FFLAGS)
 
-find_zoom: find_zoom.f90
-	$(FC)  find_zoom.f90 -o find_zoom $(FFLAGS)
+find_zoom.x: find_zoom.f90
+	$(FC)  find_zoom.f90 -o find_zoom.x $(FFLAGS)
 
 
-smith_sandwell2nc: smith_sandwell2nc.f90
-	$(FC)  smith_sandwell2nc.f90 -o smith_sandwell2nc $(FFLAGS) -assume byterecl -convert big_endian
+smith_sandwell2nc.x: smith_sandwell2nc.f90
+	$(FC)  smith_sandwell2nc.f90 -o smith_sandwell2nc.x $(FFLAGS) -assume byterecl -convert big_endian
 
-NSIDC_map_trf: NSIDC_map_trf.f90
-	$(FC) NSIDC_map_trf.f90 -o NSIDC_map_trf $(FFLAGS)
+NSIDC_map_trf.x: NSIDC_map_trf.f90
+	$(FC) NSIDC_map_trf.f90 -o NSIDC_map_trf.x $(FFLAGS)
 
-test_xy: test_xy.f90
-	$(FC) test_xy.f90 -o test_xy $(FFLAGS)
+mergebat.x: mergebat.f90
+	$(FC) mergebat.f90 -o mergebat.x $(FFLAGS)
+
+test_xy.x: test_xy.f90
+	$(FC) test_xy.f90 -o test_xy.x $(FFLAGS)
 
 clean:
-	\rm -f *.o *~ *.mod
+	\rm -f *.o *~ *.mod 
 
 cleanall : clean
 	 \rm -f $(EXEC)

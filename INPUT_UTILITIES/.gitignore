@@ -1,8 +1,2 @@
 make.macro
-NSIDC_map_trf
-find_zoom
-grd2nc
-mk_coor
-revertetopo2
-smith_sandwell2nc
-test_xy
+*.x
