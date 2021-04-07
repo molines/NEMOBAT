@@ -5,7 +5,8 @@
 ## -------------------------------------------------------------------------
 include make.macro
 
-EXEC=grd2nc.x mk_coor.x smith_sandwell2nc.x revertetopo2.x find_zoom.x NSIDC_map_trf.x test_xy.x mergebat.x apply_history.x
+EXEC=grd2nc.x mk_coor.x smith_sandwell2nc.x revertetopo2.x find_zoom.x NSIDC_map_trf.x \
+    test_xy.x mergebat.x apply_history.x apply_patch.x
 
 all: $(EXEC)
 
@@ -33,6 +34,9 @@ mergebat.x: mergebat.f90
 
 apply_history.x: apply_history.f90
 	$(FC) apply_history.f90 -o apply_history.x $(FFLAGS)
+
+apply_patch.x: apply_patch.f90
+	$(FC) apply_patch.f90 -o apply_patch.x $(FFLAGS)
 
 test_xy.x: test_xy.f90
 	$(FC) test_xy.f90 -o test_xy.x $(FFLAGS)
