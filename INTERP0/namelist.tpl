@@ -1,11 +1,16 @@
+! Namelist file to be used by batinterp.exe
+! This file was produced by the command batinterp.exe -p namelist.tpl
+!    EDIT this file to fit your needs/wish before use.
+  
 &naminterpo
    nn_interp = 1       ! interpolation method : O: Arithmetic Average
                        !                        1: Median average
    nn_perio  = 0       ! NEMO periodic conditions (99 : automatic inference)
 
    ! NEMO bathymetry output file
-   cn_fout   = 'bathy_meter.nc'   ! name of the output file
+   cn_fout   = 'bathy_meter.nc'   ! name of the output filer
    cn_varout = 'Bathymetry'       ! name of output variable
+   ln_time   = .FALSE.            ! Creation of a time dim/var
 
    ! NEMO coordinate file
    cn_fgrid  = 'mesh_hgr.nc'      ! name of horizontal grid file

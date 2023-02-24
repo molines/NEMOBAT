@@ -33,8 +33,8 @@ PROGRAM batinterp
   INTEGER(KIND=4)                 :: iimin, iimax, ijmin, ijmax  
   !
   INTEGER(KIND=4)                 :: ierr
-  INTEGER(KIND=4)                 :: ncid, ncio, idx, idy, id
-  INTEGER(KIND=4)                 :: idv_lon, idv_lat, idv_bat
+  INTEGER(KIND=4)                 :: ncid, ncio, idx, idy, id, idt
+  INTEGER(KIND=4)                 :: idv_lon, idv_lat, idv_bat, idv_tim
   INTEGER(KIND=4)                 :: idv_moce, idv_mpoi
 
   INTEGER(KIND=4)                 :: npiloc, npjloc     ! size of local subdomain
@@ -78,9 +78,11 @@ PROGRAM batinterp
 
   LOGICAL             :: ln_sign     ! If True change the sign of surface elevation (case of Ice Shelves)
   LOGICAL             :: ln_regin    ! True : External Bathymetry file regular, False:  irregular
+  LOGICAL             :: ln_time     ! True : create a time dimension(UNLIMITED) + time variable in outputfile
 
-  NAMELIST /naminterpo/ nn_interp, ln_sign, cn_fbatin, cn_fout, cn_fgrid, nn_perio,      &
-         &              cn_varin, cn_varout, cn_xdim, cn_ydim, ln_regin, cn_lonv, cn_latv
+  NAMELIST /naminterpo/ nn_interp, ln_sign, cn_fbatin, cn_fout, cn_fgrid, nn_perio,        &
+         &              cn_varin, cn_varout, cn_xdim, cn_ydim, ln_regin, cn_lonv, cn_latv, &
+         &              ln_time
   !-------------------------------------------------------------------
   narg = iargc()
 
@@ -440,7 +442,7 @@ PROGRAM batinterp
   !  NOW deal with output file 
   !--------------------------------------------------------------
   PRINT *, 'Opening  the output file:' ,TRIM(cn_fout)
-  ierr = NF90_CREATE(TRIM(cn_fout), NF90_CLOBBER, ncio)
+  ierr = NF90_CREATE(TRIM(cn_fout), NF90_NETCDF4, ncio)
   IF (ierr /=  NF90_NOERR) THEN
      PRINT *, NF90_STRERROR(ierr)
      PRINT *, ' '
@@ -455,16 +457,26 @@ PROGRAM batinterp
   !
   ierr = NF90_DEF_DIM(ncio, 'x', npiglo, idx)
   ierr = NF90_DEF_DIM(ncio, 'y', npjglo, idy)
+  IF ( ln_time ) THEN
+    ierr = NF90_DEF_DIM(ncio, 'time', NF90_UNLIMITED, idt)
+  ENDIF
   !
   !  Definition of variables
   !
-  ierr=NF90_DEF_VAR(ncio,'nav_lon',NF90_FLOAT,(/idx,idy/),idv_lon) 
-  ierr=NF90_DEF_VAR(ncio,'nav_lat',NF90_FLOAT,(/idx,idy/),idv_lat) 
+  ierr=NF90_DEF_VAR(ncio,'nav_lon',NF90_FLOAT,(/idx,idy/),idv_lon,deflate_level=1, chunksizes=(/npiglo,1000/)) 
+  ierr=NF90_DEF_VAR(ncio,'nav_lat',NF90_FLOAT,(/idx,idy/),idv_lat,deflate_level=1, chunksizes=(/npiglo,1000/)) 
   !                                     ---------------  
   !                                     Dim_msk has 2 dimensions  idx and idy
-  ierr=NF90_DEF_VAR(ncio,cn_varout ,NF90_FLOAT,(/idx,idy/),idv_bat) 
-  ierr=NF90_DEF_VAR(ncio,'moce'       ,NF90_INT,(/idx,idy/),idv_moce)
-  ierr=NF90_DEF_VAR(ncio,'mpoi'       ,NF90_INT,(/idx,idy/),idv_mpoi)
+  IF ( ln_time ) THEN
+     ierr=NF90_DEF_VAR(ncio,cn_varout ,NF90_FLOAT,(/idx,idy,idt/),idv_bat,deflate_level=1, chunksizes=(/npiglo,1000,1/)) 
+     ierr=NF90_DEF_VAR(ncio,'time' ,NF90_FLOAT,(/idt/),idv_tim) 
+  ELSE
+     ierr=NF90_DEF_VAR(ncio,cn_varout ,NF90_FLOAT,(/idx,idy/),idv_bat,deflate_level=1, chunksizes=(/npiglo,1000/)) 
+  ENDIF
+  ierr=NF90_DEF_VAR(ncio,'moce'       ,NF90_INT,(/idx,idy/),idv_moce,deflate_level=1, chunksizes=(/npiglo,1000/))
+  ierr=NF90_DEF_VAR(ncio,'mpoi'       ,NF90_INT,(/idx,idy/),idv_mpoi,deflate_level=1, chunksizes=(/npiglo,1000/))
+
+  ierr=NF90_PUT_ATT(ncio,idv_bat,'missing_value',-9999.99)
   ierr=NF90_ENDDEF(ncio)
   !
   !  Save variables
@@ -472,7 +484,13 @@ PROGRAM batinterp
   ierr=NF90_PUT_VAR(ncio, idv_lon, glamt)
   ierr=NF90_PUT_VAR(ncio, idv_lat, gphit)
   !
-  ierr=NF90_PUT_VAR(ncio, idv_bat, zdep  )
+  IF ( ln_time ) THEN
+    ierr=NF90_PUT_VAR(ncio, idv_bat, zdep, start=(/1,1,1/), count=(/npiglo,npjglo,1/)  )
+    vardep1d(1)=1
+    ierr=NF90_PUT_VAR(ncio, idv_tim, vardep1d, start=(/1/), count=(/1/)  )
+  ELSE
+    ierr=NF90_PUT_VAR(ncio, idv_bat, zdep  )
+  ENDIF
   ierr=NF90_PUT_VAR(ncio, idv_moce, moce  )
   ierr=NF90_PUT_VAR(ncio, idv_mpoi, mpoi  )
 
@@ -511,6 +529,7 @@ CONTAINS
     WRITE(inum,'(a)') '   ! NEMO bathymetry output file'
     WRITE(inum,'(a)') "   cn_fout   = 'bathy_meter.nc'   ! name of the output filer"
     WRITE(inum,'(a)') "   cn_varout = 'Bathymetry'       ! name of output variable"
+    WRITE(inum,'(a)') "   ln_time   = .FALSE.            ! Creation of a time dim/var"
     WRITE(inum,'(a)') ''
     WRITE(inum,'(a)') '   ! NEMO coordinate file'
     WRITE(inum,'(a)') "   cn_fgrid  = 'mesh_hgr.nc'      ! name of horizontal grid file"
