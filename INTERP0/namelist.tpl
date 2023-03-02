@@ -5,6 +5,9 @@
 &naminterpo
    nn_interp = 1       ! interpolation method : O: Arithmetic Average
                        !                        1: Median average
+                       !                        2: Median average modified
+                       ! In case of even sorted list do not use a mean if one
+                       ! of the 2 central values is 0.
    nn_perio  = 0       ! NEMO periodic conditions (99 : automatic inference)
 
    ! NEMO bathymetry output file

@@ -9,6 +9,9 @@ PROGRAM batinterp
   !   Two averaging methods are provided: 
   !     nn_interp = 0 : arithmetic average;
   !     nn_interp = 1 : median average.
+  !     nn_interp = 2 : median average modified : in case of even number
+  !                     of sorted values dont take the mean in one of the
+  !                     value is 0 ( usefull for mask)
   !--------------------------------------------------------
   !-------------------------------------------------------------------
   !  History: derived by Elisabeth Remy from a version of opabat provided by 
@@ -46,11 +49,12 @@ PROGRAM batinterp
   INTEGER(KIND=4), DIMENSION(:,:), ALLOCATABLE :: mask_box, mask_oce
 
   REAL(KIND=4)                               :: median          ! external function from scilib
+  REAL(KIND=4)                               :: median_no0          ! external function from scilib
   REAL(KIND=4)                               :: zvmin, zvmax, zcrit
   REAL(KIND=4), DIMENSION(:,:), ALLOCATABLE  :: glamf, gphif,glamt,gphit
   REAL(KIND=4), DIMENSION(:,:), ALLOCATABLE  :: vardep, zdep, vardeploc
   REAL(KIND=4), DIMENSION(:,:), ALLOCATABLE  :: tabtestsw,tabtestse,tabtestne,tabtestnw
-  REAL(KIND=4), DIMENSION(:),   ALLOCATABLE  :: vardep1d
+  REAL(KIND=4), DIMENSION(:),   ALLOCATABLE  :: vardep1d, rtim
 
   REAL(KIND=8)                               :: dlonmin, dlonmax, dlatmin, dlatmax
   REAL(KIND=8)                               :: dlatmin_in, dlatmax_in
@@ -87,7 +91,7 @@ PROGRAM batinterp
   narg = iargc()
 
   IF ( narg == 0 ) THEN
-     PRINT *,' usage : batinterp.exe -f NAMELIST-name'
+     PRINT *,' usage : batinterp.exe -f NAMELIST-name [-p TEMPLATE-namelist]'
      PRINT *,'      '
      PRINT *,'     PURPOSE :'
      PRINT *,'        This program is part of the NEMOBAT package used to create a '
@@ -414,7 +418,11 @@ PROGRAM batinterp
                        END IF
                     END DO
                  END DO
-                 zdep(ji,jj) = median(vardep1d,moce(ji,jj))
+                 IF ( nn_interp == 1 ) THEN
+                    zdep(ji,jj) = median(vardep1d,moce(ji,jj))
+                 ELSEIF (nn_interp == 2 ) THEN
+                    zdep(ji,jj) = median_no0(vardep1d,moce(ji,jj))
+                 ENDIF
               ENDIF
            END IF
            DEALLOCATE(vardep1d)
@@ -476,7 +484,10 @@ PROGRAM batinterp
   ierr=NF90_DEF_VAR(ncio,'moce'       ,NF90_INT,(/idx,idy/),idv_moce,deflate_level=1, chunksizes=(/npiglo,1000/))
   ierr=NF90_DEF_VAR(ncio,'mpoi'       ,NF90_INT,(/idx,idy/),idv_mpoi,deflate_level=1, chunksizes=(/npiglo,1000/))
 
+  ierr=NF90_PUT_ATT(ncio,idv_lon,'long_name','Longitude')
+  ierr=NF90_PUT_ATT(ncio,idv_lat,'long_name','Latitude')
   ierr=NF90_PUT_ATT(ncio,idv_bat,'missing_value',-9999.99)
+  ierr=NF90_PUT_ATT(ncio,idv_bat,'coordinates','nav_lon nav_lat')  ! to ease cdo work
   ierr=NF90_ENDDEF(ncio)
   !
   !  Save variables
@@ -485,9 +496,11 @@ PROGRAM batinterp
   ierr=NF90_PUT_VAR(ncio, idv_lat, gphit)
   !
   IF ( ln_time ) THEN
+    ALLOCATE (rtim(1) )
     ierr=NF90_PUT_VAR(ncio, idv_bat, zdep, start=(/1,1,1/), count=(/npiglo,npjglo,1/)  )
-    vardep1d(1)=1
-    ierr=NF90_PUT_VAR(ncio, idv_tim, vardep1d, start=(/1/), count=(/1/)  )
+    rtim=1.
+    ierr=NF90_PUT_VAR(ncio, idv_tim, rtim, start=(/1/), count=(/1/)  )
+    DEALLOCATE ( rtim )
   ELSE
     ierr=NF90_PUT_VAR(ncio, idv_bat, zdep  )
   ENDIF
@@ -524,6 +537,9 @@ CONTAINS
     WRITE(inum,'(a)') '&naminterpo'
     WRITE(inum,'(a)') '   nn_interp = 1       ! interpolation method : O: Arithmetic Average'
     WRITE(inum,'(a)') '                       !                        1: Median average'
+    WRITE(inum,'(a)') '                       !                        2: Median average modified:'
+                                              !     In case of even sorted list, do not take mean val
+                                              !  if one of the 2 values is 0.
     WRITE(inum,'(a)') '   nn_perio  = 0       ! NEMO periodic conditions (99 : automatic inference)'
     WRITE(inum,'(a)') ''
     WRITE(inum,'(a)') '   ! NEMO bathymetry output file'
