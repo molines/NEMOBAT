@@ -206,6 +206,31 @@ cc      call qcksrt(list,listord,num)
       END FUNCTION median
 
 c***********************************************************
+      REAL FUNCTION median_no0(list,num)
+c  modif by JMM in order not to make average with 0 value
+c***********************************************************
+
+      INTEGER num
+      REAL list(num),listord(num)
+
+! re-order the vector in a monoton way
+cc      call qcksrt(list,listord,num)     
+      call ssort(list,listord,num)
+
+! Calculate median
+      IF (mod(num,2) .NE. 0) THEN
+         median_no0 = list(num/2 + 1)
+      ELSE
+         median_no0 = ( list(num/2) + list(num/2+1) )/2.0
+         IF ( list(num/2) .EQ. 0 .OR. list(num/2+1) .EQ. 0 ) THEN 
+           median_no0 = 0.
+         ENDIF
+      END IF
+      RETURN
+      END FUNCTION median_no0
+
+
+c***********************************************************
       subroutine qcksrt(arr1,arr2,n)
 c***********************************************************
 
