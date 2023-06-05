@@ -254,7 +254,7 @@ CONTAINS
     ierr = NF90_CREATE(cf_lonlat,OR(NF90_NETCDF4,NF90_NOCLOBBER), ncio )
     ! define dimensions
     ierr = NF90_DEF_DIM(ncio, 'x', npx, idx )
-    ierr = NF90_DEF_DIM(ncio, 'y', npy, idx )
+    ierr = NF90_DEF_DIM(ncio, 'y', npy, idy )
     ! define variables
     ierr = NF90_DEF_VAR(ncio, 'glamt', NF90_DOUBLE, (/idx,idy/), idlont )
     ierr = NF90_DEF_VAR(ncio, 'glamu', NF90_DOUBLE, (/idx,idy/), idlonu )

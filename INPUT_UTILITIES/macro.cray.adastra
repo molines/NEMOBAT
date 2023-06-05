@@ -1,0 +1,5 @@
+FC=ftn
+NCDF=$(netcdf_DIR)
+
+FFLAGS=-O2 -I$(NCDF)/include -L$(NCDF)/lib -lnetcdff -lnetcdf
+
